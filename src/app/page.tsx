@@ -5,6 +5,7 @@ import { Post } from "@/models/Post";
 import { User } from "@/models/User"; // Import User to register the schema before populating
 
 export default async function Home() {
+  // Always connect to DB and register models on home entry
   await connectToDatabase();
   // Fetch only 3 recent published posts
   const recentPosts = await Post.find({ published: true })
