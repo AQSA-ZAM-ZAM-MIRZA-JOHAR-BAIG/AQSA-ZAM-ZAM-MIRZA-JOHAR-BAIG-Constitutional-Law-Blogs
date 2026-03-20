@@ -6,11 +6,10 @@ import { Post } from "@/models/Post";
 export default async function PostsPage({
   searchParams,
 }: {
-  searchParams: { category?: string; search?: string };
+  searchParams: Promise<{ category?: string; search?: string }>;
 }) {
   await connectToDatabase();
-  const category = await Promise.resolve(searchParams.category);
-  const search = await Promise.resolve(searchParams.search);
+  const { category, search } = await searchParams;
 
   let query: any = { published: true };
   if (category) query.category = category;

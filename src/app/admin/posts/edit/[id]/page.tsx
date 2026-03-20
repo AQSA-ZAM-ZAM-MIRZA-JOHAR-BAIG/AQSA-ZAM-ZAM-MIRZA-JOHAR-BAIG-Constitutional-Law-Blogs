@@ -3,9 +3,10 @@ import connectToDatabase from "@/lib/db";
 import { Post } from "@/models/Post";
 import { notFound } from "next/navigation";
 
-export default async function EditPostPage({ params }: { params: { id: string } }) {
+export default async function EditPostPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   await connectToDatabase();
-  const post = await Post.findById(params.id).lean();
+  const post = await Post.findById(id).lean();
   
   if (!post) {
     notFound();

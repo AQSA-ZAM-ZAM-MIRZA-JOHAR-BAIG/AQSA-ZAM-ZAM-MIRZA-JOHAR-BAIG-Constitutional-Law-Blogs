@@ -5,9 +5,10 @@ import styles from "./post.module.css";
 import Link from "next/link";
 import { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
   await connectToDatabase();
-  const post = await Post.findOne({ slug: params.slug, published: true }).lean();
+  const post = await Post.findOne({ slug, published: true }).lean();
   
   if (!post) return { title: "Not Found" };
   
@@ -22,9 +23,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function PostPage({ params }: { params: { slug: string } }) {
+export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
   await connectToDatabase();
-  const slug = await Promise.resolve(params.slug);
+  const { slug } = await params;
   const post = await Post.findOne({ slug, published: true }).populate("author", "name").lean();
   
   if (!post) {

@@ -6,14 +6,15 @@ import { Post } from "@/models/Post";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     await connectToDatabase();
     // support lookup by slug or ObjectId
-    const isObjectId = params.id.match(/^[0-9a-fA-F]{24}$/);
+    const isObjectId = id.match(/^[0-9a-fA-F]{24}$/);
     const post = await Post.findOne({
-      $or: isObjectId ? [{ _id: params.id }, { slug: params.id }] : [{ slug: params.id }]
+      $or: isObjectId ? [{ _id: id }, { slug: id }] : [{ slug: id }]
     }).populate('author', 'name email');
     
     if (!post) {
@@ -28,8 +29,9 @@ export async function GET(
 
 export async function PUT(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     if (!session || !session.user) {
@@ -51,14 +53,14 @@ export async function PUT(
     await connectToDatabase();
     
     // Contributors can only edit their own posts
-    const postToUpdate = await Post.findById(params.id);
+    const postToUpdate = await Post.findById(id);
     if (!postToUpdate) return NextResponse.json({ error: "Not Found" }, { status: 404 });
 
     if (role !== "admin" && postToUpdate.author.toString() !== (session.user as any).id) {
       return NextResponse.json({ error: "Forbidden: Not your post" }, { status: 403 });
     }
 
-    const post = await Post.findByIdAndUpdate(params.id, body, { new: true });
+    const post = await Post.findByIdAndUpdate(id, body, { new: true });
     return NextResponse.json(post);
   } catch (error) {
     console.error(error);
@@ -68,8 +70,9 @@ export async function PUT(
 
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     if (!session || !session.user) {
@@ -82,7 +85,7 @@ export async function DELETE(
     }
 
     await connectToDatabase();
-    const post = await Post.findByIdAndDelete(params.id);
+    const post = await Post.findByIdAndDelete(id);
     if (!post) {
       return NextResponse.json({ error: "Not Found" }, { status: 404 });
     }
