@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document, Model } from "mongoose";
-import { IUser } from "./User";
+import { IUser, User } from "./User"; // Import User model to ensure registration
 
 export interface IPost extends Document {
   title: string;

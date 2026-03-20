@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from './page.module.css';
 import connectToDatabase from "@/lib/db";
 import { Post } from "@/models/Post";
+import { User } from "@/models/User"; // Import User to register the schema before populating
 
 export default async function Home() {
   await connectToDatabase();
