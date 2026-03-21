@@ -65,6 +65,109 @@ export default async function Home() {
           )}
         </div>
       </section>
+      {/* Online Profiles and Projects Section */}
+      <section className={styles.profilesSection}>
+        <div className={styles.profilesHeader}>
+          <span className={styles.profilesBadge}>FIND ME ONLINE</span>
+          <h2 className={styles.profilesTitle}>Online Profiles & Projects</h2>
+          <p className={styles.profilesSubtitle}>
+            Connect with me across the web — from legal publications and academic repositories to code and content platforms.
+          </p>
+        </div>
+
+        <div className={styles.sectionHeader}>
+          <h2>Profiles</h2>
+        </div>
+        <div className={styles.profileGrid}>
+          <a href="https://www.linkedin.com/in/aqsa-zam-zam-mirza-johar-baig-28501b3b6/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" className={styles.profileCard}>
+            <div className={styles.profileIcon} style={{backgroundColor: '#0077B5'}}>in</div>
+            <div className={styles.profileInfo}>
+              <h4>LINKEDIN</h4>
+              <p>Aqsa Zam Zam Mirza Johar Baig</p>
+            </div>
+            <span className={styles.profileArrow}>↗</span>
+          </a>
+          <a href="https://github.com/AQSA-ZAM-ZAM-MIRZA-JOHAR-BAIG" target="_blank" rel="noopener noreferrer" className={styles.profileCard}>
+            <div className={styles.profileIcon} style={{backgroundColor: '#333'}}>🐙</div>
+            <div className={styles.profileInfo}>
+              <h4>GITHUB</h4>
+              <p>@AQSA-ZAM-ZAM-MIRZA-JOHAR-BAIG</p>
+            </div>
+            <span className={styles.profileArrow}>↗</span>
+          </a>
+          <a href="https://aqsamirza08.medium.com/" target="_blank" rel="noopener noreferrer" className={styles.profileCard}>
+            <div className={styles.profileIcon} style={{backgroundColor: '#000'}}>M</div>
+            <div className={styles.profileInfo}>
+              <h4>MEDIUM BLOG</h4>
+              <p>@aqsamirza08</p>
+            </div>
+            <span className={styles.profileArrow}>↗</span>
+          </a>
+          <a href="https://www.kaggle.com/aqsamirza08" target="_blank" rel="noopener noreferrer" className={styles.profileCard}>
+            <div className={styles.profileIcon} style={{backgroundColor: '#20BEFF'}}>K</div>
+            <div className={styles.profileInfo}>
+              <h4>KAGGLE</h4>
+              <p>@aqsamirza08</p>
+            </div>
+            <span className={styles.profileArrow}>↗</span>
+          </a>
+          <a href="https://stackoverflow.com/users/32468898/aqsa-zam-zam-mirza-johar-baig" target="_blank" rel="noopener noreferrer" className={styles.profileCard}>
+            <div className={styles.profileIcon} style={{backgroundColor: '#F48024'}}>so</div>
+            <div className={styles.profileInfo}>
+              <h4>STACK OVERFLOW</h4>
+              <p>Aqsa Zam Zam Mirza Johar Baig</p>
+            </div>
+            <span className={styles.profileArrow}>↗</span>
+          </a>
+          <a href="https://www.youtube.com/@aqsamirza08" target="_blank" rel="noopener noreferrer" className={styles.profileCard}>
+            <div className={styles.profileIcon} style={{backgroundColor: '#FF0000'}}>▶</div>
+            <div className={styles.profileInfo}>
+              <h4>YOUTUBE</h4>
+              <p>@aqsamirza08</p>
+            </div>
+            <span className={styles.profileArrow}>↗</span>
+          </a>
+        </div>
+
+        <div className={styles.sectionHeader} style={{marginTop: '4rem'}}>
+          <h2>Projects</h2>
+        </div>
+        <div className={styles.profileGrid}>
+          <a href="https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app/" target="_blank" rel="noopener noreferrer" className={styles.profileCard}>
+            <div className={styles.profileIcon} style={{backgroundColor: '#1E3A8A'}}>🌐</div>
+            <div className={styles.profileInfo}>
+              <h4>PORTFOLIO SITE</h4>
+              <p>aqsa-...mirza-johar-baig-portf</p>
+            </div>
+            <span className={styles.profileArrow}>↗</span>
+          </a>
+          <a href="https://aqsa-zam-zam-mirza-johar-baig-urdu.vercel.app/" target="_blank" rel="noopener noreferrer" className={styles.profileCard}>
+            <div className={styles.profileIcon} style={{backgroundColor: '#B45309'}}>📜</div>
+            <div className={styles.profileInfo}>
+              <h4>URDU SHAYARI</h4>
+              <p>Beautiful Poetry Collection</p>
+            </div>
+            <span className={styles.profileArrow}>↗</span>
+          </a>
+          <a href="https://aqsa-zam-zam-mirza-johar-baig-law-d.vercel.app/" target="_blank" rel="noopener noreferrer" className={styles.profileCard}>
+            <div className={styles.profileIcon} style={{backgroundColor: '#4B5563'}}>⚖️</div>
+            <div className={styles.profileInfo}>
+              <h4>LAW DICTIONARY</h4>
+              <p>Legal Terminology Reference</p>
+            </div>
+            <span className={styles.profileArrow}>↗</span>
+          </a>
+          <a href="https://aqsa-zam-zam-mirza-johar-baig-blogs.vercel.app/" target="_blank" rel="noopener noreferrer" className={styles.profileCard}>
+            <div className={styles.profileIcon} style={{backgroundColor: '#047857'}}>📝</div>
+            <div className={styles.profileInfo}>
+              <h4>PERSONAL BLOG</h4>
+              <p>Articles and Thoughts</p>
+            </div>
+            <span className={styles.profileArrow}>↗</span>
+          </a>
+        </div>
+      </section>
+
     </div>
   );
 }

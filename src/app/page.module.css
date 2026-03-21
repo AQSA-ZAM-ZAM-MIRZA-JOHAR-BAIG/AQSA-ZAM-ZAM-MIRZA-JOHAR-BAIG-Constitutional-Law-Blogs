@@ -171,3 +171,121 @@
   border-top: 1px solid var(--border);
   padding-top: 1rem;
 }
+
+/* Online Profiles Section */
+.profilesSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 8rem;
+  width: 100%;
+}
+
+.profilesHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.profilesBadge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  padding: 0.25rem 1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  background-color: rgba(180, 83, 9, 0.1);
+}
+
+.profilesTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--secondary);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.profilesSubtitle {
+  font-size: 1.125rem;
+  color: var(--foreground);
+  opacity: 0.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profileGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.profileCard {
+  display: flex;
+  align-items: center;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.profileCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.profileIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 1.25rem;
+  flex-shrink: 0;
+}
+
+.profileInfo {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.profileInfo h4 {
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.profileInfo p {
+  font-size: 1rem;
+  color: var(--foreground);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.profileArrow {
+  opacity: 0;
+  transform: translate(-10px, 10px);
+  transition: all 0.3s ease;
+  color: var(--foreground);
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
+.profileCard:hover .profileArrow {
+  opacity: 0.5;
+  transform: translate(0, 0);
+}
