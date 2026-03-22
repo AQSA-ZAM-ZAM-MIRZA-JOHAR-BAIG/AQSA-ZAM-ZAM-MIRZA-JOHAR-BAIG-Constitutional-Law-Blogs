@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Legal Internships & Experience',
-  description: 'Timeline of AQSA MIRZA’s legal internships including the National Human Rights Commission (NHRC), trial courts, and various legal research institutes.',
+  title: 'Legal Internships & Experience | Aqsa Zam Zam Mirza Johar Baig',
+  description: 'Timeline of Aqsa Zam Zam Mirza Johar Baig’s legal internships including the National Human Rights Commission (NHRC), trial courts, and various legal research institutes.',
 };
 
 const experiences = [
@@ -101,9 +101,9 @@ export default function Experience() {
       <div className="mt-8 mb-12 text-center md:text-left">
         <h1 className="text-4xl font-bold mb-4 font-serif">Internships & Professional Experience</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-          A comprehensive timeline of AQSA MIRZA's practical exposure in legal research, litigation, and public policy advocacy.
+          A comprehensive timeline of Aqsa Zam Zam Mirza Johar Baig's practical exposure in legal research, litigation, and public policy advocacy.
         </p>
-        <p className="text-sm text-gray-500 italic mt-4">Author: AQSA MIRZA | Last Updated: March 2026</p>
+        <p className="text-sm text-gray-500 italic mt-4">Author: Aqsa Zam Zam Mirza Johar Baig | Last Updated: March 2026</p>
       </div>
 
       <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-blue-300 dark:before:via-blue-800 before:to-transparent">

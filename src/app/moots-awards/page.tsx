@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Moot Court Competitions & Awards',
-  description: 'AQSA MIRZA’s achievements in National Moot Court Competitions and presentation events, showcasing excellence in legal advocacy and oral argumentation.',
+  title: 'Moot Court Competitions & Awards | Aqsa Zam Zam Mirza Johar Baig',
+  description: 'Aqsa Zam Zam Mirza Johar Baig’s achievements in National Moot Court Competitions and presentation events, showcasing excellence in legal advocacy and oral argumentation.',
 };
 
 export default function MootsAwards() {
@@ -14,9 +14,9 @@ export default function MootsAwards() {
       <div className="mt-8 mb-10 text-center md:text-left">
         <h1 className="text-4xl font-bold mb-4 font-serif">Moot Courts & Outstanding Achievements</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-          A record of AQSA MIRZA's competitive advocacy, demonstrating exceptional skills in legal research, drafting memorials, and persuasive oral arguments.
+          A record of Aqsa Zam Zam Mirza Johar Baig's competitive advocacy, demonstrating exceptional skills in legal research, drafting memorials, and persuasive oral arguments.
         </p>
-        <p className="text-sm text-gray-500 italic mt-4">Author: AQSA MIRZA | Last Updated: March 2026</p>
+        <p className="text-sm text-gray-500 italic mt-4">Author: Aqsa Zam Zam Mirza Johar Baig | Last Updated: March 2026</p>
       </div>
 
       <div className="overflow-x-auto shadow-sm sm:rounded-lg border border-gray-200 dark:border-gray-700 mb-12">

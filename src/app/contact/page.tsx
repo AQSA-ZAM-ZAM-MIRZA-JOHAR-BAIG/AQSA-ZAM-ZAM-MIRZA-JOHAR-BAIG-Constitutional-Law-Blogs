@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Reach out to AQSA MIRZA for legal research, public policy opportunities, or internships at institutions like NITI Aayog.',
+  title: 'Contact Aqsa Zam Zam Mirza Johar Baig',
+  description: 'Reach out to Aqsa Zam Zam Mirza Johar Baig for legal research, public policy opportunities, or internships at institutions like NITI Aayog.',
 };
 
 export default function Contact() {
@@ -14,7 +14,7 @@ export default function Contact() {
       <div className="text-center mt-10 mb-14">
         <h1 className="text-4xl font-bold mb-4 font-serif">Get In Touch</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Reach out for opportunities in policy research, legal research, and internships at institutions like NITI Aayog. AQSA MIRZA is open to collaborative academic drafting and advocacy roles.
+          Reach out for opportunities in policy research, legal research, and internships at institutions like NITI Aayog. Aqsa Zam Zam Mirza Johar Baig is open to collaborative academic drafting and advocacy roles.
         </p>
       </div>
 

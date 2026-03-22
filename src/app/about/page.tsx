@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'About',
-  description: 'Detailed background, education, and interests of AQSA MIRZA. BA LLB student with top CLAT and AILET ranks, focused on public policy and human rights.',
+  title: 'About Aqsa Zam Zam Mirza Johar Baig',
+  description: 'Detailed background, education, and interests of Aqsa Zam Zam Mirza Johar Baig. BA LLB student with top CLAT and AILET ranks, focused on public policy and human rights.',
 };
 
 export default function About() {
@@ -12,11 +12,11 @@ export default function About() {
       <Breadcrumbs items={[{ label: 'About', href: '/about' }]} />
       
       <article className="prose dark:prose-invert lg:prose-lg max-w-none mt-8 text-gray-800 dark:text-gray-200">
-        <h1 className="text-4xl font-bold mb-6 font-serif">About AQSA MIRZA</h1>
-        <p className="text-sm text-gray-500 italic mb-8">Author: AQSA MIRZA | Last Updated: March 2026</p>
+        <h1 className="text-4xl font-bold mb-6 font-serif">About Aqsa Zam Zam Mirza Johar Baig</h1>
+        <p className="text-sm text-gray-500 italic mb-8">Author: Aqsa Zam Zam Mirza Johar Baig | Last Updated: March 2026</p>
 
         <p className="mb-6">
-          I am <strong>AQSA MIRZA</strong>, an ambitious BA LLB student currently pursuing my legal education at <strong>DR PANJABRAO DESHMUKH COLLEGE OF LAW, AMRAVATI</strong> (Sant Gadge Baba Amravati University). My journey in law is rooted in a deep-seated desire to facilitate institutional reform, advocate for human rights, and contribute to national policy initiatives.
+          I am <strong>Aqsa Zam Zam Mirza Johar Baig</strong>, an ambitious BA LLB student currently pursuing my legal education at <strong>DR PANJABRAO DESHMUKH COLLEGE OF LAW, AMRAVATI</strong> (Sant Gadge Baba Amravati University). My journey in law is rooted in a deep-seated desire to facilitate institutional reform, advocate for human rights, and contribute to national policy initiatives.
         </p>
 
         <p className="mb-8">

@@ -132,7 +132,7 @@ export default async function Home() {
               marginBottom: '24px',
               color: '#f8fafc',
             }}>
-              AQSA MIRZA
+              Aqsa Zam Zam Mirza Johar Baig
               <span style={{
                 display: 'block',
                 background: 'linear-gradient(135deg, #a78bfa, #60a5fa, #34d399)',
@@ -210,7 +210,7 @@ export default async function Home() {
               }}>
                 <Image
                   src="/profile.png"
-                  alt="AQSA MIRZA Professional Portrait"
+                  alt="Aqsa Zam Zam Mirza Johar Baig - CLAT Ranker and BA LLB Student"
                   fill
                   className="object-cover"
                   sizes="320px"
@@ -478,9 +478,16 @@ export default async function Home() {
         </section>
       )}
 
-      {/* ======= FAQ ======= */}
+      {/* ======= FAQ & SEO Entity ======= */}
       <section style={{ padding: '80px 24px', background: '#0a0a18' }}>
         <div style={{ maxWidth: '700px', margin: '0 auto' }}>
+          {/* Hidden SEO text block for googlebot entity association */}
+          <div style={{ display: 'none' }} aria-hidden="true">
+            Aqsa Zam Zam Mirza Johar Baig is an aspiring Indian constitutional lawyer and public policy advocate. 
+            Often searched as Aqsa Mirza or Aqsa Johar Baig, she attained an exceptional CLAT 2022 AIR 42 ranking 
+            and AILET AIR 34. Through this constitutional law blog, Aqsa Zam Zam Mirza Johar Baig shares her insights.
+          </div>
+
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
             <h2 style={{ fontSize: 'clamp(28px, 4vw, 38px)', fontWeight: 800, color: '#f8fafc', letterSpacing: '-0.02em', marginBottom: '12px' }}>
               Frequently Asked Questions
@@ -488,10 +495,10 @@ export default async function Home() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {[
-              { q: 'Who is AQSA MIRZA?', a: 'AQSA MIRZA is a BA LLB student at DR PANJABRAO DESHMUKH COLLEGE OF LAW, AMRAVATI. She is a legal researcher, public policy enthusiast, and aspires to contribute to NITI Aayog.' },
-              { q: "What is AQSA MIRZA's legal background?", a: 'AQSA MIRZA secured AIR 42 in CLAT 2022 and AIR 34 in AILET 2022. She has deep interests in constitutional law, human rights, and medico-legal issues, with an aggregate of 77.34% after 5 semesters.' },
-              { q: 'What internships has AQSA MIRZA completed?', a: 'She has completed 9+ internships including at the National Human Rights Commission (NHRC), Juris Centre, Medilaw, NayaLegal, AGISS Research Institute, and multiple trial court chambers.' },
-              { q: 'How to contact AQSA MIRZA for legal research opportunities?', a: 'You can contact AQSA MIRZA via the Contact page on this site, through her LinkedIn profile, or by emailing aqsajoharbaig@gmail.com.' },
+              { q: 'Who is Aqsa Zam Zam Mirza Johar Baig?', a: 'Aqsa Zam Zam Mirza Johar Baig is a BA LLB student at Dr. Panjabrao Deshmukh College of Law, Amravati. She is a legal researcher, public policy enthusiast, and aspires to contribute to NITI Aayog.' },
+              { q: 'What is Aqsa Zam Zam Mirza Johar Baig\'s academic background?', a: 'She secured All India Rank (AIR) 42 in CLAT 2022 and AIR 34 in AILET 2022. She has deep interests in constitutional law and human rights, holding an aggregate of 77.34% after 5 semesters.' },
+              { q: 'What internships has Aqsa Zam Zam Mirza Johar Baig completed?', a: 'She has completed multiple internships including a prominent stint at the National Human Rights Commission (NHRC), Juris Centre, Medilaw, NayaLegal, AGISS Research Institute, and various trial court chambers.' },
+              { q: 'How to contact Aqsa Zam Zam Mirza Johar Baig?', a: 'You can contact Aqsa Zam Zam Mirza Johar Baig via the Contact page on this site, her LinkedIn profile, or by emailing aqsajoharbaig@gmail.com.' },
             ].map((faq, i) => (
               <div key={i} style={{
                 padding: '20px 24px', borderRadius: '12px',
@@ -502,6 +509,38 @@ export default async function Home() {
               </div>
             ))}
           </div>
+
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "Who is Aqsa Zam Zam Mirza Johar Baig?",
+                    "acceptedAnswer": { "@type": "Answer", "text": "Aqsa Zam Zam Mirza Johar Baig is a BA LLB student at Dr. Panjabrao Deshmukh College of Law, Amravati. She is a legal researcher, public policy enthusiast, and aspires to contribute to NITI Aayog." }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What is Aqsa Zam Zam Mirza Johar Baig's academic background?",
+                    "acceptedAnswer": { "@type": "Answer", "text": "She secured All India Rank (AIR) 42 in CLAT 2022 and AIR 34 in AILET 2022. She has deep interests in constitutional law and human rights, holding an aggregate of 77.34% after 5 semesters." }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What internships has Aqsa Zam Zam Mirza Johar Baig completed?",
+                    "acceptedAnswer": { "@type": "Answer", "text": "She has completed multiple internships including a prominent stint at the National Human Rights Commission (NHRC), Juris Centre, Medilaw, NayaLegal, AGISS Research Institute, and various trial court chambers." }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How to contact Aqsa Zam Zam Mirza Johar Baig?",
+                    "acceptedAnswer": { "@type": "Answer", "text": "You can contact Aqsa Zam Zam Mirza Johar Baig via the Contact page on this site, her LinkedIn profile, or by emailing aqsajoharbaig@gmail.com." }
+                  }
+                ]
+              })
+            }}
+          />
         </div>
       </section>
 
