@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Constitutional Law Blog | Aqsa Zam Zam Mirza Johar Baig",
-  description: "A platform for insights into constitutional provisions, case interpretations, and amendments by Aqsa Zam Zam Mirza Johar Baig, BA LLB student, CLAT 2022 AIR 42, and Legal Researcher.",
+  metadataBase: new URL("https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/"),
+  title: "AQSA MIRZA | Law Student, Legal Researcher & Policy Enthusiast",
+  description: "Explore AQSA MIRZA’s journey as a BA LLB student, legal researcher, and public policy enthusiast. Insights into constitutional provisions, landmark cases, and amendments.",
   keywords: [
     "Aqsa Zam Zam Mirza Johar Baig", 
     "Aqsa Mirza", 
@@ -23,22 +26,22 @@ export const metadata: Metadata = {
     "CLAT AIR 42", 
     "Legal Researcher", 
     "Indian Constitution", 
-    "Law Blog"
+    "NITI Aayog enthusiast"
   ],
   authors: [{ name: "Aqsa Zam Zam Mirza Johar Baig" }],
   creator: "Aqsa Zam Zam Mirza Johar Baig",
   openGraph: {
-    title: "Constitutional Law Blog | Aqsa Zam Zam Mirza Johar Baig",
-    description: "Insights into constitutional provisions, landmark cases, and pivotal amendments by Aqsa Zam Zam Mirza Johar Baig (BA LLB, CLAT AIR 42).",
+    title: "AQSA MIRZA | Law Student & Legal Researcher",
+    description: "Explore AQSA MIRZA’s journey as a BA LLB student, legal researcher, and public policy enthusiast.",
     url: "https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/",
-    siteName: "Constitutional Law Blog",
+    siteName: "Constitutional Law Blog & Portfolio",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Constitutional Law Blog | Aqsa Zam Zam Mirza Johar Baig",
-    description: "Insights into constitutional provisions, landmark cases, and pivotal amendments by Aqsa Zam Zam Mirza Johar Baig (BA LLB, CLAT AIR 42).",
+    title: "AQSA MIRZA | Law Student & Legal Researcher",
+    description: "Explore AQSA MIRZA’s journey as a BA LLB student, legal researcher, and public policy enthusiast.",
   },
 };
 
@@ -47,10 +50,34 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "AQSA MIRZA",
+    "jobTitle": "Law Student & Legal Researcher",
+    "affiliation": {
+      "@type": "EducationalOrganization",
+      "name": "DR PANJABRAO DESHMUKH COLLEGE OF LAW, AMRAVATI"
+    },
+    "knowsAbout": ["Human Rights Law", "Medico-Legal Issues", "Public Policy", "Civil and Criminal Litigation", "International Trade in Services", "Constitutional Law"],
+    "sameAs": [
+      "https://www.linkedin.com/in/aqsa-zam-zam-mirza-johar-baig-28501b3b6/",
+      "https://github.com/AQSA-ZAM-ZAM-MIRZA-JOHAR-BAIG"
+    ]
+  };
+
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>
-        <main>{children}</main>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+      </head>
+      <body className="min-h-screen flex flex-col antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+        <Navbar />
+        <main className="flex-grow pt-20">{children}</main>
+        <Footer />
       </body>
     </html>
   );
