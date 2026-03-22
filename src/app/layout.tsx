@@ -37,11 +37,20 @@ export const metadata: Metadata = {
     siteName: "Constitutional Law Blog & Portfolio",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: 'https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/profile.png',
+        width: 1200,
+        height: 630,
+        alt: 'AQSA MIRZA Professional Portrait',
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "AQSA MIRZA | Law Student & Legal Researcher",
     description: "Explore AQSA MIRZA’s journey as a BA LLB student, legal researcher, and public policy enthusiast.",
+    images: ['https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/profile.png'],
   },
 };
 

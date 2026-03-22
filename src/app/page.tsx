@@ -50,8 +50,14 @@ export default async function Home() {
         </div>
         <div className="md:w-2/5 mb-10 md:mb-0 flex justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-200 dark:border-gray-700 shadow-xl bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
-             {/* Using a placeholder SVG or user's provided photo */}
-            <span className="text-gray-500 font-medium">Portrait Placeholder</span>
+             <Image 
+               src="/profile.png" 
+               alt="AQSA MIRZA Professional Portrait" 
+               fill
+               className="object-cover"
+               sizes="(max-width: 768px) 256px, 320px"
+               priority
+             />
           </div>
         </div>
       </section>
