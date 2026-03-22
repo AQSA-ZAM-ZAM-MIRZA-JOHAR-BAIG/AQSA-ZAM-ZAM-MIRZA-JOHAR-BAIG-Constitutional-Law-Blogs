@@ -83,9 +83,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <body style={{ backgroundColor: '#080810', color: '#e2e8f0', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         <Navbar />
-        <main className="flex-grow pt-20">{children}</main>
+        <main style={{ flex: 1, paddingTop: '70px' }}>{children}</main>
         <Footer />
       </body>
     </html>
