@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,17 +39,27 @@ export default function Navbar() {
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '70px' }}>
           {/* Logo */}
-          <Link href="/" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-            <span style={{
-              fontWeight: 800,
-              fontSize: '20px',
-              letterSpacing: '0.08em',
-              background: 'linear-gradient(135deg, #a78bfa, #60a5fa)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}>AQSA MIRZA</span>
-            <span style={{ fontSize: '10px', color: '#94a3b8', letterSpacing: '0.15em', fontWeight: 500 }}>LAW · RESEARCH · POLICY</span>
+          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <Image
+              src="/const-law-blog-logo.png"
+              alt="Constitutional Law Blog Logo"
+              width={48}
+              height={48}
+              style={{ borderRadius: '8px', objectFit: 'contain' }}
+              priority
+            />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
+              <span style={{
+                fontWeight: 800,
+                fontSize: '17px',
+                letterSpacing: '0.06em',
+                background: 'linear-gradient(135deg, #a78bfa, #60a5fa)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}>AQSA MIRZA</span>
+              <span style={{ fontSize: '9px', color: '#94a3b8', letterSpacing: '0.15em', fontWeight: 500 }}>LAW · RESEARCH · POLICY</span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
