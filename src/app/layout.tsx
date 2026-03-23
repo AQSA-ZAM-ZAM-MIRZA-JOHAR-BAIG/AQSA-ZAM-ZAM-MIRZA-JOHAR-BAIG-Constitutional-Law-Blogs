@@ -16,20 +16,19 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/"),
-  title: "Aqsa Zam Zam Mirza Johar Baig | Constitutional Law Blog & Portfolio",
-  description: "Explore Aqsa Zam Zam Mirza Johar Baig’s journey as a BA LLB student, legal researcher, and public policy enthusiast. Insights into constitutional provisions, landmark cases, and amendments.",
+  title: "Aqsa Zam Zam Mirza Johar Baig | Full-Stack Developer & AI Resident",
+  description: "Aqsa Zam Zam Mirza Johar Baig - Computer Science undergraduate specializing in AI/ML, building scalable full-stack applications and cloud-based systems.",
   keywords: [
     "Aqsa Zam Zam Mirza Johar Baig", 
     "Aqsa Mirza", 
-    "Aqsa Zam Zam",
-    "Mirza Johar Baig",
-    "Aqsa Johar Baig",
-    "Constitutional Law Blog", 
-    "BA LLB", 
-    "CLAT AIR 42", 
-    "Legal Researcher", 
-    "Indian Constitution", 
-    "NITI Aayog enthusiast"
+    "Software Developer",
+    "Computer Science Portfolio",
+    "AI & ML Engineer",
+    "Full-Stack Developer", 
+    "Java Python JavaScript", 
+    "AWS Cloud Practices", 
+    "MERN Stack", 
+    "VIIT Pune Student"
   ],
   authors: [{ name: "Aqsa Zam Zam Mirza Johar Baig", url: "https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/" }],
   creator: "Aqsa Zam Zam Mirza Johar Baig",
@@ -38,10 +37,10 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Aqsa Zam Zam Mirza Johar Baig | Law Student & Legal Researcher",
-    description: "Explore the official portfolio and constitutional law blog of Aqsa Zam Zam Mirza Johar Baig, BA LLB student and CLAT AIR 42.",
-    url: "https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/",
-    siteName: "Aqsa Zam Zam Mirza Johar Baig - Constitutional Law Blog",
+    title: "Aqsa Zam Zam Mirza Johar Baig | Software Developer & AI Enthusiast",
+    description: "Official portfolio of Aqsa Zam Zam Mirza Johar Baig, showcasing full-stack development, AI/ML projects, and cloud expertise.",
+    url: "https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app/",
+    siteName: "Aqsa Zam Zam Mirza Johar Baig Portfolio",
     locale: "en_IN",
     type: "website",
     images: [
@@ -55,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aqsa Zam Zam Mirza Johar Baig | Law Student & Legal Researcher",
-    description: "Explore the official portfolio and constitutional law blog of Aqsa Zam Zam Mirza Johar Baig, BA LLB student and CLAT AIR 42.",
-    images: ['https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/profile.png'],
+    title: "Aqsa Zam Zam Mirza Johar Baig | Software Developer & AI Enthusiast",
+    description: "Official portfolio of Aqsa Zam Zam Mirza Johar Baig, showcasing full-stack development, AI/ML projects, and cloud expertise.",
+    images: ['https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app/profile.png'],
   },
 };
 
@@ -73,8 +72,8 @@ export default function RootLayout({
     "alternateName": ["Aqsa Mirza", "Aqsa Johar Baig"],
     "url": "https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/",
     "image": "https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/profile.png",
-    "jobTitle": "Law Student & Legal Researcher",
-    "description": "BA LLB student, CLAT 2022 AIR 42, and legal researcher specializing in Constitutional Law, Human Rights, and Public Policy.",
+    "jobTitle": "Software Developer & AI/ML Specialist",
+    "description": "Computer Science student at VIIT Pune and BSc Data Science at IIT Madras, specializing in AI/ML, Full-stack development, and Cloud Architecture.",
     "nationality": {
       "@type": "Country",
       "name": "India"
@@ -82,16 +81,20 @@ export default function RootLayout({
     "alumniOf": [
       {
         "@type": "EducationalOrganization",
-        "name": "DR PANJABRAO DESHMUKH COLLEGE OF LAW, AMRAVATI"
+        "name": "Vishwakarma Institute of Information Technology (VIIT), Pune"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Indian Institute of Technology (IITM), Madras"
       }
     ],
     "affiliation": {
       "@type": "Organization",
-      "name": "National Human Rights Commission (NHRC)"
+      "name": "Mahalaxmi Tailors, FalcoVita"
     },
-    "knowsAbout": ["Constitutional Law", "Human Rights Law", "Medico-Legal Issues", "Public Policy", "Civil Litigation"],
+    "knowsAbout": ["Full-Stack Development", "Artificial Intelligence", "Machine Learning", "Cloud Architecture (AWS)", "Data Structures & Algorithms"],
     "sameAs": [
-      "https://www.linkedin.com/in/aqsa-zam-zam-mirza-johar-baig-28501b3b6/",
+      "https://www.linkedin.com/in/aqsamirza08",
       "https://github.com/AQSA-ZAM-ZAM-MIRZA-JOHAR-BAIG"
     ]
   };
@@ -99,8 +102,8 @@ export default function RootLayout({
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Aqsa Zam Zam Mirza Johar Baig - Constitutional Law Blog",
-    "url": "https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/",
+    "name": "Aqsa Zam Zam Mirza Johar Baig - Developer Portfolio",
+    "url": "https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app/",
     "author": {
       "@type": "Person",
       "name": "Aqsa Zam Zam Mirza Johar Baig"

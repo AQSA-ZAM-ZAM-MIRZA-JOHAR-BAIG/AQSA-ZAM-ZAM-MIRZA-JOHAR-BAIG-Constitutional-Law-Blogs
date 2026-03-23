@@ -18,69 +18,66 @@ export default async function Home() {
     console.error("Failed to fetch posts:", error);
   }
 
-  const constitutionalTopics = [
+  const technicalSkills = [
     {
-      icon: '⚖️',
-      title: 'Fundamental Rights',
-      articles: 'Articles 12–35',
-      desc: 'The bedrock of Indian democracy — enforceable rights guaranteeing equality, freedom, and protection against state arbitrariness.',
+      icon: '💻',
+      title: 'Programming',
+      details: 'Java, Python, C++, JavaScript',
+      desc: 'Building robust applications with object-oriented and functional paradigms.',
       color: '#6366f1',
     },
     {
-      icon: '🏛️',
-      title: 'Directive Principles',
-      articles: 'Articles 36–51',
-      desc: 'Non-justiciable guidelines directing state policy toward social and economic justice, inspired by the Irish Constitution.',
+      icon: '🌐',
+      title: 'Web Dev',
+      details: 'React, Vue, Node, Flask',
+      desc: 'Crafting responsive, high-performance UIs and scalable RESTful backends.',
       color: '#8b5cf6',
     },
     {
-      icon: '🔒',
-      title: 'Habeas Corpus & Writs',
-      articles: 'Articles 32 & 226',
-      desc: "Constitutional remedies — the 'heart and soul' of fundamental rights as described by Dr. Ambedkar. A citizen's shield against illegal detention.",
+      icon: '🤖',
+      title: 'AI & ML',
+      details: 'PyTorch, TensorFlow, Scikit-learn',
+      desc: 'Implementing supervised/unsupervised learning and deep neural networks.',
       color: '#a78bfa',
     },
     {
-      icon: '🗳️',
-      title: 'Federalism & Centre-State',
-      articles: 'Articles 245–263',
-      desc: 'India\'s "quasi-federal" structure — examining legislative, administrative and financial relations between Union and States.',
+      icon: '☁️',
+      title: 'Cloud & DevOps',
+      details: 'AWS (EC2, S3, RDS, Lambda)',
+      desc: 'Architecting scalable, fault-tolerant cloud infrastructures and CI/CD pipelines.',
       color: '#60a5fa',
     },
     {
-      icon: '📜',
-      title: 'Constitutional Amendments',
-      articles: 'Article 368',
-      desc: 'The delicate balance between parliamentary supremacy and constitutional rigidity — from the 42nd to the 101st Amendment.',
+      icon: '🗄️',
+      title: 'Databases',
+      details: 'PostgreSQL, MongoDB, Redis',
+      desc: 'Optimizing data storage and retrieval using SQL and NoSQL solutions.',
       color: '#34d399',
     },
     {
-      icon: '⚡',
-      title: 'Judicial Review',
-      articles: 'Basic Structure Doctrine',
-      desc: 'Kesavananda Bharati (1973) and beyond — how the Supreme Court acts as the guardian of the Constitution.',
+      icon: '🧠',
+      title: 'Core CS',
+      details: 'DSA, System Design, OS',
+      desc: 'Applying fundamental principles to solve complex engineering challenges.',
       color: '#f59e0b',
     },
   ];
 
-  const landmarks = [
+  const topProjects = [
     {
-      case: 'Kesavananda Bharati v. State of Kerala',
-      year: '1973',
-      principle: 'Basic Structure Doctrine',
-      desc: 'The Supreme Court held that while Parliament may amend the Constitution, it cannot alter its basic structure — perhaps the most consequential judgment in Indian constitutional history.',
+      name: 'Mahalaxmi Tailors',
+      tech: 'MERN, JWT, AWS, Razorpay',
+      desc: 'Full-stack production e-commerce platform with secure auth and cloud deployment.',
     },
     {
-      case: 'Maneka Gandhi v. Union of India',
-      year: '1978',
-      principle: 'Expanded Article 21',
-      desc: "Redefined 'procedure established by law' to mean just, fair and reasonable procedure — transforming Article 21 into a living, expanding fundamental right.",
+      name: 'FalcoVita',
+      tech: 'Vue, Flask, Redis, Celery',
+      desc: 'Scalable healthcare platform with asynchronous task pipelines and data visualization.',
     },
     {
-      case: 'S.R. Bommai v. Union of India',
-      year: '1994',
-      principle: "Presidential Rule (Art. 356)",
-      desc: "Curtailed arbitrary imposition of President's Rule, requiring floor-test to prove majority — a landmark in cooperative federalism.",
+      name: 'IPO Success Predictor',
+      tech: 'Python, Ensemble Learning',
+      desc: 'Machine learning model achieving 80% accuracy in predicting IPO performance.',
     },
   ];
 
@@ -121,7 +118,7 @@ export default async function Home() {
               letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '28px',
             }}>
               <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#a78bfa', display: 'inline-block' }}></span>
-              BA LLB · DR PANJABRAO DESHMUKH COLLEGE OF LAW
+              CS & ENGINEERING (AI & ML) · VIIT PUNE
             </div>
 
             <h1 style={{
@@ -144,21 +141,21 @@ export default async function Home() {
                 marginTop: '8px',
                 letterSpacing: '-0.01em',
               }}>
-                Law Student · Legal Researcher · Policy Enthusiast
+                Full-Stack Developer · AI/ML Resident · Cloud Architect
               </span>
             </h1>
 
             <p style={{ fontSize: '17px', color: '#94a3b8', lineHeight: '1.8', marginBottom: '24px', maxWidth: '540px' }}>
-              Passionate about constitutional law, human rights, and driving systemic change through meticulous research and litigation advocacy. Aspiring to contribute to <strong style={{ color: '#a78bfa' }}>NITI Aayog</strong> and India's policy landscape.
+              Specializing in Artificial Intelligence and Machine Learning with a focus on building <strong style={{ color: '#a78bfa' }}>scalable full-stack applications</strong> and cloud-based distributed systems.
             </p>
 
             {/* Stats row */}
             <div style={{ display: 'flex', gap: '28px', flexWrap: 'wrap', marginBottom: '36px' }}>
               {[
-                { num: 'AIR 42', label: 'CLAT 2022' },
-                { num: 'AIR 34', label: 'AILET 2022' },
-                { num: '77.34%', label: 'BA LLB Score' },
-                { num: '9+', label: 'Internships' },
+                { num: '8.77', label: 'VIIT CGPA' },
+                { num: '7.44', label: 'IITM CGPA' },
+                { num: '10+', label: 'AWS Services' },
+                { num: '5+', label: 'Live Projects' },
               ].map(stat => (
                 <div key={stat.label}>
                   <div style={{ fontSize: '22px', fontWeight: 800, color: '#a78bfa' }}>{stat.num}</div>
@@ -183,7 +180,7 @@ export default async function Home() {
                 border: '1px solid rgba(255,255,255,0.15)',
                 color: '#94a3b8', fontWeight: 600, fontSize: '15px',
                 textDecoration: 'none',
-              }}>Read My Blogs</Link>
+              }}>Read My Tech Blogs</Link>
             </div>
           </div>
 
@@ -210,7 +207,7 @@ export default async function Home() {
               }}>
                 <Image
                   src="/profile.png"
-                  alt="Aqsa Zam Zam Mirza Johar Baig - CLAT Ranker and BA LLB Student"
+                  alt="Aqsa Zam Zam Mirza Johar Baig - Software Developer"
                   fill
                   className="object-cover"
                   sizes="320px"
@@ -225,8 +222,8 @@ export default async function Home() {
                 borderRadius: '12px', padding: '10px 14px',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.6)',
               }}>
-                <div style={{ fontSize: '11px', color: '#64748b', fontWeight: 600, letterSpacing: '0.05em' }}>CLAT 2022</div>
-                <div style={{ fontSize: '18px', fontWeight: 800, color: '#a78bfa' }}>AIR 42</div>
+                <div style={{ fontSize: '11px', color: '#64748b', fontWeight: 600, letterSpacing: '0.05em' }}>CERTIFIED</div>
+                <div style={{ fontSize: '18px', fontWeight: 800, color: '#a78bfa' }}>AWS Practitioner</div>
               </div>
               <div style={{
                 position: 'absolute', top: '20px', left: '-16px', zIndex: 10,
@@ -235,15 +232,15 @@ export default async function Home() {
                 borderRadius: '12px', padding: '10px 14px',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.6)',
               }}>
-                <div style={{ fontSize: '11px', color: '#64748b', fontWeight: 600, letterSpacing: '0.05em' }}>AILET 2022</div>
-                <div style={{ fontSize: '18px', fontWeight: 800, color: '#60a5fa' }}>AIR 34</div>
+                <div style={{ fontSize: '11px', color: '#64748b', fontWeight: 600, letterSpacing: '0.05em' }}>DATA SCIENCE</div>
+                <div style={{ fontSize: '18px', fontWeight: 800, color: '#60a5fa' }}>IIT MADRAS</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ======= CONSTITUTIONAL LAW TOPICS ======= */}
+      {/* ======= TECHNICAL SKILLS ======= */}
       <section style={{ padding: '80px 24px', background: '#0a0a18' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
@@ -252,12 +249,12 @@ export default async function Home() {
               backgroundColor: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.25)',
               color: '#a78bfa', fontSize: '12px', fontWeight: 700, letterSpacing: '0.1em',
               textTransform: 'uppercase', marginBottom: '16px',
-            }}>Constitutional Law Coverage</div>
+            }}>Core Competencies</div>
             <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#f8fafc', letterSpacing: '-0.02em', lineHeight: 1.2, marginBottom: '16px' }}>
-              Core Areas of Constitutional Study
+              Modern Technology Stack
             </h2>
             <p style={{ fontSize: '17px', color: '#64748b', maxWidth: '540px', margin: '0 auto', lineHeight: 1.7 }}>
-              Deep dives into India's constitutional framework — from fundamental rights to emerging jurisprudence.
+              End-to-end development expertise from frontend aesthetics to backend scalability and AI integration.
             </p>
           </div>
 
@@ -266,49 +263,46 @@ export default async function Home() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
             gap: '20px',
           }}>
-            {constitutionalTopics.map((topic, i) => (
-              <Link href="/posts" key={i} style={{ textDecoration: 'none' }}>
+            {technicalSkills.map((skill, i) => (
+              <div key={i} style={{
+                padding: '28px',
+                borderRadius: '16px',
+                backgroundColor: '#0d0d1f',
+                border: `1px solid rgba(255,255,255,0.06)`,
+                transition: 'all 0.3s ease',
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '16px',
+                position: 'relative',
+                overflow: 'hidden',
+              }}>
+                {/* Gradient accent */}
                 <div style={{
-                  padding: '28px',
-                  borderRadius: '16px',
-                  backgroundColor: '#0d0d1f',
-                  border: `1px solid rgba(255,255,255,0.06)`,
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '16px',
-                  position: 'relative',
-                  overflow: 'hidden',
-                }}>
-                  {/* Gradient accent */}
+                  position: 'absolute', top: 0, left: 0, right: 0, height: '3px',
+                  background: `linear-gradient(90deg, ${skill.color}, transparent)`,
+                }} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                   <div style={{
-                    position: 'absolute', top: 0, left: 0, right: 0, height: '3px',
-                    background: `linear-gradient(90deg, ${topic.color}, transparent)`,
-                  }} />
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                    <div style={{
-                      width: '48px', height: '48px', borderRadius: '12px', flexShrink: 0,
-                      backgroundColor: `${topic.color}20`,
-                      border: `1px solid ${topic.color}40`,
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: '22px',
-                    }}>{topic.icon}</div>
-                    <div>
-                      <div style={{ color: '#f1f5f9', fontWeight: 700, fontSize: '16px', marginBottom: '2px' }}>{topic.title}</div>
-                      <div style={{ color: topic.color, fontSize: '12px', fontWeight: 600, letterSpacing: '0.05em' }}>{topic.articles}</div>
-                    </div>
+                    width: '48px', height: '48px', borderRadius: '12px', flexShrink: 0,
+                    backgroundColor: `${skill.color}20`,
+                    border: `1px solid ${skill.color}40`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: '22px',
+                  }}>{skill.icon}</div>
+                  <div>
+                    <div style={{ color: '#f1f5f9', fontWeight: 700, fontSize: '16px', marginBottom: '2px' }}>{skill.title}</div>
+                    <div style={{ color: skill.color, fontSize: '12px', fontWeight: 600, letterSpacing: '0.05em' }}>{skill.details}</div>
                   </div>
-                  <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.7', margin: 0 }}>{topic.desc}</p>
                 </div>
-              </Link>
+                <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.7', margin: 0 }}>{skill.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ======= LANDMARK JUDGMENTS ======= */}
+      {/* ======= FEATURED PROJECTS ======= */}
       <section style={{ padding: '80px 24px', background: 'linear-gradient(180deg, #0a0a18 0%, #080810 100%)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
@@ -317,17 +311,17 @@ export default async function Home() {
               backgroundColor: 'rgba(52,211,153,0.1)', border: '1px solid rgba(52,211,153,0.25)',
               color: '#34d399', fontSize: '12px', fontWeight: 700, letterSpacing: '0.1em',
               textTransform: 'uppercase', marginBottom: '16px',
-            }}>Landmark Judgments</div>
+            }}>Selected Work</div>
             <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#f8fafc', letterSpacing: '-0.02em', lineHeight: 1.2, marginBottom: '16px' }}>
-              Pillars of Indian Constitutional Law
+              Full-Stack & ML Projects
             </h2>
             <p style={{ fontSize: '17px', color: '#64748b', maxWidth: '540px', margin: '0 auto', lineHeight: 1.7 }}>
-              Cases that fundamentally shaped the constitutional framework of India.
+              Practical implementations of cloud-native apps and intelligent systems.
             </p>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            {landmarks.map((lm, i) => (
+            {topProjects.map((project, i) => (
               <div key={i} style={{
                 display: 'flex', alignItems: 'flex-start', gap: '24px', flexWrap: 'wrap',
                 padding: '28px', borderRadius: '16px',
@@ -342,66 +336,61 @@ export default async function Home() {
                 }}>{i + 1}</div>
                 <div style={{ flex: 1 }}>
                   <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '12px', marginBottom: '8px' }}>
-                    <h3 style={{ color: '#f1f5f9', fontWeight: 700, fontSize: '18px', margin: 0 }}>{lm.case}</h3>
+                    <h3 style={{ color: '#f1f5f9', fontWeight: 700, fontSize: '18px', margin: 0 }}>{project.name}</h3>
                     <span style={{
                       padding: '3px 12px', borderRadius: '100px', fontSize: '12px', fontWeight: 700,
                       backgroundColor: 'rgba(99,102,241,0.15)', color: '#a78bfa',
                       border: '1px solid rgba(99,102,241,0.3)',
-                    }}>{lm.year}</span>
-                    <span style={{
-                      padding: '3px 12px', borderRadius: '100px', fontSize: '12px', fontWeight: 700,
-                      backgroundColor: 'rgba(52,211,153,0.1)', color: '#34d399',
-                      border: '1px solid rgba(52,211,153,0.25)',
-                    }}>{lm.principle}</span>
+                    }}>{project.tech}</span>
                   </div>
-                  <p style={{ color: '#64748b', fontSize: '15px', lineHeight: '1.7', margin: 0 }}>{lm.desc}</p>
+                  <p style={{ color: '#64748b', fontSize: '15px', lineHeight: '1.7', margin: 0 }}>{project.desc}</p>
                 </div>
               </div>
             ))}
           </div>
 
           <div style={{ textAlign: 'center', marginTop: '40px' }}>
-            <Link href="/posts" style={{
+            <Link href="/experience" style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               padding: '13px 32px', borderRadius: '12px',
               border: '1px solid rgba(99,102,241,0.4)',
               color: '#a78bfa', fontWeight: 600, fontSize: '15px',
               textDecoration: 'none', backgroundColor: 'rgba(99,102,241,0.08)',
-            }}>Explore All Constitutional Articles →</Link>
+            }}>Explore All Experience & Certs →</Link>
           </div>
         </div>
       </section>
 
-      {/* ======= EXPERTISE CARDS ======= */}
+      {/* ======= ACADEMIC CARDS ======= */}
       <section style={{ padding: '80px 24px', background: '#0a0a18' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#f8fafc', letterSpacing: '-0.02em', lineHeight: 1.2, marginBottom: '16px' }}>
-              Excellence in Legal Studies & Research
+              Education & Industry Programs
             </h2>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
             {[
               {
-                icon: '🏆',
-                title: 'Top Academic Ranks',
-                desc: 'Secured CLAT 2022 AIR 42 and AILET 2022 AIR 34, among the top-ranked law aspirants nationally. 10th: 97.4% · 12th PCM: 95%',
-                link: '/about', linkText: 'About AQSA MIRZA →',
+                icon: '🎓',
+                title: 'VIIT & IIT Madras',
+                desc: 'Pursuing B.Tech at VIIT Pune (8.77 CGPA) and B.Sc in Data Science at IIT Madras (7.44 CGPA). Focus on AI, ML, and scalable architecture.',
+                link: '/about', linkText: 'Academic Profile →',
                 color: '#f59e0b',
               },
               {
-                icon: '🏛️',
-                title: 'NHRC Internship',
-                desc: 'Gained invaluable experience at the National Human Rights Commission (Jan–Feb 2025), analyzing human rights violations and statutory protection mechanisms.',
-                link: '/experience', linkText: 'Explore All Internships →',
+                icon: '🛠️',
+                title: 'Industry Experience',
+                desc: 'Developed 5+ responsive apps via EduSkills and deployed 3+ cloud apps using 15+ AWS services. Reduced page loads by 30% through optimization.',
+                link: '/experience', linkText: 'Work Experience →',
                 color: '#6366f1',
               },
               {
-                icon: '🎤',
-                title: 'Moots & Advocacy',
-                desc: 'Runner-up at 1st Jadhavar National Moot Court 2025. Winner – Yuva Bhushan Competition 2025. 2nd Best Speaker – 3rd AIU National Moot 2024.',
-                link: '/moots-awards', linkText: 'View Moots & Awards →',
+                icon: '📜',
+                title: 'Certifications',
+                desc: 'Microsoft Azure Fundamentals (AZ-900) & Oracle Cloud Infrastructure 2025 Certified Generative AI Professional.',
+                link: '/publications', linkText: 'View Certifications →',
                 color: '#34d399',
               },
             ].map((card, i) => (
@@ -429,63 +418,14 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ======= RECENT BLOG POSTS ======= */}
-      {recentPosts.length > 0 && (
-        <section style={{ padding: '80px 24px', background: '#080810' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '40px', flexWrap: 'wrap', gap: '16px' }}>
-              <div>
-                <div style={{ color: '#6366f1', fontSize: '13px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
-                  CONSTITUTIONAL LAW
-                </div>
-                <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 36px)', fontWeight: 800, color: '#f8fafc', margin: 0, letterSpacing: '-0.02em' }}>Latest Insights & Articles</h2>
-              </div>
-              <Link href="/posts" style={{ color: '#a78bfa', fontWeight: 600, fontSize: '14px', textDecoration: 'none' }}>View All Posts →</Link>
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
-              {recentPosts.map((post: any) => (
-                <Link href={`/posts/${post.slug || post._id}`} key={post._id.toString()} style={{ textDecoration: 'none' }}>
-                  <div style={{
-                    padding: '28px', borderRadius: '16px',
-                    backgroundColor: '#0d0d1f',
-                    border: '1px solid rgba(255,255,255,0.06)',
-                    display: 'flex', flexDirection: 'column', gap: '14px',
-                    height: '100%', cursor: 'pointer',
-                    transition: 'border-color 0.2s',
-                  }}>
-                    <div style={{
-                      fontSize: '11px', fontWeight: 700, letterSpacing: '0.1em',
-                      textTransform: 'uppercase', color: '#6366f1',
-                    }}>{post.category}</div>
-                    <h3 style={{ color: '#f1f5f9', fontWeight: 700, fontSize: '18px', lineHeight: 1.4, margin: 0 }}>{post.title}</h3>
-                    <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.6', margin: 0, flex: 1,
-                      display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden',
-                    }}>{post.summary}</p>
-                    <div style={{
-                      display: 'flex', justifyContent: 'space-between',
-                      paddingTop: '14px', borderTop: '1px solid rgba(255,255,255,0.06)',
-                      fontSize: '13px', color: '#475569',
-                    }}>
-                      <span style={{ fontWeight: 600 }}>{post.author?.name || 'AQSA MIRZA'}</span>
-                      <span>{new Date(post.publishedAt || post.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* ======= FAQ & SEO Entity ======= */}
       <section style={{ padding: '80px 24px', background: '#0a0a18' }}>
         <div style={{ maxWidth: '700px', margin: '0 auto' }}>
           {/* Hidden SEO text block for googlebot entity association */}
           <div style={{ display: 'none' }} aria-hidden="true">
-            Aqsa Zam Zam Mirza Johar Baig is an aspiring Indian constitutional lawyer and public policy advocate. 
-            Often searched as Aqsa Mirza or Aqsa Johar Baig, she attained an exceptional CLAT 2022 AIR 42 ranking 
-            and AILET AIR 34. Through this constitutional law blog, Aqsa Zam Zam Mirza Johar Baig shares her insights.
+            Aqsa Zam Zam Mirza Johar Baig is a software developer and AI/ML specialist based in Pune.
+            Also known as Aqsa Mirza, she is pursuing Computer Science at VIIT Pune and Data Science at IIT Madras.
+            Her portfolio showcases expertise in full-stack development, AWS cloud, and machine learning.
           </div>
 
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
@@ -495,10 +435,10 @@ export default async function Home() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {[
-              { q: 'Who is Aqsa Zam Zam Mirza Johar Baig?', a: 'Aqsa Zam Zam Mirza Johar Baig is a BA LLB student at Dr. Panjabrao Deshmukh College of Law, Amravati. She is a legal researcher, public policy enthusiast, and aspires to contribute to NITI Aayog.' },
-              { q: 'What is Aqsa Zam Zam Mirza Johar Baig\'s academic background?', a: 'She secured All India Rank (AIR) 42 in CLAT 2022 and AIR 34 in AILET 2022. She has deep interests in constitutional law and human rights, holding an aggregate of 77.34% after 5 semesters.' },
-              { q: 'What internships has Aqsa Zam Zam Mirza Johar Baig completed?', a: 'She has completed multiple internships including a prominent stint at the National Human Rights Commission (NHRC), Juris Centre, Medilaw, NayaLegal, AGISS Research Institute, and various trial court chambers.' },
-              { q: 'How to contact Aqsa Zam Zam Mirza Johar Baig?', a: 'You can contact Aqsa Zam Zam Mirza Johar Baig via the Contact page on this site, her LinkedIn profile, or by emailing aqsajoharbaig@gmail.com.' },
+              { q: 'Who is Aqsa Zam Zam Mirza Johar Baig?', a: 'Aqsa Zam Zam Mirza Johar Baig is a Computer Science undergraduate at VIIT Pune and a Data Science student at IIT Madras, specializing in AI/ML and full-stack development.' },
+              { q: 'What are Aqsa\'s primary technical skills?', a: 'Her core skills include Java, Python, JavaScript, React.js, AWS Cloud, and Machine Learning frameworks like PyTorch and TensorFlow.' },
+              { q: 'What significant projects has she built?', a: 'Key projects include Mahalaxmi Tailors (MERN/AWS), FalcoVita (Flask/Vue/Redis), and an IPO Success Predictor (Machine Learning).' },
+              { q: 'How to contact Aqsa Zam Zam Mirza Johar Baig?', a: 'You can contact her via the Contact page, LinkedIn (aqsamirza08), or GitHub (AQSA-ZAM-ZAM-MIRZA-JOHAR-BAIG).' },
             ].map((faq, i) => (
               <div key={i} style={{
                 padding: '20px 24px', borderRadius: '12px',
@@ -520,22 +460,22 @@ export default async function Home() {
                   {
                     "@type": "Question",
                     "name": "Who is Aqsa Zam Zam Mirza Johar Baig?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Aqsa Zam Zam Mirza Johar Baig is a BA LLB student at Dr. Panjabrao Deshmukh College of Law, Amravati. She is a legal researcher, public policy enthusiast, and aspires to contribute to NITI Aayog." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "Aqsa Zam Zam Mirza Johar Baig is a Computer Science undergraduate at VIIT Pune and a Data Science student at IIT Madras, specializing in AI/ML and full-stack development." }
                   },
                   {
                     "@type": "Question",
-                    "name": "What is Aqsa Zam Zam Mirza Johar Baig's academic background?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "She secured All India Rank (AIR) 42 in CLAT 2022 and AIR 34 in AILET 2022. She has deep interests in constitutional law and human rights, holding an aggregate of 77.34% after 5 semesters." }
+                    "name": "What are Aqsa's primary technical skills?",
+                    "acceptedAnswer": { "@type": "Answer", "text": "Her core skills include Java, Python, JavaScript, React.js, AWS Cloud, and Machine Learning frameworks like PyTorch and TensorFlow." }
                   },
                   {
                     "@type": "Question",
-                    "name": "What internships has Aqsa Zam Zam Mirza Johar Baig completed?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "She has completed multiple internships including a prominent stint at the National Human Rights Commission (NHRC), Juris Centre, Medilaw, NayaLegal, AGISS Research Institute, and various trial court chambers." }
+                    "name": "What significant projects has she built?",
+                    "acceptedAnswer": { "@type": "Answer", "text": "Key projects include Mahalaxmi Tailors (MERN/AWS), FalcoVita (Flask/Vue/Redis), and an IPO Success Predictor (Machine Learning)." }
                   },
                   {
                     "@type": "Question",
                     "name": "How to contact Aqsa Zam Zam Mirza Johar Baig?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "You can contact Aqsa Zam Zam Mirza Johar Baig via the Contact page on this site, her LinkedIn profile, or by emailing aqsajoharbaig@gmail.com." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "You can contact her via the Contact page, LinkedIn (aqsamirza08), or GitHub (AQSA-ZAM-ZAM-MIRZA-JOHAR-BAIG)." }
                   }
                 ]
               })
@@ -560,10 +500,10 @@ export default async function Home() {
               pointerEvents: 'none',
             }} />
             <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#f8fafc', letterSpacing: '-0.02em', marginBottom: '16px' }}>
-              Reach Out for Opportunities
+              Let's Build Something Great
             </h2>
             <p style={{ fontSize: '18px', color: '#94a3b8', maxWidth: '540px', margin: '0 auto 36px', lineHeight: '1.7' }}>
-              Open to opportunities in policy research, legal research, and internships at institutions like <strong style={{ color: '#a78bfa' }}>NITI Aayog</strong>.
+              Open to roles in Software Engineering, AI Research, and Cloud Architecture.
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link href="/contact" style={{

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app';
+  const baseUrl = 'https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app';
   
   return [
     {

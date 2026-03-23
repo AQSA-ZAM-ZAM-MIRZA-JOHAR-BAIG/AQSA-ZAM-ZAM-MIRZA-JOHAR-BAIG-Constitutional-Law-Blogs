@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Aqsa Zam Zam Mirza Johar Baig | Official Profile & Legal Researcher",
-  description: "The official profile of Aqsa Zam Zam Mirza Johar Baig, CLAT AIR 42, BA LLB student at Dr Panjabrao Deshmukh College of Law, Amravati. Constitutional law researcher and public policy enthusiast.",
+  title: "Aqsa Zam Zam Mirza Johar Baig | Official Profile & Software Engineer",
+  description: "The official profile of Aqsa Zam Zam Mirza Johar Baig, Computer Science student at VIIT Pune and Data Science student at IIT Madras. Specializing in AI/ML, Full-stack dev, and Cloud.",
   alternates: {
     canonical: "/aqsa-zam-zam-mirza-johar-baig",
   },
@@ -18,12 +18,12 @@ export default function NameDisambiguationPage() {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/"
+      "item": "https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app/"
     },{
       "@type": "ListItem",
       "position": 2,
       "name": "Aqsa Zam Zam Mirza Johar Baig",
-      "item": "https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/aqsa-zam-zam-mirza-johar-baig"
+      "item": "https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app/aqsa-zam-zam-mirza-johar-baig"
     }]
   };
 
@@ -54,10 +54,10 @@ export default function NameDisambiguationPage() {
             Aqsa Zam Zam Mirza Johar Baig
           </h1>
           <p style={{ fontSize: '20px', color: '#a78bfa', fontWeight: 600, marginBottom: '24px' }}>
-            BA LLB Student, CLAT AIR 42, Legal Researcher
+            Software Developer, AI/ML Specialist, Cloud Architect
           </p>
           <div style={{ maxWidth: '600px', margin: '0 auto', color: '#94a3b8', fontSize: '16px', lineHeight: 1.8 }}>
-            <p>Welcome to the official profile of <strong>Aqsa Zam Zam Mirza Johar Baig</strong>. This page provides a comprehensive overview of my academic achievements, legal research experience, and professional aspirations in constitutional law and public policy.</p>
+            <p>Welcome to the official profile of <strong>Aqsa Zam Zam Mirza Johar Baig</strong>. This page provides a comprehensive overview of my technical expertise, academic background in Computer Science, and my journey in building scalable intelligent systems.</p>
           </div>
         </header>
 
@@ -69,22 +69,15 @@ export default function NameDisambiguationPage() {
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
               <span style={{ color: '#8b5cf6', marginTop: '4px' }}>▹</span>
               <div>
-                <strong style={{ display: 'block', color: '#f8fafc', fontSize: '16px' }}>BA LLB (5-Year Integrated Course)</strong>
-                <span style={{ fontSize: '15px', color: '#94a3b8' }}>Dr. Panjabrao Deshmukh College of Law, Amravati (77.34% aggregate)</span>
+                <strong style={{ display: 'block', color: '#f8fafc', fontSize: '16px' }}>B.Tech in Computer Science & Engineering (AI & ML)</strong>
+                <span style={{ fontSize: '15px', color: '#94a3b8' }}>Vishwakarma Institute of Information Technology (VIIT), Pune (8.77 CGPA)</span>
               </div>
             </li>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
               <span style={{ color: '#8b5cf6', marginTop: '4px' }}>▹</span>
               <div>
-                <strong style={{ display: 'block', color: '#f8fafc', fontSize: '16px' }}>CLAT 2022 Top Ranker</strong>
-                <span style={{ fontSize: '15px', color: '#94a3b8' }}>Secured All India Rank (AIR) 42 in the Common Law Admission Test under specific categories.</span>
-              </div>
-            </li>
-            <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-              <span style={{ color: '#8b5cf6', marginTop: '4px' }}>▹</span>
-              <div>
-                <strong style={{ display: 'block', color: '#f8fafc', fontSize: '16px' }}>AILET 2022 Top Ranker</strong>
-                <span style={{ fontSize: '15px', color: '#94a3b8' }}>Secured All India Rank (AIR) 34 in the All India Law Entrance Test.</span>
+                <strong style={{ display: 'block', color: '#f8fafc', fontSize: '16px' }}>B.S. in Data Science</strong>
+                <span style={{ fontSize: '15px', color: '#94a3b8' }}>Indian Institute of Technology (IITM), Madras (7.44 CGPA)</span>
               </div>
             </li>
           </ul>
@@ -92,13 +85,13 @@ export default function NameDisambiguationPage() {
 
         <section style={{ marginBottom: '60px' }}>
           <h2 style={{ fontSize: '24px', fontWeight: 700, color: '#f1f5f9', marginBottom: '24px', borderBottom: '1px solid #1e1e38', paddingBottom: '12px' }}>
-            Recent Legal Research Experience
+            Featured Software Engineering Work
           </h2>
           <div style={{ backgroundColor: '#0d0d1f', border: '1px solid rgba(99,102,241,0.2)', padding: '24px', borderRadius: '12px' }}>
-            <h3 style={{ fontSize: '18px', fontWeight: 600, color: '#e2e8f0', marginBottom: '8px' }}>National Human Rights Commission (NHRC)</h3>
-            <p style={{ fontSize: '14px', color: '#8b5cf6', fontWeight: 600, marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Winter Intern | Jan 2025 – Feb 2025</p>
+            <h3 style={{ fontSize: '18px', fontWeight: 600, color: '#e2e8f0', marginBottom: '8px' }}>Full-Stack Development & Cloud Deployment</h3>
+            <p style={{ fontSize: '14px', color: '#8b5cf6', fontWeight: 600, marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>MERN & AWS Expert</p>
             <p style={{ color: '#94a3b8', fontSize: '15px', lineHeight: 1.7, margin: 0 }}>
-              As an intern at the NHRC, <strong>Aqsa Zam Zam Mirza Johar Baig</strong> analyzed human rights violations, examined statutory protection mechanisms, and assisted in drafting complaints and reports under the supervision of senior officers.
+              <strong>Aqsa Zam Zam Mirza Johar Baig</strong> has successfully built and deployed production-ready applications like Mahalaxmi Tailors and FalcoVita. Her expertise includes architecting serverless functions on AWS Lambda, managing NoSQL clusters, and implementing high-security auth protocols.
             </p>
           </div>
         </section>

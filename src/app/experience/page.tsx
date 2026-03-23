@@ -2,93 +2,71 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Legal Internships & Experience | Aqsa Zam Zam Mirza Johar Baig',
-  description: 'Timeline of Aqsa Zam Zam Mirza Johar Baig’s legal internships including the National Human Rights Commission (NHRC), trial courts, and various legal research institutes.',
+  title: 'Software Development Experience | Aqsa Zam Zam Mirza Johar Baig',
+  description: 'Timeline of industries programs (AWS, Google, EduSkills) and full-stack development projects by Aqsa Zam Zam Mirza Johar Baig.',
 };
 
 const experiences = [
   {
-    role: "Legal Intern",
-    organization: "National Human Rights Commission (NHRC)",
-    period: "Jan 27, 2025 – Feb 7, 2025",
+    role: "Full Stack Developer (E-commerce)",
+    organization: "Mahalaxmi Tailors (mahalaxmi-tailors.shop)",
+    period: "Dec 2025 – Jan 2026",
     details: [
-      "Conducted in-depth human rights analysis on emerging socio-legal issues.",
-      "Assisted in drafting research summaries and reviewing complaints regarding human rights violations.",
-      "Gained firsthand exposure to the statutory mechanisms of human rights protection in India."
+      "Designed a production-ready MERN platform supporting 70+ registered users with JWT/RBAC security.",
+      "Integrated Razorpay, Cloudinary, and Jitsi Meet for seamless payment, storage, and conferencing.",
+      "Architected deployment on AWS using IAM, S3, Route 53, EC2, CloudFront, and CloudWatch.",
+      "Improved reliability using API rate-limiting and security through Helmet and continuous monitoring."
     ]
   },
   {
-    role: "Legal Intern",
-    organization: "Juris Centre",
-    period: "Nov 2024",
+    role: "Lead Full Stack Developer",
+    organization: "FalcoVita (falcovita.vercel.app)",
+    period: "Sept 2025 – Dec 2025",
     details: [
-      "Authored extensive legal research articles focusing on constitutional and criminal law.",
-      "Drafted legal briefs and case summaries to assist in ongoing advisory matters.",
-      "Collaborated with senior researchers to analyze recent landmark Supreme Court judgments."
+      "Architected a scalable healthcare platform using Vue.js, Flask, and SQLite.",
+      "Implemented asynchronous task pipelines with Celery and Redis, significantly reducing request latency.",
+      "Developed 20+ interactive data visualizations using Chart.js to enable exploratory data analysis (EDA).",
+      "Secured application with Bcrypt, Argon2, and HMAC-SHA cryptographic algorithms."
     ]
   },
   {
-    role: "Law Intern",
-    organization: "Medilaw",
-    period: "Oct 2024",
+    role: "ML Engineer",
+    organization: "IPO-Success-Predictor",
+    period: "Jan 2025 – Mar 2025",
     details: [
-      "Specialized in medico-legal research, analyzing the intersection of healthcare policies, medical negligence, and patient rights.",
-      "Reviewed case files regarding medical malpractice and statutory compliance of healthcare facilities."
+      "Achieved 80% prediction accuracy using Ensemble Learning (Bagging, Boosting) on real-world datasets.",
+      "Automated the end-to-end ML pipeline reducing manual analysis time and ensuring repeatable insights.",
+      "Deployed model on Hugging Face spaces with an interactive web interface for near real-time assessment."
     ]
   },
   {
-    role: "Legal Research Intern",
-    organization: "NayaLegal",
-    period: "Sept 10, 2024 – Oct 10, 2024",
+    role: "AI & ML Trainee",
+    organization: "Google – AICTE Industry Program",
+    period: "Oct 2024 – Dec 2024",
     details: [
-      "Contributed to policy research initiatives assessing the impact of new quasi-judicial tribunal rules.",
-      "Prepared comparative legal analysis reports highlighting gaps in current commercial litigation frameworks."
+      "Applied supervised and unsupervised learning techniques on complex datasets.",
+      "Mastered data preprocessing and model performance evaluation using 10+ validation metrics.",
+      "Gained hands-on experience with PyTorch and TensorFlow for building neural networks."
     ]
   },
   {
-    role: "Legal Research Intern",
-    organization: "AGISS Research Institute",
-    period: "Aug 10, 2024 – Sept 10, 2024",
+    role: "AWS Cloud Practitioner",
+    organization: "AWS – Cloud Practices Program",
+    period: "Jul 2024 – Sept 2024",
     details: [
-      "Participated in quantitative and qualitative legal research projects aimed at institutional reform.",
-      "Drafted abstracts and assisted in the compilation of policy papers directed at legislative feedback."
+      "Implemented 15+ AWS services to design and deploy highly available cloud-based applications.",
+      "Deployed 3+ scalable and fault-tolerant architectures using EC2, RDS, and Lambda.",
+      "Utilized CloudFormation and IAM for Infrastructure as Code (IaC) and secure resource management."
     ]
   },
   {
-    role: "Legal Intern",
-    organization: "Rahul & Jayshree Associates & Co.",
-    period: "July 1 – July 31, 2024",
+    role: "Web Development Intern",
+    organization: "EduSkills – Industry Program",
+    period: "Apr 2024 – Jun 2024",
     details: [
-      "Observed civil litigation proceedings and assisted in the preparation of plaints, written statements, and affidavits.",
-      "Conducted due diligence and client interaction to support trial court advocacy."
-    ]
-  },
-  {
-    role: "Legal Intern",
-    organization: "Chamber of Advocate Quazi Attibuddin M",
-    period: "Dec 2023 – Feb 2024",
-    details: [
-      "Aided in legal drafting of bail applications, criminal revisions, and appeals.",
-      "Conducted extensive case law research to formulate arguments for criminal litigation matters.",
-      "Shadowed the advocate during cross-examinations and final arguments in District Court."
-    ]
-  },
-  {
-    role: "Legal Intern",
-    organization: "Advocate Milind Deshpande",
-    period: "May 2023 – Sept 2023",
-    details: [
-      "Supported documentation and filing processes in civil and family law disputes.",
-      "Researched localized state laws and procedural rules to assist in everyday chamber practice."
-    ]
-  },
-  {
-    role: "Legal Intern",
-    organization: "Advocate Abdul Hakim",
-    period: "Dec 2022 – Feb 2023",
-    details: [
-      "Gained foundational exposure to litigation practice, observing court decorum, filing procedures, and client counseling.",
-      "Assisted in organizing case briefs and maintaining chamber records."
+      "Built 5+ responsive web applications using HTML, CSS, JavaScript, and Bootstrap.",
+      "Implemented backend integrations which reduced page load time by 30% and improved UX.",
+      "Collaborated in a team environment following agile methodologies for sprint-based delivery."
     ]
   }
 ];
@@ -99,9 +77,9 @@ export default function Experience() {
       <Breadcrumbs items={[{ label: 'Experience', href: '/experience' }]} />
       
       <div className="mt-8 mb-12 text-center md:text-left">
-        <h1 className="text-4xl font-bold mb-4 font-serif">Internships & Professional Experience</h1>
+        <h1 className="text-4xl font-bold mb-4 font-serif">Projects & Industrial Experience</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-          A comprehensive timeline of Aqsa Zam Zam Mirza Johar Baig's practical exposure in legal research, litigation, and public policy advocacy.
+          A comprehensive record of Aqsa Zam Zam Mirza Johar Baig's technical journey in software engineering, AI/ML research, and cloud architecture.
         </p>
         <p className="text-sm text-gray-500 italic mt-4">Author: Aqsa Zam Zam Mirza Johar Baig | Last Updated: March 2026</p>
       </div>

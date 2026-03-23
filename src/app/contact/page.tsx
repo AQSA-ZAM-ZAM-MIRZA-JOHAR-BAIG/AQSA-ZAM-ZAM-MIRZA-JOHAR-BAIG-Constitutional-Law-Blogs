@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Contact Aqsa Zam Zam Mirza Johar Baig',
-  description: 'Reach out to Aqsa Zam Zam Mirza Johar Baig for legal research, public policy opportunities, or internships at institutions like NITI Aayog.',
+  title: 'Contact Aqsa Zam Zam Mirza Johar Baig | Software Engineer',
+  description: 'Get in touch with Aqsa Zam Zam Mirza Johar Baig for software development collaborations, AI/ML projects, or cloud architecture consulting.',
 };
 
 export default function Contact() {
@@ -14,7 +14,7 @@ export default function Contact() {
       <div className="text-center mt-10 mb-14">
         <h1 className="text-4xl font-bold mb-4 font-serif">Get In Touch</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Reach out for opportunities in policy research, legal research, and internships at institutions like NITI Aayog. Aqsa Zam Zam Mirza Johar Baig is open to collaborative academic drafting and advocacy roles.
+          Interested in building something together? Whether it's a full-stack application, an AI model, or a cloud-native system, I'm always open to discussing new opportunities and technical collaborations.
         </p>
       </div>
 
@@ -26,22 +26,22 @@ export default function Contact() {
             <div>
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Email</h3>
               <p className="text-lg text-blue-600 dark:text-blue-400 font-medium">
-                <a href="mailto:aqsajoharbaig@gmail.com" className="hover:underline">aqsajoharbaig@gmail.com</a>
+                <a href="mailto:aqsamirz6306@gmail.com" className="hover:underline">aqsamirz6306@gmail.com</a>
               </p>
             </div>
             <div>
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Location</h3>
-              <p className="text-lg text-gray-800 dark:text-gray-200">Amravati / Nagpur Region, Maharashtra, India</p>
+              <p className="text-lg text-gray-800 dark:text-gray-200">Pune, Maharashtra, India</p>
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Institution</h3>
-              <p className="text-lg text-gray-800 dark:text-gray-200">DR PANJABRAO DESHMUKH COLLEGE OF LAW</p>
+              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Education</h3>
+              <p className="text-lg text-gray-800 dark:text-gray-200">VIIT Pune | IIT Madras (Data Science)</p>
             </div>
             
             <div className="pt-8 mt-4 border-t border-gray-200 dark:border-gray-700">
                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Connect on Social</h3>
                <div className="flex space-x-4">
-                 <a href="https://linkedin.com/in/aqsa-zam-zam-mirza-johar-baig-28501b3b6/" target="_blank" rel="noopener noreferrer" className="px-5 py-2 bg-[#0A66C2] text-white rounded font-medium hover:bg-blue-800 transition shadow-sm">LinkedIn</a>
+                 <a href="https://www.linkedin.com/in/aqsamirza08" target="_blank" rel="noopener noreferrer" className="px-5 py-2 bg-[#0A66C2] text-white rounded font-medium hover:bg-blue-800 transition shadow-sm">LinkedIn</a>
                  <a href="https://github.com/AQSA-ZAM-ZAM-MIRZA-JOHAR-BAIG" target="_blank" rel="noopener noreferrer" className="px-5 py-2 bg-gray-900 dark:bg-black text-white rounded font-medium hover:bg-gray-800 transition shadow-sm border border-gray-700">GitHub</a>
                </div>
             </div>
@@ -62,7 +62,7 @@ export default function Contact() {
             </div>
             <div>
               <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
-              <input type="text" id="subject" className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-50 dark:bg-gray-900 dark:border-gray-600 dark:text-white px-4 py-3 transition" placeholder="Legal Research Opportunity" required />
+              <input type="text" id="subject" className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-50 dark:bg-gray-900 dark:border-gray-600 dark:text-white px-4 py-3 transition" placeholder="Project Collaboration" required />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>

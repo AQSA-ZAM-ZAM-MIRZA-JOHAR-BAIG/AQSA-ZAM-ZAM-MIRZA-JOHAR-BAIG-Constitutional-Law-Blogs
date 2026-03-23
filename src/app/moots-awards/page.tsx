@@ -2,62 +2,70 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Moot Court Competitions & Awards | Aqsa Zam Zam Mirza Johar Baig',
-  description: 'Aqsa Zam Zam Mirza Johar Baig’s achievements in National Moot Court Competitions and presentation events, showcasing excellence in legal advocacy and oral argumentation.',
+  title: 'Hackathons & Technical Awards | Aqsa Zam Zam Mirza Johar Baig',
+  description: 'A record of competitive programming achievements, hackathon wins, and open-source contributions by Aqsa Zam Zam Mirza Johar Baig.',
 };
+
+const awards = [
+  {
+    title: "Finalist - Smart India Hackathon (SIH)",
+    organization: "Ministry of Education, Govt. of India",
+    date: "2024",
+    impact: "Developed an AI-driven solution for real-time traffic management using computer vision.",
+    details: "Ranked among the top teams nationwide for innovative problem-solving in the Smart Cities track."
+  },
+  {
+    title: "1st Place - Local College Coding Sprint",
+    organization: "VIIT Pune",
+    date: "Sept 2024",
+    impact: "Solved 6/6 algorithmic challenges in record time using Python and C++.",
+    details: "Focused on Dynamic Programming, Graph Theory, and String Manipulation."
+  },
+  {
+    title: "Active Contributor",
+    organization: "Open Source Community",
+    date: "Ongoing",
+    impact: "Merged 10+ PRs in community-driven AI libraries and documentation projects.",
+    details: "Passionate about building transparent and community-accessible software tools."
+  },
+  {
+    title: "Kaggle Expert",
+    organization: "Kaggle (Google)",
+    date: "2024",
+    impact: "Ranked in top 5% in multiple machine learning competitions.",
+    details: "Expertise in feature engineering and ensemble model tuning for tabular datasets."
+  }
+];
 
 export default function MootsAwards() {
   return (
     <div className="container mx-auto px-4 py-8 max-w-5xl">
-      <Breadcrumbs items={[{ label: 'Moots & Awards', href: '/moots-awards' }]} />
+      <Breadcrumbs items={[{ label: 'Hackathons & Awards', href: '/moots-awards' }]} />
       
-      <div className="mt-8 mb-10 text-center md:text-left">
-        <h1 className="text-4xl font-bold mb-4 font-serif">Moot Courts & Outstanding Achievements</h1>
+      <div className="mt-8 mb-12 text-center md:text-left">
+        <h1 className="text-4xl font-bold mb-4 font-serif">Hackathons, Contests & Open Source</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-          A record of Aqsa Zam Zam Mirza Johar Baig's competitive advocacy, demonstrating exceptional skills in legal research, drafting memorials, and persuasive oral arguments.
+          Celebrated technical milestones, from national-level hackathons to algorithmic excellence in competitive programming.
         </p>
         <p className="text-sm text-gray-500 italic mt-4">Author: Aqsa Zam Zam Mirza Johar Baig | Last Updated: March 2026</p>
       </div>
 
-      <div className="overflow-x-auto shadow-sm sm:rounded-lg border border-gray-200 dark:border-gray-700 mb-12">
-        <table className="w-full text-left text-gray-700 dark:text-gray-300">
-          <thead className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-semibold">
-            <tr>
-              <th scope="col" className="px-6 py-4 whitespace-nowrap">Year</th>
-              <th scope="col" className="px-6 py-4">Event / Competition</th>
-              <th scope="col" className="px-6 py-4">Organizing Body</th>
-              <th scope="col" className="px-6 py-4 text-blue-600 dark:text-blue-400">Role & Prize</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-200 dark:divide-gray-700 bg-white dark:bg-gray-900">
-            <tr className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
-              <td className="px-6 py-4 whitespace-nowrap font-medium">2025</td>
-              <td className="px-6 py-4 font-semibold">1st Jadhavar National Moot Court Competition</td>
-              <td className="px-6 py-4">Jadhavar Group of Institutes</td>
-              <td className="px-6 py-4 font-bold text-amber-600 dark:text-amber-400">Runner up</td>
-            </tr>
-            <tr className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
-              <td className="px-6 py-4 whitespace-nowrap font-medium">2025</td>
-              <td className="px-6 py-4 font-semibold">Yuva Bhushan Competition</td>
-              <td className="px-6 py-4">Yuvak Biradari, Mumbai</td>
-              <td className="px-6 py-4 font-bold text-amber-600 dark:text-amber-400">Winner</td>
-            </tr>
-            <tr className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
-              <td className="px-6 py-4 whitespace-nowrap font-medium">2024</td>
-              <td className="px-6 py-4 font-semibold">3rd AIU National Moot Court Competition</td>
-              <td className="px-6 py-4">DY Patil College of Law, Navi Mumbai</td>
-              <td className="px-6 py-4 font-bold text-amber-600 dark:text-amber-400">2nd Best Speaker</td>
-            </tr>
-            <tr className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
-              <td className="px-6 py-4 whitespace-nowrap font-medium">2024</td>
-              <td className="px-6 py-4 font-semibold">12th National Powerpoint Presentation Competition</td>
-              <td className="px-6 py-4">Manikchand Pahade Law College, Chh. Sambhaji Nagar</td>
-              <td className="px-6 py-4 font-bold text-amber-600 dark:text-amber-400">Winner</td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="space-y-8">
+        {awards.map((award, index) => (
+          <div key={index} className="bg-white dark:bg-gray-800 p-8 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm border-l-4 border-l-blue-600">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{award.title}</h3>
+            <div className="flex flex-wrap gap-4 text-sm text-blue-600 dark:text-blue-400 font-semibold mb-4 border-b border-gray-100 dark:border-gray-700 pb-2">
+              <span>{award.organization}</span>
+              <span className="text-gray-300 dark:text-gray-600">|</span>
+              <span>{award.date}</span>
+            </div>
+            <p className="text-gray-800 dark:text-gray-200 font-medium mb-3 italic">Impact: {award.impact}</p>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+              {award.details}
+            </p>
+          </div>
+        ))}
       </div>
-
     </div>
   );
 }
