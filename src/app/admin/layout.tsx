@@ -18,7 +18,7 @@ export default async function AdminLayout({
   return (
     <div className={styles.adminLayout}>
       <aside className={styles.sidebar}>
-        <div className={styles.logo}>LawBlog Admin</div>
+        <div className={styles.logo}>Developer Blog Admin</div>
         <nav className={styles.nav}>
           <Link href="/admin" className={styles.navLink}>Dashboard</Link>
           <Link href="/admin/posts" className={styles.navLink}>Posts</Link>

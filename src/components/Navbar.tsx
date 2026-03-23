@@ -18,8 +18,8 @@ export default function Navbar() {
     { name: 'Blogs', path: '/posts' },
     { name: 'About', path: '/about' },
     { name: 'Experience', path: '/experience' },
-    { name: 'Publications', path: '/publications' },
-    { name: 'Moots', path: '/moots-awards' },
+    { name: 'Certifications', path: '/publications' },
+    { name: 'Awards', path: '/moots-awards' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -41,8 +41,8 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
             <Image
-              src="/const-law-blog-logo.png"
-              alt="Constitutional Law Blog Logo"
+              src="/developer-blog-logo.png"
+              alt="Developer Blog Logo"
               width={48}
               height={48}
               style={{ borderRadius: '8px', objectFit: 'contain' }}
@@ -58,7 +58,7 @@ export default function Navbar() {
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
               }}>AQSA MIRZA</span>
-              <span style={{ fontSize: '9px', color: '#94a3b8', letterSpacing: '0.15em', fontWeight: 500 }}>LAW · RESEARCH · POLICY</span>
+              <span style={{ fontSize: '9px', color: '#94a3b8', letterSpacing: '0.15em', fontWeight: 500 }}>DEV · AI/ML · CLOUD</span>
             </div>
           </Link>
 

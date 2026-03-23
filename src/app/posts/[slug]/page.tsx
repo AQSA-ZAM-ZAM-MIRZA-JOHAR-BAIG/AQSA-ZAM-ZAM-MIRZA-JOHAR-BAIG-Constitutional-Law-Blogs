@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return { title: "Not Found" };
   
   return {
-    title: `${post.title} | Constitutional Law Blog`,
+    title: `${post.title} | Technical Blog`,
     description: post.summary,
     openGraph: {
       title: post.title,

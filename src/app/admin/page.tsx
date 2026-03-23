@@ -32,7 +32,7 @@ export default async function AdminDashboard() {
       <div className={styles.grid}>
         <div className={styles.card}>
           <h2>Manage Posts</h2>
-          <p>Create, edit, and delete constitutional law articles.</p>
+          <p>Create, edit, and delete technical articles.</p>
           <Link href="/admin/posts" className={styles.button}>Go to Posts</Link>
         </div>
         

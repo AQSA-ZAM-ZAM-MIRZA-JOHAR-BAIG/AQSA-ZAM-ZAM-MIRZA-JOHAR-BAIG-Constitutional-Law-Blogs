@@ -26,7 +26,7 @@ export default async function PostsPage({
     <div className={styles.container}>
       <header className={styles.header}>
         <h1 className={styles.title}>Explore Insights</h1>
-        <p className={styles.subtitle}>Browse through our comprehensive constitutional law directory.</p>
+        <p className={styles.subtitle}>Browse through our technical engineering directory.</p>
         
         <form className={styles.searchBar}>
           <input 
@@ -39,10 +39,12 @@ export default async function PostsPage({
           <select name="category" defaultValue={category || ""} className={styles.searchInput}>
             <option value="">All Categories</option>
             <option value="General">General</option>
-            <option value="Fundamental Rights">Fundamental Rights</option>
-            <option value="DPSP">DPSP</option>
-            <option value="Amendments">Amendments</option>
-            <option value="Case Analysis">Case Analysis</option>
+            <option value="AI & ML">AI & ML</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+            <option value="Full Stack">Full Stack</option>
+            <option value="System Design">System Design</option>
+            <option value="Data Engineering">Data Engineering</option>
+            <option value="Security">Security</option>
           </select>
           <button type="submit" className={styles.searchButton}>Filter</button>
         </form>

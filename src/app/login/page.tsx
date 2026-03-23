@@ -6,7 +6,7 @@ export default function LoginPage() {
     <div className={styles.container}>
       <div className={styles.card}>
         <h1 className={styles.title}>Admin Login</h1>
-        <p className={styles.subtitle}>Sign in to access the Constitutional Law Blog dashboard.</p>
+        <p className={styles.subtitle}>Sign in to access the Technical Blog dashboard.</p>
         <LoginForm />
       </div>
     </div>
