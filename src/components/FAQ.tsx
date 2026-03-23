@@ -4,19 +4,19 @@ import { useState } from 'react';
 const faqs = [
   {
     question: "Who is AQSA MIRZA?",
-    answer: "AQSA MIRZA is a passionate BA LLB student at DR PANJABRAO DESHMUKH COLLEGE OF LAW, AMRAVATI. She is a legal researcher, public policy enthusiast, and aspires to contribute to NITI Aayog."
+    answer: "AQSA MIRZA is a Computer Science undergraduate at VIIT Pune and a Data Science student at IIT Madras. She is a software developer, AI/ML specialist, and cloud architect."
   },
   {
-    question: "What is AQSA MIRZA’s legal background?",
-    answer: "AQSA MIRZA has a strong academic foundation, marked by AIR 42 in CLAT 2022 and AIR 34 in AILET 2022. She is pursuing a 5-year integrated BA LLB course and has deep interests in Constitutional Law, Human Rights, and Medico-Legal issues."
+    question: "What is AQSA MIRZA’s technical background?",
+    answer: "AQSA MIRZA is pursuing a B.Tech in Computer Science & Engineering (AI & ML) and a B.S. in Data Science. She has deep expertise in full-stack development (MERN, Flask/Vue), cloud infrastructure (AWS, Azure), and predictive modeling using ensemble learning."
   },
   {
-    question: "What internships has AQSA MIRZA completed?",
-    answer: "AQSA MIRZA has completed significant internships including a stint at the National Human Rights Commission (NHRC), various legal research institutes like AGISS, Juris Centre, NayaLegal, and substantial trial court litigation exposure under multiple senior advocates."
+    question: "What key projects has AQSA MIRZA built?",
+    answer: "Her major works include Mahalaxmi Tailors (a production-ready e-commerce platform), FalcoVita (a scalable healthcare data visualization app), and an IPO Success Predictor using advanced Machine Learning algorithms."
   },
   {
-    question: "How to contact AQSA MIRZA for legal research or policy opportunities?",
-    answer: "You can contact AQSA MIRZA through the 'Contact' page on this website, via her professional email, or through her official LinkedIn profile."
+    question: "How to contact AQSA MIRZA for technical collaborations?",
+    answer: "You can reach out to AQSA MIRZA through the 'Contact' page, via her professional email (aqsamirz6306@gmail.com), or through her official GitHub and LinkedIn profiles."
   }
 ];
 
