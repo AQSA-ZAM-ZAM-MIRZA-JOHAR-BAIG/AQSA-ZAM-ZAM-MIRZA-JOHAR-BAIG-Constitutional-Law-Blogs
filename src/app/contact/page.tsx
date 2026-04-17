@@ -1,9 +1,19 @@
 import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { SITE_URL, absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Contact Aqsa Zam Zam Mirza Johar Baig | Software Engineer',
-  description: 'Get in touch with Aqsa Zam Zam Mirza Johar Baig for software development collaborations, AI/ML projects, or cloud architecture consulting.',
+  title: 'Contact',
+  description:
+    'Contact Aqsa Zam Zam Mirza Johar Baig for software development collaborations, AI and ML projects, speaking, or cloud architecture consulting opportunities.',
+  alternates: { canonical: '/contact' },
+  openGraph: {
+    title: 'Contact Aqsa Zam Zam Mirza Johar Baig',
+    description:
+      'Send project inquiries, collaboration requests, or technical partnership opportunities through the contact page.',
+    url: `${SITE_URL}/contact`,
+    images: [{ url: absoluteUrl('/profile.svg'), width: 1200, height: 630, alt: 'Aqsa profile card' }],
+  },
 };
 
 export default function Contact() {

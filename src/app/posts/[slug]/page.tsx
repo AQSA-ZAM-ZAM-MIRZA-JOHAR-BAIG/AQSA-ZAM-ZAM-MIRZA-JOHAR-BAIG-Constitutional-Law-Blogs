@@ -4,21 +4,45 @@ import { Post } from "@/models/Post";
 import styles from "./post.module.css";
 import Link from "next/link";
 import { Metadata } from "next";
+import { absoluteUrl, trimToLength } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   await connectToDatabase();
   const post = await Post.findOne({ slug, published: true }).lean();
   
-  if (!post) return { title: "Not Found" };
+  if (!post) {
+    return {
+      title: "Article Not Found",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const title = trimToLength(`${post.title} | Technical Blog`, 60);
+  const description = trimToLength(
+    post.summary || `Read ${post.title} on Aqsa Zam Zam Mirza Johar Baig's technical blog.`,
+    155
+  );
+  const canonical = `/posts/${post.slug}`;
+  const ogImage = absoluteUrl("/profile.svg");
   
   return {
-    title: `${post.title} | Technical Blog`,
-    description: post.summary,
+    title,
+    description,
+    alternates: { canonical },
+    keywords: [post.category, ...(post.tags || [])],
     openGraph: {
-      title: post.title,
-      description: post.summary,
+      title,
+      description,
       type: "article",
+      url: absoluteUrl(canonical),
+      images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
     }
   };
 }

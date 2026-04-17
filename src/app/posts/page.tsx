@@ -2,6 +2,41 @@ import Link from "next/link";
 import styles from "./posts.module.css";
 import connectToDatabase from "@/lib/db";
 import { Post } from "@/models/Post";
+import { Metadata } from "next";
+import { SITE_URL, absoluteUrl } from "@/lib/seo";
+
+const baseMetadata: Metadata = {
+  title: "Technical Blog",
+  description:
+    "Read technical blog posts on full-stack development, AI and ML, cloud computing, and system design by Aqsa Zam Zam Mirza Johar Baig.",
+  alternates: { canonical: "/posts" },
+  openGraph: {
+    title: "Technical Blog Articles",
+    description:
+      "Browse engineering articles covering architecture, AI and ML, cloud deployment, and practical coding insights.",
+    url: `${SITE_URL}/posts`,
+    images: [{ url: absoluteUrl("/profile.svg"), width: 1200, height: 630, alt: "Aqsa profile card" }],
+    type: "website",
+  },
+};
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ category?: string; search?: string }>;
+}): Promise<Metadata> {
+  const { category, search } = await searchParams;
+  if (!category && !search) return baseMetadata;
+
+  return {
+    ...baseMetadata,
+    robots: {
+      index: false,
+      follow: true,
+    },
+    alternates: { canonical: "/posts" },
+  };
+}
 
 export default async function PostsPage({
   searchParams,

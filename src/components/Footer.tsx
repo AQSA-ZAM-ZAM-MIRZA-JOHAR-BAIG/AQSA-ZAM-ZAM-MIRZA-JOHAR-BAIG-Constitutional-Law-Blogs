@@ -59,6 +59,7 @@ export default function Footer() {
                 { name: 'Home', href: '/' }, { name: 'Technical Blogs', href: '/posts' },
                 { name: 'About', href: '/about' }, { name: 'Experience', href: '/experience' },
                 { name: 'Certifications', href: '/publications' }, { name: 'Awards & Hackathons', href: '/moots-awards' },
+                { name: 'Official Profile', href: '/aqsa-zam-zam-mirza-johar-baig' },
               ].map(link => (
                 <li key={link.name}>
                    <Link href={link.href} style={{ color: '#64748b', textDecoration: 'none', fontSize: '14px', transition: 'color 0.2s' }}>

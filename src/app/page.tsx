@@ -206,7 +206,7 @@ export default async function Home() {
                 overflow: 'hidden', zIndex: 2,
               }}>
                 <Image
-                  src="/profile.png"
+                  src="/profile.svg"
                   alt="Aqsa Zam Zam Mirza Johar Baig - Software Developer"
                   fill
                   className="object-cover"

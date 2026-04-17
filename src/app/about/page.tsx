@@ -1,9 +1,19 @@
 import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { SITE_URL, absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'About Aqsa Zam Zam Mirza Johar Baig | Software Developer',
-  description: 'Background and education of Aqsa Zam Zam Mirza Johar Baig, a Computer Science student at VIIT Pune and Data Science student at IIT Madras, specializing in AI/ML.',
+  title: 'About',
+  description:
+    'Learn about Aqsa Zam Zam Mirza Johar Baig, including education at VIIT and IIT Madras, technical strengths, and philosophy for building scalable software.',
+  alternates: { canonical: '/about' },
+  openGraph: {
+    title: 'About Aqsa Zam Zam Mirza Johar Baig',
+    description:
+      'Academic journey, technical interests, and software engineering philosophy of Aqsa Zam Zam Mirza Johar Baig.',
+    url: `${SITE_URL}/about`,
+    images: [{ url: absoluteUrl('/profile.svg'), width: 1200, height: 630, alt: 'Aqsa profile card' }],
+  },
 };
 
 export default function About() {

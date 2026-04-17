@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { SITE_URL } from '@/lib/seo';
 
 interface BreadcrumbItem {
   label: string;
@@ -10,7 +11,7 @@ export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
     "@type": "ListItem",
     "position": index + 2,
     "name": item.label,
-    "item": `https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app${item.href}`
+    "item": `${SITE_URL}${item.href}`
   }));
 
   const breadcrumbSchema = {
@@ -21,7 +22,7 @@ export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/"
+        "item": `${SITE_URL}/`
       },
       ...schemaList
     ]

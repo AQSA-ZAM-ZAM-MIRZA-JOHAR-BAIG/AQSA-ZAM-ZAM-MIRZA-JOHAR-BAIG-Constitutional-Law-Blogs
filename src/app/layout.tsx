@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SITE_URL, SITE_NAME, absoluteUrl } from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,9 +16,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/"),
-  title: "Aqsa Zam Zam Mirza Johar Baig | Full-Stack Developer & AI Resident",
-  description: "Aqsa Zam Zam Mirza Johar Baig - Computer Science undergraduate specializing in AI/ML, building scalable full-stack applications and cloud-based systems.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Aqsa Zam Zam Mirza Johar Baig | AI and Full-Stack Engineer",
+    template: "%s | Aqsa Zam Zam Mirza Johar Baig",
+  },
+  description:
+    "Portfolio and technical blog of Aqsa Zam Zam Mirza Johar Baig, featuring full-stack engineering, AI and ML projects, cloud architecture, and research-backed articles.",
   keywords: [
     "Aqsa Zam Zam Mirza Johar Baig", 
     "Aqsa Mirza", 
@@ -30,33 +35,35 @@ export const metadata: Metadata = {
     "MERN Stack", 
     "VIIT Pune Student"
   ],
-  authors: [{ name: "Aqsa Zam Zam Mirza Johar Baig", url: "https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/" }],
+  authors: [{ name: "Aqsa Zam Zam Mirza Johar Baig", url: SITE_URL }],
   creator: "Aqsa Zam Zam Mirza Johar Baig",
   publisher: "Aqsa Zam Zam Mirza Johar Baig",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Aqsa Zam Zam Mirza Johar Baig | Software Developer & AI Enthusiast",
-    description: "Official portfolio of Aqsa Zam Zam Mirza Johar Baig, showcasing full-stack development, AI/ML projects, and cloud expertise.",
-    url: "https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app/",
-    siteName: "Aqsa Zam Zam Mirza Johar Baig Portfolio",
-    locale: "en_IN",
+    title: "Aqsa Zam Zam Mirza Johar Baig | AI and Full-Stack Engineer",
+    description:
+      "Explore Aqsa's technical portfolio, software engineering case studies, cloud projects, and AI and ML writing in one place.",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: "en_US",
     type: "website",
     images: [
       {
-        url: 'https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/profile.png',
+        url: absoluteUrl("/profile.svg"),
         width: 1200,
         height: 630,
-        alt: 'Aqsa Zam Zam Mirza Johar Baig Professional Portrait',
+        alt: "Aqsa Zam Zam Mirza Johar Baig profile card",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aqsa Zam Zam Mirza Johar Baig | Software Developer & AI Enthusiast",
-    description: "Official portfolio of Aqsa Zam Zam Mirza Johar Baig, showcasing full-stack development, AI/ML projects, and cloud expertise.",
-    images: ['https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app/profile.png'],
+    title: "Aqsa Zam Zam Mirza Johar Baig | AI and Full-Stack Engineer",
+    description:
+      "Explore Aqsa's technical portfolio, software engineering case studies, cloud projects, and AI and ML writing in one place.",
+    images: [absoluteUrl("/profile.svg")],
   },
 };
 
@@ -70,8 +77,8 @@ export default function RootLayout({
     "@type": "Person",
     "name": "Aqsa Zam Zam Mirza Johar Baig",
     "alternateName": ["Aqsa Mirza", "Aqsa Johar Baig"],
-    "url": "https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/",
-    "image": "https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/profile.png",
+    "url": SITE_URL,
+    "image": absoluteUrl("/profile.svg"),
     "jobTitle": "Software Developer & AI/ML Specialist",
     "description": "Computer Science student at VIIT Pune and BSc Data Science at IIT Madras, specializing in AI/ML, Full-stack development, and Cloud Architecture.",
     "nationality": {
@@ -102,8 +109,8 @@ export default function RootLayout({
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Aqsa Zam Zam Mirza Johar Baig - Developer Portfolio",
-    "url": "https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app/",
+    "name": `${SITE_NAME} - Developer Portfolio`,
+    "url": SITE_URL,
     "author": {
       "@type": "Person",
       "name": "Aqsa Zam Zam Mirza Johar Baig"

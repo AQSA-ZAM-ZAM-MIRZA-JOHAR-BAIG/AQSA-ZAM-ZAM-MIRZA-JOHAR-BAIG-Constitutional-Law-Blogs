@@ -3,6 +3,12 @@ import { authOptions } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import styles from "./admin.module.css";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Admin",
+  robots: { index: false, follow: false, nocache: true },
+};
 
 export default async function AdminLayout({
   children,
@@ -22,9 +28,6 @@ export default async function AdminLayout({
         <nav className={styles.nav}>
           <Link href="/admin" className={styles.navLink}>Dashboard</Link>
           <Link href="/admin/posts" className={styles.navLink}>Posts</Link>
-          {(session.user as any)?.role === 'admin' && (
-            <Link href="/admin/users" className={styles.navLink}>Users</Link>
-          )}
           <Link href="/" className={styles.navLink}>Back to Site</Link>
         </nav>
       </aside>

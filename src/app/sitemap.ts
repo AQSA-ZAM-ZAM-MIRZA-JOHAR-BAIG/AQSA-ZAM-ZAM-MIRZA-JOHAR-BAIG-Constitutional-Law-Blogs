@@ -1,9 +1,10 @@
 import { MetadataRoute } from 'next'
 import connectToDatabase from '@/lib/db'
 import { Post } from '@/models/Post'
+import { SITE_URL } from '@/lib/seo'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app';
+  const baseUrl = SITE_URL;
 
   // ── Static pages ──────────────────────────────────────────────────
   const staticPages: MetadataRoute.Sitemap = [
@@ -13,12 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 1,
     },
-    {
-      url: `${baseUrl}/aqsa-zam-zam-mirza-johar-baig`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
+    { url: `${baseUrl}/aqsa-zam-zam-mirza-johar-baig`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     {
       url: `${baseUrl}/about`,
       lastModified: new Date(),
@@ -55,13 +51,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'daily',
       priority: 0.9,
     },
-    // Static HTML redirect page (public folder)
-    {
-      url: `${baseUrl}/aqsa-zam-zam-mirza-johar-baig.html`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
   ];
 
   // ── Dynamic blog post pages ───────────────────────────────────────
@@ -81,43 +70,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }));
   } catch (error) {
     console.error('Sitemap: Failed to fetch posts from DB:', error);
-    // Fallback: include known seed post slugs so sitemap is never empty
-    const fallbackSlugs = [
-      'understanding-transformer-architectures',
-      'ci-cd-pipelines-aws-mern',
-      'implementing-rbac-with-jwt',
-      'optimizing-postgresql-throughput',
-      'microservices-vs-monolith',
-    ];
-    postPages = fallbackSlugs.map(slug => ({
-      url: `${baseUrl}/posts/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    }));
+    postPages = [];
   }
 
-  // ── Category filter pages (indexable search facets) ────────────────
-  const categories = [
-    'Fundamental Rights',
-    'DPSP',
-    'Amendments',
-    'Case Analysis',
-    'General',
-    'AI & ML',
-    'Cloud Computing',
-    'Full Stack',
-    'System Design',
-    'Data Engineering',
-    'Security',
-  ];
-
-  const categoryPages: MetadataRoute.Sitemap = categories.map(cat => ({
-    url: `${baseUrl}/posts?category=${encodeURIComponent(cat)}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.5,
-  }));
-
-  return [...staticPages, ...postPages, ...categoryPages];
+  // Keep sitemap strictly canonical: no query/facet URLs.
+  return [...staticPages, ...postPages];
 }

@@ -41,7 +41,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
             <Image
-              src="/developer-blog-logo.png"
+              src="/developer-blog-logo.svg"
               alt="Developer Blog Logo"
               width={48}
               height={48}
@@ -86,7 +86,7 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <a href="/assets/aqsa-mirza-resume.pdf" download style={{
+            <a href="/contact" style={{
               textDecoration: 'none',
               padding: '8px 18px',
               borderRadius: '8px',
@@ -98,7 +98,7 @@ export default function Navbar() {
               transition: 'all 0.2s',
               marginLeft: '8px',
             }}>
-              Resume ↓
+              Contact
             </a>
           </div>
 

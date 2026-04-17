@@ -1,9 +1,19 @@
 import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { SITE_URL, absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Certifications & Technical Research | Aqsa Zam Zam Mirza Johar Baig',
-  description: 'Authored technical articles, system design summaries, and professional certifications in AI, Cloud (Azure), and GenAI.',
+  title: 'Publications and Certifications',
+  description:
+    'Explore certifications, technical research notes, and learning milestones across cloud computing, AI and ML, and software architecture.',
+  alternates: { canonical: '/publications' },
+  openGraph: {
+    title: 'Publications and Certifications',
+    description:
+      'Technical research highlights and professional certifications earned by Aqsa Zam Zam Mirza Johar Baig.',
+    url: `${SITE_URL}/publications`,
+    images: [{ url: absoluteUrl('/profile.svg'), width: 1200, height: 630, alt: 'Aqsa profile card' }],
+  },
 };
 
 export default function Publications() {

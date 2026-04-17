@@ -36,13 +36,6 @@ export default async function AdminDashboard() {
           <Link href="/admin/posts" className={styles.button}>Go to Posts</Link>
         </div>
         
-        {(session.user as any)?.role === 'admin' && (
-          <div className={styles.card}>
-            <h2>Manage Users</h2>
-            <p>Administer contributors and readers.</p>
-            <Link href="/admin/users" className={styles.button}>Go to Users</Link>
-          </div>
-        )}
       </div>
     </div>
   );

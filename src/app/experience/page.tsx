@@ -1,9 +1,19 @@
 import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { SITE_URL, absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Software Development Experience | Aqsa Zam Zam Mirza Johar Baig',
-  description: 'Timeline of industries programs (AWS, Google, EduSkills) and full-stack development projects by Aqsa Zam Zam Mirza Johar Baig.',
+  title: 'Experience',
+  description:
+    'Review software engineering experience, AI and ML projects, cloud deployments, and industry programs completed by Aqsa Zam Zam Mirza Johar Baig.',
+  alternates: { canonical: '/experience' },
+  openGraph: {
+    title: 'Software Engineering Experience',
+    description:
+      'Projects, internships, and technical milestones spanning full-stack development, cloud architecture, and machine learning.',
+    url: `${SITE_URL}/experience`,
+    images: [{ url: absoluteUrl('/profile.svg'), width: 1200, height: 630, alt: 'Aqsa profile card' }],
+  },
 };
 
 const experiences = [

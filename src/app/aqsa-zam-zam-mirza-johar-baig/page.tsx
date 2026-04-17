@@ -1,12 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { SITE_URL, absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Aqsa Zam Zam Mirza Johar Baig | Official Profile & Software Engineer",
-  description: "The official profile of Aqsa Zam Zam Mirza Johar Baig, Computer Science student at VIIT Pune and Data Science student at IIT Madras. Specializing in AI/ML, Full-stack dev, and Cloud.",
+  title: "Official Profile",
+  description:
+    "Official profile page for Aqsa Zam Zam Mirza Johar Baig with academic background, full-stack engineering achievements, and AI and ML specialization.",
   alternates: {
     canonical: "/aqsa-zam-zam-mirza-johar-baig",
+  },
+  openGraph: {
+    title: "Aqsa Zam Zam Mirza Johar Baig Official Profile",
+    description:
+      "Read Aqsa's official profile, including education, software engineering experience, and links to technical projects and publications.",
+    url: `${SITE_URL}/aqsa-zam-zam-mirza-johar-baig`,
+    images: [{ url: absoluteUrl("/profile.svg"), width: 1200, height: 630, alt: "Aqsa profile card" }],
   },
 };
 
@@ -18,20 +27,18 @@ export default function NameDisambiguationPage() {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app/"
+      "item": `${SITE_URL}/`
     },{
       "@type": "ListItem",
       "position": 2,
       "name": "Aqsa Zam Zam Mirza Johar Baig",
-      "item": "https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app/aqsa-zam-zam-mirza-johar-baig"
+      "item": `${SITE_URL}/aqsa-zam-zam-mirza-johar-baig`
     }]
   };
 
   return (
     <div style={{ fontFamily: "'Geist Sans', Arial, sans-serif", color: '#e2e8f0', backgroundColor: '#080810', minHeight: '100vh', padding: '120px 24px 60px' }}>
-      <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      </head>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         <Link href="/" style={{ color: '#a78bfa', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '40px', fontWeight: 600 }}>
@@ -41,7 +48,7 @@ export default function NameDisambiguationPage() {
         <header style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '60px' }}>
           <div style={{ position: 'relative', width: '200px', height: '200px', borderRadius: '50%', overflow: 'hidden', border: '4px solid #1e1e38', marginBottom: '24px' }}>
             <Image
-              src="/profile.png"
+              src="/profile.svg"
               alt="Aqsa Zam Zam Mirza Johar Baig"
               fill
               className="object-cover"

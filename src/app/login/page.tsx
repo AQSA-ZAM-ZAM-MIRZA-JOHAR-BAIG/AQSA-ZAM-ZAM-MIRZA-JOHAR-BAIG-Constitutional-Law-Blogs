@@ -1,5 +1,12 @@
 import LoginForm from './LoginForm';
 import styles from './login.module.css';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Login',
+  description: 'Secure login portal for content administrators.',
+  robots: { index: false, follow: false, nocache: true },
+};
 
 export default function LoginPage() {
   return (
