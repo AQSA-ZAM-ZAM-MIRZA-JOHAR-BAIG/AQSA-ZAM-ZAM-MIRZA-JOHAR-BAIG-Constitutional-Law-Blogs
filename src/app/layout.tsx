@@ -18,52 +18,52 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Aqsa Zam Zam Mirza Johar Baig | AI and Full-Stack Engineer",
+    default: "Aqsa Zam Zam Mirza Johar Baig | Developer & AI/ML",
     template: "%s | Aqsa Zam Zam Mirza Johar Baig",
   },
   description:
-    "Portfolio and technical blog of Aqsa Zam Zam Mirza Johar Baig, featuring full-stack engineering, AI and ML projects, cloud architecture, and research-backed articles.",
+    "Portfolio and blog of Aqsa Zam Zam Mirza Johar Baig – full-stack engineering, AI/ML projects, cloud architecture, and research articles.",
   keywords: [
-    "Aqsa Zam Zam Mirza Johar Baig", 
-    "Aqsa Mirza", 
+    "Aqsa Zam Zam Mirza Johar Baig",
+    "Aqsa Mirza",
     "Software Developer",
     "Computer Science Portfolio",
     "AI & ML Engineer",
-    "Full-Stack Developer", 
-    "Java Python JavaScript", 
-    "AWS Cloud Practices", 
-    "MERN Stack", 
+    "Full-Stack Developer",
+    "Java Python JavaScript",
+    "AWS Cloud Practices",
+    "MERN Stack",
     "VIIT Pune Student"
   ],
   authors: [{ name: "Aqsa Zam Zam Mirza Johar Baig", url: SITE_URL }],
   creator: "Aqsa Zam Zam Mirza Johar Baig",
   publisher: "Aqsa Zam Zam Mirza Johar Baig",
   alternates: {
-    canonical: "/",
+    canonical: `${SITE_URL}/`,
   },
   openGraph: {
-    title: "Aqsa Zam Zam Mirza Johar Baig | AI and Full-Stack Engineer",
+    title: "Aqsa Zam Zam Mirza Johar Baig | Developer & AI/ML",
     description:
-      "Explore Aqsa's technical portfolio, software engineering case studies, cloud projects, and AI and ML writing in one place.",
-    url: SITE_URL,
+      "Explore Aqsa's technical portfolio, engineering case studies, cloud projects, and AI/ML writing in one place.",
+    url: `${SITE_URL}/`,
     siteName: SITE_NAME,
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: absoluteUrl("/profile.svg"),
+        url: absoluteUrl("/og-image.png"),
         width: 1200,
         height: 630,
-        alt: "Aqsa Zam Zam Mirza Johar Baig profile card",
+        alt: "Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aqsa Zam Zam Mirza Johar Baig | AI and Full-Stack Engineer",
+    title: "Aqsa Zam Zam Mirza Johar Baig | Developer & AI/ML",
     description:
-      "Explore Aqsa's technical portfolio, software engineering case studies, cloud projects, and AI and ML writing in one place.",
-    images: [absoluteUrl("/profile.svg")],
+      "Explore Aqsa's technical portfolio, engineering case studies, cloud projects, and AI/ML writing.",
+    images: [absoluteUrl("/og-image.png")],
   },
 };
 
@@ -78,7 +78,7 @@ export default function RootLayout({
     "name": "Aqsa Zam Zam Mirza Johar Baig",
     "alternateName": ["Aqsa Mirza", "Aqsa Johar Baig"],
     "url": SITE_URL,
-    "image": absoluteUrl("/profile.svg"),
+    "image": absoluteUrl("/og-image.png"),
     "jobTitle": "Software Developer & AI/ML Specialist",
     "description": "Computer Science student at VIIT Pune and BSc Data Science at IIT Madras, specializing in AI/ML, Full-stack development, and Cloud Architecture.",
     "nationality": {

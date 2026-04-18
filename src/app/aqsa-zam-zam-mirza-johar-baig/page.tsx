@@ -4,18 +4,22 @@ import { Metadata } from 'next';
 import { SITE_URL, absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Official Profile",
+  title: 'Official Profile',
   description:
-    "Official profile page for Aqsa Zam Zam Mirza Johar Baig with academic background, full-stack engineering achievements, and AI and ML specialization.",
+    'Official profile of Aqsa Zam Zam Mirza Johar Baig – academic background, full-stack engineering achievements, and AI/ML specialization.',
   alternates: {
-    canonical: "/aqsa-zam-zam-mirza-johar-baig",
+    canonical: `${SITE_URL}/aqsa-zam-zam-mirza-johar-baig`,
   },
   openGraph: {
-    title: "Aqsa Zam Zam Mirza Johar Baig Official Profile",
+    title: 'Aqsa Zam Zam Mirza Johar Baig – Official Profile',
     description:
       "Read Aqsa's official profile, including education, software engineering experience, and links to technical projects and publications.",
     url: `${SITE_URL}/aqsa-zam-zam-mirza-johar-baig`,
-    images: [{ url: absoluteUrl("/profile.svg"), width: 1200, height: 630, alt: "Aqsa profile card" }],
+    images: [{ url: absoluteUrl('/og-image.png'), width: 1200, height: 630, alt: 'Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [absoluteUrl('/og-image.png')],
   },
 };
 

@@ -3,16 +3,20 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { SITE_URL, absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Publications and Certifications',
+  title: 'Certifications & Research',
   description:
-    'Explore certifications, technical research notes, and learning milestones across cloud computing, AI and ML, and software architecture.',
-  alternates: { canonical: '/publications' },
+    'Explore certifications, technical research notes, and learning milestones across cloud computing, AI/ML, and software architecture by Aqsa Zam Zam Mirza Johar Baig.',
+  alternates: { canonical: `${SITE_URL}/publications` },
   openGraph: {
-    title: 'Publications and Certifications',
+    title: 'Certifications & Research | Aqsa Zam Zam Mirza Johar Baig',
     description:
       'Technical research highlights and professional certifications earned by Aqsa Zam Zam Mirza Johar Baig.',
     url: `${SITE_URL}/publications`,
-    images: [{ url: absoluteUrl('/profile.svg'), width: 1200, height: 630, alt: 'Aqsa profile card' }],
+    images: [{ url: absoluteUrl('/og-image.png'), width: 1200, height: 630, alt: 'Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [absoluteUrl('/og-image.png')],
   },
 };
 

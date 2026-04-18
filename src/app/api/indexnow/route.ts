@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
   const payload = {
     host: new URL(SITE_URL).hostname,
     key,
-    keyLocation: `${SITE_URL}/indexnow-key.txt`,
+    keyLocation: `${SITE_URL}/${key}.txt`,
     urlList: urls,
   };
 

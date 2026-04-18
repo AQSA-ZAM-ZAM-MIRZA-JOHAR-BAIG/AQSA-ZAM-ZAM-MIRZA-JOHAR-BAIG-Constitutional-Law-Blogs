@@ -5,14 +5,18 @@ import { SITE_URL, absoluteUrl } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Contact Aqsa Zam Zam Mirza Johar Baig for software development collaborations, AI and ML projects, speaking, or cloud architecture consulting opportunities.',
-  alternates: { canonical: '/contact' },
+    'Contact Aqsa Zam Zam Mirza Johar Baig for software collaborations, AI/ML projects, speaking engagements, or cloud architecture consulting opportunities.',
+  alternates: { canonical: `${SITE_URL}/contact` },
   openGraph: {
     title: 'Contact Aqsa Zam Zam Mirza Johar Baig',
     description:
       'Send project inquiries, collaboration requests, or technical partnership opportunities through the contact page.',
     url: `${SITE_URL}/contact`,
-    images: [{ url: absoluteUrl('/profile.svg'), width: 1200, height: 630, alt: 'Aqsa profile card' }],
+    images: [{ url: absoluteUrl('/og-image.png'), width: 1200, height: 630, alt: 'Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [absoluteUrl('/og-image.png')],
   },
 };
 

@@ -3,16 +3,20 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { SITE_URL, absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Awards and Hackathons',
+  title: 'Awards & Hackathons',
   description:
     'Discover hackathons, competitive programming milestones, and open source contributions by Aqsa Zam Zam Mirza Johar Baig.',
-  alternates: { canonical: '/moots-awards' },
+  alternates: { canonical: `${SITE_URL}/moots-awards` },
   openGraph: {
-    title: 'Awards and Hackathons',
+    title: 'Awards & Hackathons | Aqsa Zam Zam Mirza Johar Baig',
     description:
       'Competitive programming wins, hackathon participation, and open source achievements in one timeline.',
     url: `${SITE_URL}/moots-awards`,
-    images: [{ url: absoluteUrl('/profile.svg'), width: 1200, height: 630, alt: 'Aqsa profile card' }],
+    images: [{ url: absoluteUrl('/og-image.png'), width: 1200, height: 630, alt: 'Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [absoluteUrl('/og-image.png')],
   },
 };
 

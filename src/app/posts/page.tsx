@@ -6,17 +6,21 @@ import { Metadata } from "next";
 import { SITE_URL, absoluteUrl } from "@/lib/seo";
 
 const baseMetadata: Metadata = {
-  title: "Technical Blog",
+  title: "Constitutional Law Blog",
   description:
-    "Read technical blog posts on full-stack development, AI and ML, cloud computing, and system design by Aqsa Zam Zam Mirza Johar Baig.",
-  alternates: { canonical: "/posts" },
+    "Read constitutional law blogs and legal analysis on fundamental rights, DPSP, case studies, and amendments by Aqsa Zam Zam Mirza Johar Baig.",
+  alternates: { canonical: `${SITE_URL}/posts` },
   openGraph: {
-    title: "Technical Blog Articles",
+    title: "Constitutional Law Blog | Aqsa Zam Zam Mirza Johar Baig",
     description:
-      "Browse engineering articles covering architecture, AI and ML, cloud deployment, and practical coding insights.",
+      "Browse legal analysis articles covering constitutional rights, landmark cases, DPSP, and amendments.",
     url: `${SITE_URL}/posts`,
-    images: [{ url: absoluteUrl("/profile.svg"), width: 1200, height: 630, alt: "Aqsa profile card" }],
+    images: [{ url: absoluteUrl("/og-image.png"), width: 1200, height: 630, alt: "Aqsa Zam Zam Mirza Johar Baig – Law Blog" }],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [absoluteUrl("/og-image.png")],
   },
 };
 

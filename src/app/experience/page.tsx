@@ -5,14 +5,18 @@ import { SITE_URL, absoluteUrl } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Experience',
   description:
-    'Review software engineering experience, AI and ML projects, cloud deployments, and industry programs completed by Aqsa Zam Zam Mirza Johar Baig.',
-  alternates: { canonical: '/experience' },
+    'Software engineering experience, AI/ML projects, cloud deployments, and industry programs completed by Aqsa Zam Zam Mirza Johar Baig.',
+  alternates: { canonical: `${SITE_URL}/experience` },
   openGraph: {
-    title: 'Software Engineering Experience',
+    title: 'Software Engineering Experience | Aqsa Zam Zam Mirza Johar Baig',
     description:
       'Projects, internships, and technical milestones spanning full-stack development, cloud architecture, and machine learning.',
     url: `${SITE_URL}/experience`,
-    images: [{ url: absoluteUrl('/profile.svg'), width: 1200, height: 630, alt: 'Aqsa profile card' }],
+    images: [{ url: absoluteUrl('/og-image.png'), width: 1200, height: 630, alt: 'Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [absoluteUrl('/og-image.png')],
   },
 };
 

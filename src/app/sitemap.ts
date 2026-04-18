@@ -6,42 +6,47 @@ import { SITE_URL } from '@/lib/seo'
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = SITE_URL;
 
-  // ── Static pages ──────────────────────────────────────────────────
+  // ── Static indexable pages only (must match canonical URLs exactly) ──
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}`,
+      url: `${baseUrl}/`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 1,
+      priority: 1.0,
     },
-    { url: `${baseUrl}/aqsa-zam-zam-mirza-johar-baig`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    {
+      url: `${baseUrl}/aqsa-zam-zam-mirza-johar-baig`,
+      lastModified: new Date('2026-03-01'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-03-01'),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/experience`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-03-01'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/moots-awards`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-03-01'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/publications`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-03-01'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-03-01'),
       changeFrequency: 'yearly',
       priority: 0.7,
     },
@@ -53,26 +58,35 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // ── Dynamic blog post pages ───────────────────────────────────────
+  // ── Dynamic blog post pages ─────────────────────────────────────────
   let postPages: MetadataRoute.Sitemap = [];
 
   try {
     await connectToDatabase();
+    // Only published posts with a summary (non-thin content)
     const posts = await Post.find({ published: true })
-      .select('slug updatedAt publishedAt createdAt')
+      .select('slug updatedAt publishedAt createdAt title summary')
       .lean();
 
-    postPages = posts.map((post: any) => ({
-      url: `${baseUrl}/posts/${post.slug}`,
-      lastModified: new Date(post.updatedAt || post.publishedAt || post.createdAt),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    }));
+    postPages = posts
+      .filter((post: any) => post.slug && post.slug.trim() !== '')
+      .map((post: any) => ({
+        url: `${baseUrl}/posts/${post.slug}`,
+        lastModified: new Date(post.updatedAt || post.publishedAt || post.createdAt),
+        changeFrequency: 'weekly' as const,
+        priority: 0.7,
+      }));
   } catch (error) {
     console.error('Sitemap: Failed to fetch posts from DB:', error);
     postPages = [];
   }
 
-  // Keep sitemap strictly canonical: no query/facet URLs.
-  return [...staticPages, ...postPages];
+  // Deduplicate by URL (guard against duplicate slugs)
+  const all = [...staticPages, ...postPages];
+  const seen = new Set<string>();
+  return all.filter(entry => {
+    if (seen.has(entry.url)) return false;
+    seen.add(entry.url);
+    return true;
+  });
 }

@@ -20,6 +20,7 @@ export default function Navbar() {
     { name: 'Experience', path: '/experience' },
     { name: 'Certifications', path: '/publications' },
     { name: 'Awards', path: '/moots-awards' },
+    { name: 'Profile', path: '/aqsa-zam-zam-mirza-johar-baig' },
     { name: 'Contact', path: '/contact' },
   ];
 

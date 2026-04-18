@@ -5,14 +5,18 @@ import { SITE_URL, absoluteUrl } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Learn about Aqsa Zam Zam Mirza Johar Baig, including education at VIIT and IIT Madras, technical strengths, and philosophy for building scalable software.',
-  alternates: { canonical: '/about' },
+    'Learn about Aqsa Zam Zam Mirza Johar Baig – education at VIIT Pune and IIT Madras, technical strengths, and philosophy for building scalable software.',
+  alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
     title: 'About Aqsa Zam Zam Mirza Johar Baig',
     description:
       'Academic journey, technical interests, and software engineering philosophy of Aqsa Zam Zam Mirza Johar Baig.',
     url: `${SITE_URL}/about`,
-    images: [{ url: absoluteUrl('/profile.svg'), width: 1200, height: 630, alt: 'Aqsa profile card' }],
+    images: [{ url: absoluteUrl('/og-image.png'), width: 1200, height: 630, alt: 'Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [absoluteUrl('/og-image.png')],
   },
 };
 

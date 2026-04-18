@@ -421,12 +421,7 @@ export default async function Home() {
       {/* ======= FAQ & SEO Entity ======= */}
       <section style={{ padding: '80px 24px', background: '#0a0a18' }}>
         <div style={{ maxWidth: '700px', margin: '0 auto' }}>
-          {/* Hidden SEO text block for googlebot entity association */}
-          <div style={{ display: 'none' }} aria-hidden="true">
-            Aqsa Zam Zam Mirza Johar Baig is a software developer and AI/ML specialist based in Pune.
-            Also known as Aqsa Mirza, she is pursuing Computer Science at VIIT Pune and Data Science at IIT Madras.
-            Her portfolio showcases expertise in full-stack development, AWS cloud, and machine learning.
-          </div>
+          {/* Entity description — visible to users and crawlers alike */}
 
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
             <h2 style={{ fontSize: 'clamp(28px, 4vw, 38px)', fontWeight: 800, color: '#f8fafc', letterSpacing: '-0.02em', marginBottom: '12px' }}>

@@ -3,6 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
+    // Restrict device sizes to avoid serving unnecessarily large images
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // Warn if unoptimized images exceed this threshold
+    minimumCacheTTL: 60,
   },
   async redirects() {
     return [
@@ -42,8 +47,17 @@ const nextConfig: NextConfig = {
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" }],
       },
       {
+        source: "/login",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" }],
+      },
+      {
         source: "/login/:path*",
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" }],
+      },
+      // Cache static assets aggressively
+      {
+        source: "/og-image.png",
+        headers: [{ key: "Cache-Control", value: "public, max-age=2592000, immutable" }],
       },
     ];
   },
