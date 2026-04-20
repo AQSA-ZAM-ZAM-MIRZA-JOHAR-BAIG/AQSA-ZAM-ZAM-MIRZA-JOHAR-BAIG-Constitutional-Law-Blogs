@@ -23,9 +23,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const rawTitle = `${post.title} | Aqsa Zam Zam Mirza Johar Baig`;
   const title = trimToLength(rawTitle, 60);
 
-  // Ensure description is always 50–155 chars
-  const rawDesc = post.summary ||
+  // Ensure description is always 110–155 chars for SEO
+  let rawDesc = post.summary ||
     `Read "${post.title}" \u2013 constitutional law analysis by Aqsa Zam Zam Mirza Johar Baig covering ${post.category} on the official law blog.`;
+    
+  if (rawDesc.length < 110) {
+    rawDesc = `${rawDesc} Discover comprehensive constitutional law analysis, landmark case studies, and insights by Aqsa Zam Zam Mirza Johar Baig.`;
+  }
+  
   const description = trimToLength(rawDesc, 155);
 
   const canonical = `${SITE_URL}/posts/${post.slug}`;
