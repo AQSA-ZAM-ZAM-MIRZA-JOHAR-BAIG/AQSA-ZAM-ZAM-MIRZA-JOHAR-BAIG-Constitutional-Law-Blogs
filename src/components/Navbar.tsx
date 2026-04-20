@@ -2,15 +2,21 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { runWhenUserReady } from '@/lib/defer';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [interactiveReady, setInteractiveReady] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    return runWhenUserReady(() => setInteractiveReady(true));
   }, []);
 
   const navLinks = [
@@ -77,10 +83,12 @@ export default function Navbar() {
                 letterSpacing: '0.02em',
               }}
               onMouseEnter={(e) => {
+                if (!interactiveReady) return;
                 (e.target as HTMLElement).style.backgroundColor = 'rgba(99,102,241,0.15)';
                 (e.target as HTMLElement).style.color = '#a78bfa';
               }}
               onMouseLeave={(e) => {
+                if (!interactiveReady) return;
                 (e.target as HTMLElement).style.backgroundColor = 'transparent';
                 (e.target as HTMLElement).style.color = '#cbd5e1';
               }}>

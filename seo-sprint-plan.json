@@ -1,0 +1,58 @@
+{
+  "brand": "AQSA ZAM ZAM MIRZA JOHAR BAIG",
+  "keyword": "AQSA ZAM ZAM MIRZA JOHAR BAIG",
+  "sprints": [
+    {
+      "name": "Sprint 0 (48 Hours)",
+      "tasks": [
+        "Deploy answer-first identity box and sticky jump links on homepage.",
+        "Add WebPageElement and ClaimReview schema to strengthen entity trust.",
+        "Deploy smart 404 route-level intent handling for /pricing and /blog patterns.",
+        "Defer non-critical interactivity using requestIdleCallback user-ready wrapper."
+      ]
+    },
+    {
+      "name": "Sprint 1 (Week 1)",
+      "tasks": [
+        "Add intent-led Q&A heading structure on profile page.",
+        "Publish 'name disambiguation' content for legal-academic entity context.",
+        "Expand posts with author authority and identity reinforcement blocks."
+      ]
+    },
+    {
+      "name": "Sprint 2 (Week 2)",
+      "tasks": [
+        "Run focal-point image watermark workflow via scripts/watermark-images.sh.",
+        "Test 404 intent routing and pre-filled blog search on broken slugs."
+      ]
+    },
+    {
+      "name": "Sprint 3 (Week 3)",
+      "tasks": [
+        "A/B test title variants with curiosity + year framing on key pages.",
+        "Prioritize CTR elasticity for URLs ranking in positions 9-15."
+      ]
+    },
+    {
+      "name": "Sprint 4 (Week 4)",
+      "tasks": [
+        "Measure average position, impressions per URL, CTR delta, and engagement time.",
+        "Keep winners and iterate next 30-day backlog."
+      ]
+    }
+  ],
+  "offpage_precision": {
+    "google_operator": "\"AQSA ZAM ZAM MIRZA JOHAR BAIG\" -site:aqsa-zam-zam-mirza-johar-baig-const.vercel.app -twitter.com -facebook.com -linkedin.com \"2026\"",
+    "email_template": {
+      "subject": "Quick citation update request",
+      "body": "Hi [Name],\n\nThank you for mentioning AQSA ZAM ZAM MIRZA JOHAR BAIG in [Page Title]. Could you please add a source link to the official profile URL below so readers can verify identity and references?\n\n[Official URL]\n\nThanks again,\n[Your Name]"
+    }
+  },
+  "title_rewrites": [
+    "Aqsa Zam Zam Mirza Johar Baig (Official Profile) - Verified Work and Education 2026",
+    "Who Is Aqsa Zam Zam Mirza Johar Baig? Official Credentials and Contact 2026",
+    "Aqsa Zam Zam Mirza Johar Baig: Why Recruiters Check This Official Profile First (2026)",
+    "Official Aqsa Zam Zam Mirza Johar Baig Profile - Projects, Credentials, and Verified Links",
+    "Aqsa Zam Zam Mirza Johar Baig in 2026: Full-Stack and AI/ML Work You Can Verify"
+  ]
+}

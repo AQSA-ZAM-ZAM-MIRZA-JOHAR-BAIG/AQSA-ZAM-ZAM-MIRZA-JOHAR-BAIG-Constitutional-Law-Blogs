@@ -83,9 +83,40 @@ export default async function Home() {
 
   return (
     <div style={{ fontFamily: "'Geist Sans', Arial, sans-serif", color: '#e2e8f0', backgroundColor: '#080810' }}>
+      <div
+        style={{
+          position: "sticky",
+          top: "74px",
+          zIndex: 20,
+          backgroundColor: "rgba(8,8,16,0.92)",
+          backdropFilter: "blur(8px)",
+          borderBottom: "1px solid rgba(255,255,255,0.08)",
+          padding: "10px 24px",
+        }}
+      >
+        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", gap: "14px", flexWrap: "wrap" }}>
+          <a href="#answer-box" style={{ color: "#a78bfa", fontSize: "13px", fontWeight: 700 }}>Quick Answer</a>
+          <a href="#identity" style={{ color: "#a78bfa", fontSize: "13px", fontWeight: 700 }}>Identity</a>
+          <a href="#skills" style={{ color: "#a78bfa", fontSize: "13px", fontWeight: 700 }}>Skills</a>
+          <a href="#projects" style={{ color: "#a78bfa", fontSize: "13px", fontWeight: 700 }}>Projects</a>
+          <a href="#faq" style={{ color: "#a78bfa", fontSize: "13px", fontWeight: 700 }}>FAQ</a>
+        </div>
+      </div>
+
+      <section id="answer-box" style={{ padding: "22px 24px 10px", backgroundColor: "#0a0a18" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", border: "1px solid rgba(99,102,241,0.28)", borderRadius: "14px", padding: "16px 18px" }}>
+          <h2 style={{ fontSize: "20px", marginBottom: "8px", color: "#f8fafc" }}>
+            Who is Aqsa Zam Zam Mirza Johar Baig?
+          </h2>
+          <p style={{ color: "#cbd5e1", fontSize: "15px", lineHeight: 1.7 }}>
+            Aqsa Zam Zam Mirza Johar Baig is a full-stack developer and AI/ML specialist with formal studies at VIIT Pune and IIT Madras.
+            This official profile consolidates verified identity, education, projects, technical publications, and direct contact links.
+          </p>
+        </div>
+      </section>
 
       {/* ======= HERO SECTION ======= */}
-      <section style={{
+      <section id="identity" style={{
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
@@ -241,7 +272,7 @@ export default async function Home() {
       </section>
 
       {/* ======= TECHNICAL SKILLS ======= */}
-      <section style={{ padding: '80px 24px', background: '#0a0a18' }}>
+      <section id="skills" style={{ padding: '80px 24px', background: '#0a0a18' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <div style={{
@@ -303,7 +334,7 @@ export default async function Home() {
       </section>
 
       {/* ======= FEATURED PROJECTS ======= */}
-      <section style={{ padding: '80px 24px', background: 'linear-gradient(180deg, #0a0a18 0%, #080810 100%)' }}>
+      <section id="projects" style={{ padding: '80px 24px', background: 'linear-gradient(180deg, #0a0a18 0%, #080810 100%)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <div style={{
@@ -362,7 +393,7 @@ export default async function Home() {
       </section>
 
       {/* ======= ACADEMIC CARDS ======= */}
-      <section style={{ padding: '80px 24px', background: '#0a0a18' }}>
+      <section id="faq" style={{ padding: '80px 24px', background: '#0a0a18' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#f8fafc', letterSpacing: '-0.02em', lineHeight: 1.2, marginBottom: '16px' }}>

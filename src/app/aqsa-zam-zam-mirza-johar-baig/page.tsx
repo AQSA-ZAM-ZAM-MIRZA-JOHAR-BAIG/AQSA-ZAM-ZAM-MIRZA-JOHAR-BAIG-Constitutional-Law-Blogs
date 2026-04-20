@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import { SITE_URL, absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Official Profile',
+  title: 'Who Is Aqsa Zam Zam Mirza Johar Baig? Official Profile 2026',
   description:
     'Official profile of Aqsa Zam Zam Mirza Johar Baig – academic background, full-stack engineering achievements, and AI/ML specialization.',
   alternates: {
@@ -74,8 +74,12 @@ export default function NameDisambiguationPage() {
 
         <section style={{ marginBottom: '60px' }}>
           <h2 style={{ fontSize: '24px', fontWeight: 700, color: '#f1f5f9', marginBottom: '24px', borderBottom: '1px solid #1e1e38', paddingBottom: '12px' }}>
-            Academic Profile
+            How can I verify Aqsa Zam Zam Mirza Johar Baig's academic profile?
           </h2>
+          <p style={{ color: '#94a3b8', marginBottom: '18px', lineHeight: 1.7 }}>
+            This section lists current degree programs and institutions so visitors can validate identity and educational context quickly.
+            The names and credentials are kept consistent across metadata, schema, and page content.
+          </p>
           <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '16px', color: '#cbd5e1' }}>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
               <span style={{ color: '#8b5cf6', marginTop: '4px' }}>▹</span>
@@ -96,8 +100,12 @@ export default function NameDisambiguationPage() {
 
         <section style={{ marginBottom: '60px' }}>
           <h2 style={{ fontSize: '24px', fontWeight: 700, color: '#f1f5f9', marginBottom: '24px', borderBottom: '1px solid #1e1e38', paddingBottom: '12px' }}>
-            Featured Software Engineering Work
+            Which projects prove practical full-stack and AI/ML experience?
           </h2>
+          <p style={{ color: '#94a3b8', marginBottom: '18px', lineHeight: 1.7 }}>
+            The highlighted projects below represent production-focused engineering across cloud deployment, data workflows, and secure application architecture.
+            Each example maps to real execution rather than generic technology claims.
+          </p>
           <div style={{ backgroundColor: '#0d0d1f', border: '1px solid rgba(99,102,241,0.2)', padding: '24px', borderRadius: '12px' }}>
             <h3 style={{ fontSize: '18px', fontWeight: 600, color: '#e2e8f0', marginBottom: '8px' }}>Full-Stack Development & Cloud Deployment</h3>
             <p style={{ fontSize: '14px', color: '#8b5cf6', fontWeight: 600, marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>MERN & AWS Expert</p>

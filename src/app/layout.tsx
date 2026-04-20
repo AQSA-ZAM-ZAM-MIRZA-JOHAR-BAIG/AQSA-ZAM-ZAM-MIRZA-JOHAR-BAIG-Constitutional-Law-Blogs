@@ -18,11 +18,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Aqsa Zam Zam Mirza Johar Baig | Developer & AI/ML",
+    default: "Aqsa Zam Zam Mirza Johar Baig Official Profile (2026)",
     template: "%s | Aqsa Zam Zam Mirza Johar Baig",
   },
   description:
-    "Portfolio and blog of Aqsa Zam Zam Mirza Johar Baig – full-stack engineering, AI/ML projects, cloud architecture, and research articles.",
+    "Official profile, verified education, featured projects, FAQ answers, and direct contact for Aqsa Zam Zam Mirza Johar Baig.",
   keywords: [
     "Aqsa Zam Zam Mirza Johar Baig",
     "Aqsa Mirza",
@@ -117,7 +117,41 @@ export default function RootLayout({
     }
   };
 
-  const combinedSchema = [personSchema, websiteSchema];
+  const webPageElementSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPageElement",
+    "name": "Identity Verification Summary",
+    "cssSelector": "#answer-box",
+    "description":
+      "Answer-first element confirming official identity, technical focus, and verified profile links for Aqsa Zam Zam Mirza Johar Baig.",
+  };
+
+  const claimReviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "ClaimReview",
+    "url": SITE_URL,
+    "claimReviewed": "This website is the official profile of Aqsa Zam Zam Mirza Johar Baig.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1",
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Aqsa Zam Zam Mirza Johar Baig",
+    },
+    "itemReviewed": {
+      "@type": "Person",
+      "name": "Aqsa Zam Zam Mirza Johar Baig",
+      "sameAs": [
+        "https://www.linkedin.com/in/aqsamirza08",
+        "https://github.com/AQSA-ZAM-ZAM-MIRZA-JOHAR-BAIG",
+      ],
+    },
+  };
+
+  const combinedSchema = [personSchema, websiteSchema, webPageElementSchema, claimReviewSchema];
 
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>

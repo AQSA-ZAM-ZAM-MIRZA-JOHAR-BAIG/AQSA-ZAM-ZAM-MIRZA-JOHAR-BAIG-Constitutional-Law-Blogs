@@ -5,6 +5,7 @@ import styles from "./post.module.css";
 import Link from "next/link";
 import { Metadata } from "next";
 import { SITE_URL, absoluteUrl, trimToLength } from "@/lib/seo";
+import AuthorBio from "@/components/AuthorBio";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -119,6 +120,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       )}
 
       <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.content }} />
+      <AuthorBio />
 
       {/* Internal link to improve site connectivity */}
       <footer style={{ marginTop: '48px', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
