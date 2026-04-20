@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { unstable_cache } from "next/cache";
 import styles from "./posts.module.css";
 import connectToDatabase from "@/lib/db";
 import { Post } from "@/models/Post";
@@ -47,19 +48,26 @@ export default async function PostsPage({
 }: {
   searchParams: Promise<{ category?: string; search?: string }>;
 }) {
-  await connectToDatabase();
   const { category, search } = await searchParams;
 
-  let query: any = { published: true };
-  if (category) query.category = category;
-  if (search) {
-    query.$or = [
-      { title: { $regex: search, $options: "i" } },
-      { content: { $regex: search, $options: "i" } }
-    ];
-  }
+  const getPosts = unstable_cache(
+    async (cat?: string, q?: string) => {
+      await connectToDatabase();
+      let query: any = { published: true };
+      if (cat) query.category = cat;
+      if (q) {
+        query.$or = [
+          { title: { $regex: q, $options: "i" } },
+          { content: { $regex: q, $options: "i" } }
+        ];
+      }
+      return Post.find(query).populate("author", "name").sort({ publishedAt: -1, createdAt: -1 }).lean();
+    },
+    ['posts-list', category || 'all', search || 'none'],
+    { revalidate: 3600 }
+  );
 
-  const posts = await Post.find(query).populate("author", "name").sort({ publishedAt: -1, createdAt: -1 }).lean();
+  const posts = await getPosts(category, search);
 
   return (
     <div className={styles.container}>

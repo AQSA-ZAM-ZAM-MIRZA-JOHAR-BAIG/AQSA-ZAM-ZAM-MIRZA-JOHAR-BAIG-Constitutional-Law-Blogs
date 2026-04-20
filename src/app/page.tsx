@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+export const revalidate = 3600; // Cache for 1 hour to fix slow TTFB
+
 export default async function Home() {
   let recentPosts: any[] = [];
 

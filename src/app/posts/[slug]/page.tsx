@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { unstable_cache } from "next/cache";
 import connectToDatabase from "@/lib/db";
 import { Post } from "@/models/Post";
 import styles from "./post.module.css";
@@ -7,10 +8,21 @@ import { Metadata } from "next";
 import { SITE_URL, absoluteUrl, trimToLength } from "@/lib/seo";
 import AuthorBio from "@/components/AuthorBio";
 
+export const revalidate = 3600; // Cache for 1 hour to fix slow TTFB
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  await connectToDatabase();
-  const post = await Post.findOne({ slug, published: true }).lean();
+  
+  const getPostMeta = unstable_cache(
+    async (postSlug: string) => {
+      await connectToDatabase();
+      return Post.findOne({ slug: postSlug, published: true }).lean();
+    },
+    [`post-meta-${slug}`],
+    { revalidate: 3600 }
+  );
+
+  const post = await getPostMeta(slug);
 
   if (!post) {
     return {
@@ -62,18 +74,32 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
-  await connectToDatabase();
   const { slug } = await params;
-  const post = await Post.findOne({ slug, published: true }).populate("author", "name").lean();
+  
+  const getPostData = unstable_cache(
+    async (postSlug: string) => {
+      await connectToDatabase();
+      const post = await Post.findOne({ slug: postSlug, published: true }).populate("author", "name").lean();
+      if (!post) return null;
+      
+      const recentPosts = await Post.find({ slug: { $ne: postSlug }, published: true })
+        .sort({ publishedAt: -1, createdAt: -1 })
+        .limit(3)
+        .lean();
+        
+      return { post, recentPosts };
+    },
+    [`post-${slug}`],
+    { revalidate: 3600 }
+  );
 
-  if (!post) {
+  const data = await getPostData(slug);
+
+  if (!data || !data.post) {
     notFound();
   }
 
-  const recentPosts = await Post.find({ slug: { $ne: slug }, published: true })
-    .sort({ publishedAt: -1, createdAt: -1 })
-    .limit(3)
-    .lean();
+  const { post, recentPosts } = data;
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -105,11 +131,11 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   // Replace common relative image directories with a safe absolute fallback image
   const safeHtml = rawHtml
     // imgs with src pointing to /assets/, /uploads/, /images/ -> fallback
-    .replace(/<img\\s+([^>]*?)src=("|')(\\/((assets|uploads|images)\\/[^"'>]+))("|')([^>]*?)>/gi, (m, g1, q1, src, inner, g4, q2, g2) => {
+    .replace(/<img\s+([^>]*?)src=("|')(\/((assets|uploads|images)\/[^"'>]+))("|')([^>]*?)>/gi, (m, g1, q1, src, inner, g4, q2, g2) => {
       return `<img src="${absoluteUrl('/profile.png')}" alt="image" />`;
     })
     // imgs with protocol-relative or malformed src -> fallback
-    .replace(/<img\\s+([^>]*?)src=("|')((?:https?:)?\\/\\/[^"'>]+)("|')([^>]*?)>/gi, (m) => {
+    .replace(/<img\s+([^>]*?)src=("|')((?:https?:)?\/\/[^"'>]+)("|')([^>]*?)>/gi, (m) => {
       return `<img src="${absoluteUrl('/profile.png')}" alt="image" />`;
     });
 
