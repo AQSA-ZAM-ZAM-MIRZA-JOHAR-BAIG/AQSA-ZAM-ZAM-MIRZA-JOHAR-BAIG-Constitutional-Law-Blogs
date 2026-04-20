@@ -517,6 +517,67 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* ======= LATEST ARTICLES ======= */}
+      {recentPosts && recentPosts.length > 0 && (
+        <section style={{ padding: '80px 24px', background: 'linear-gradient(180deg, #0a0a18 0%, #080810 100%)' }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+              <div style={{
+                display: 'inline-block', padding: '6px 16px', borderRadius: '100px',
+                backgroundColor: 'rgba(167,139,250,0.1)', border: '1px solid rgba(167,139,250,0.25)',
+                color: '#a78bfa', fontSize: '12px', fontWeight: 700, letterSpacing: '0.1em',
+                textTransform: 'uppercase', marginBottom: '16px',
+              }}>Tech Blog</div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#f8fafc', letterSpacing: '-0.02em', lineHeight: 1.2, marginBottom: '16px' }}>
+                Latest Articles
+              </h2>
+              <p style={{ fontSize: '17px', color: '#64748b', maxWidth: '540px', margin: '0 auto', lineHeight: 1.7 }}>
+                Insights on constitutional law, technology, and engineering.
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {recentPosts.map((post: any) => (
+                <Link key={post._id.toString()} href={`/posts/${post.slug}`} style={{
+                  padding: '28px',
+                  borderRadius: '16px',
+                  backgroundColor: '#0d0d1f',
+                  border: '1px solid rgba(255,255,255,0.06)',
+                  transition: 'all 0.3s ease',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                  textDecoration: 'none',
+                }}>
+                  <div style={{ fontSize: '12px', color: '#a78bfa', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 'bold' }}>
+                    {post.category}
+                  </div>
+                  <h3 style={{ color: '#f1f5f9', fontWeight: 700, fontSize: '20px', margin: 0 }}>
+                    {post.title}
+                  </h3>
+                  <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.7', margin: 0, flex: 1 }}>
+                    {post.summary && post.summary.length > 100 ? `${post.summary.substring(0, 100)}...` : post.summary}
+                  </p>
+                  <div style={{ fontSize: '13px', color: '#6366f1', fontWeight: 600, marginTop: '8px' }}>
+                    Read Article →
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            <div style={{ textAlign: 'center', marginTop: '40px' }}>
+              <Link href="/posts" style={{
+                display: 'inline-flex', alignItems: 'center', gap: '8px',
+                padding: '13px 32px', borderRadius: '12px',
+                border: '1px solid rgba(167,139,250,0.4)',
+                color: '#a78bfa', fontWeight: 600, fontSize: '15px',
+                textDecoration: 'none', backgroundColor: 'rgba(167,139,250,0.08)',
+              }}>View All Articles →</Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ======= CTA BANNER ======= */}
       <section style={{ padding: '80px 24px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>

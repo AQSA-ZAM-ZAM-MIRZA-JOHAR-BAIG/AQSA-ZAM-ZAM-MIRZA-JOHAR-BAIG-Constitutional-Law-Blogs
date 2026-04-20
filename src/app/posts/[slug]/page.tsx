@@ -65,6 +65,11 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     notFound();
   }
 
+  const recentPosts = await Post.find({ slug: { $ne: slug }, published: true })
+    .sort({ publishedAt: -1, createdAt: -1 })
+    .limit(3)
+    .lean();
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -134,6 +139,35 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
       <div className={styles.content} dangerouslySetInnerHTML={{ __html: safeHtml }} />
       <AuthorBio />
+
+      {recentPosts && recentPosts.length > 0 && (
+        <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+          <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: '#fff' }}>More Articles</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {recentPosts.map((rp: any) => (
+              <Link 
+                key={rp._id.toString()} 
+                href={`/posts/${rp.slug}`} 
+                style={{ 
+                  display: 'block', 
+                  padding: '1.25rem', 
+                  backgroundColor: 'rgba(255,255,255,0.03)', 
+                  borderRadius: '12px', 
+                  textDecoration: 'none',
+                  border: '1px solid rgba(255,255,255,0.05)',
+                  transition: 'border-color 0.2s ease'
+                }}
+              >
+                <div style={{ fontSize: '0.75rem', color: '#a78bfa', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.5rem', fontWeight: 'bold' }}>{rp.category}</div>
+                <h4 style={{ margin: '0 0 0.5rem 0', color: '#fff', fontSize: '1.25rem', fontWeight: 600 }}>{rp.title}</h4>
+                <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.875rem', lineHeight: 1.5 }}>
+                  {rp.summary && rp.summary.length > 120 ? `${rp.summary.substring(0, 120)}...` : rp.summary}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Internal link to improve site connectivity */}
       <footer style={{ marginTop: '48px', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
