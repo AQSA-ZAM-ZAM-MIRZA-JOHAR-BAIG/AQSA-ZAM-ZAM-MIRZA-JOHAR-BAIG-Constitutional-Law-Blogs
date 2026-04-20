@@ -424,6 +424,13 @@ export default async function Home() {
                 link: '/publications', linkText: 'View Certifications →',
                 color: '#34d399',
               },
+              {
+                icon: '👤',
+                title: 'Official Profile',
+                desc: 'Complete identity verification, education credentials, and verified contact information for Aqsa Zam Zam Mirza Johar Baig.',
+                link: '/aqsa-zam-zam-mirza-johar-baig', linkText: 'View Official Profile →',
+                color: '#a78bfa',
+              },
             ].map((card, i) => (
               <div key={i} style={{
                 padding: '32px',
@@ -540,13 +547,13 @@ export default async function Home() {
                 textDecoration: 'none',
                 boxShadow: '0 0 40px rgba(99,102,241,0.4)',
               }}>Contact AQSA MIRZA →</Link>
-              <Link href="/about" style={{
+              <Link href="/aqsa-zam-zam-mirza-johar-baig" style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
                 padding: '14px 32px', borderRadius: '12px',
                 border: '1px solid rgba(255,255,255,0.15)',
                 color: '#94a3b8', fontWeight: 600, fontSize: '16px',
                 textDecoration: 'none',
-              }}>Read Full Bio</Link>
+              }}>View Full Profile</Link>
             </div>
           </div>
         </div>
