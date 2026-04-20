@@ -26,11 +26,6 @@ const nextConfig: NextConfig = {
         destination: '/aqsa-zam-zam-mirza-johar-baig',
         permanent: true,
       },
-      {
-        source: '/assets/aqsa-mirza-resume.pdf',
-        destination: '/contact',
-        permanent: true,
-      },
     ];
   },
   async headers() {

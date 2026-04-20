@@ -63,13 +63,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   try {
     await connectToDatabase();
-    // Only published posts with a summary (non-thin content)
+    // Only published posts with valid slugs and proper metadata
     const posts = await Post.find({ published: true })
       .select('slug updatedAt publishedAt createdAt title summary')
+      .sort({ publishedAt: -1 })
       .lean();
 
+    // Filter for valid, unique slugs only
+    const seenSlugs = new Set<string>();
     postPages = posts
-      .filter((post: any) => post.slug && post.slug.trim() !== '')
+      .filter((post: any) => {
+        // Ensure slug exists and is not empty
+        if (!post.slug || typeof post.slug !== 'string' || post.slug.trim() === '') {
+          return false;
+        }
+        // Prevent duplicate slugs
+        if (seenSlugs.has(post.slug)) {
+          console.warn(`Sitemap: Duplicate slug detected: ${post.slug}`);
+          return false;
+        }
+        seenSlugs.add(post.slug);
+        return true;
+      })
       .map((post: any) => ({
         url: `${baseUrl}/posts/${post.slug}`,
         lastModified: new Date(post.updatedAt || post.publishedAt || post.createdAt),

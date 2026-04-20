@@ -38,7 +38,7 @@ export async function generateMetadata({
       index: false,
       follow: true,
     },
-    alternates: { canonical: "/posts" },
+    alternates: { canonical: `${SITE_URL}/posts` },
   };
 }
 

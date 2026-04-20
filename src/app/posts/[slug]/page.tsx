@@ -90,6 +90,19 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     "keywords": [post.category, ...(post.tags || [])].join(", "),
   };
 
+  // Sanitize post HTML to avoid broken image links being emitted into pages
+  const rawHtml: string = post.content || '';
+  // Replace common relative image directories with a safe absolute fallback image
+  const safeHtml = rawHtml
+    // imgs with src pointing to /assets/, /uploads/, /images/ -> fallback
+    .replace(/<img\\s+([^>]*?)src=("|')(\\/((assets|uploads|images)\\/[^"'>]+))("|')([^>]*?)>/gi, (m, g1, q1, src, inner, g4, q2, g2) => {
+      return `<img src="${absoluteUrl('/profile.png')}" alt="image" />`;
+    })
+    // imgs with protocol-relative or malformed src -> fallback
+    .replace(/<img\\s+([^>]*?)src=("|')((?:https?:)?\\/\\/[^"'>]+)("|')([^>]*?)>/gi, (m) => {
+      return `<img src="${absoluteUrl('/profile.png')}" alt="image" />`;
+    });
+
   return (
     <article className={styles.article}>
       <script
@@ -119,7 +132,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         </div>
       )}
 
-      <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.content }} />
+      <div className={styles.content} dangerouslySetInnerHTML={{ __html: safeHtml }} />
       <AuthorBio />
 
       {/* Internal link to improve site connectivity */}
