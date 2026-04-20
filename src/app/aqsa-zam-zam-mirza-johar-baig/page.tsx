@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     description:
       "Read Aqsa's official profile, including education, software engineering experience, and links to technical projects and publications.",
     url: `${SITE_URL}/aqsa-zam-zam-mirza-johar-baig`,
-    images: [{ url: absoluteUrl('/og-image.png'), width: 1200, height: 630, alt: 'Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML' }],
+    images: [{ url: absoluteUrl('/profile.png'), width: 1200, height: 630, alt: 'Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML' }],
   },
   twitter: {
     card: 'summary_large_image',
-    images: [absoluteUrl('/og-image.png')],
+    images: [absoluteUrl('/profile.png')],
   },
 };
 
@@ -52,7 +52,7 @@ export default function NameDisambiguationPage() {
         <header style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '60px' }}>
           <div style={{ position: 'relative', width: '200px', height: '200px', borderRadius: '50%', overflow: 'hidden', border: '4px solid #1e1e38', marginBottom: '24px' }}>
             <Image
-              src="/profile.svg"
+              src="/profile.png"
               alt="Aqsa Zam Zam Mirza Johar Baig"
               fill
               className="object-cover"

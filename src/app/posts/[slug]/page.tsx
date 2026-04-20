@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const description = trimToLength(rawDesc, 155);
 
   const canonical = `${SITE_URL}/posts/${post.slug}`;
-  const ogImage = absoluteUrl("/og-image.png");
+  const ogImage = absoluteUrl("/profile.png");
 
   return {
     title: { absolute: title },

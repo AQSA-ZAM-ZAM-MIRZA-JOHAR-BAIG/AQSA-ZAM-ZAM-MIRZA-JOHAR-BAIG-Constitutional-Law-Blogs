@@ -12,11 +12,11 @@ export const metadata: Metadata = {
     description:
       'Technical research highlights and professional certifications earned by Aqsa Zam Zam Mirza Johar Baig.',
     url: `${SITE_URL}/publications`,
-    images: [{ url: absoluteUrl('/og-image.png'), width: 1200, height: 630, alt: 'Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML' }],
+    images: [{ url: absoluteUrl('/profile.png'), width: 1200, height: 630, alt: 'Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML' }],
   },
   twitter: {
     card: 'summary_large_image',
-    images: [absoluteUrl('/og-image.png')],
+    images: [absoluteUrl('/profile.png')],
   },
 };
 

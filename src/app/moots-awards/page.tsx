@@ -12,11 +12,11 @@ export const metadata: Metadata = {
     description:
       'Competitive programming wins, hackathon participation, and open source achievements in one timeline.',
     url: `${SITE_URL}/moots-awards`,
-    images: [{ url: absoluteUrl('/og-image.png'), width: 1200, height: 630, alt: 'Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML' }],
+    images: [{ url: absoluteUrl('/profile.png'), width: 1200, height: 630, alt: 'Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML' }],
   },
   twitter: {
     card: 'summary_large_image',
-    images: [absoluteUrl('/og-image.png')],
+    images: [absoluteUrl('/profile.png')],
   },
 };
 

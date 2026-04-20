@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: absoluteUrl("/og-image.png"),
+        url: absoluteUrl("/profile.png"),
         width: 1200,
         height: 630,
         alt: "Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     title: "Aqsa Zam Zam Mirza Johar Baig | Developer & AI/ML",
     description:
       "Explore Aqsa's technical portfolio, engineering case studies, cloud projects, and AI/ML writing.",
-    images: [absoluteUrl("/og-image.png")],
+    images: [absoluteUrl("/profile.png")],
   },
 };
 
@@ -78,7 +78,7 @@ export default function RootLayout({
     "name": "Aqsa Zam Zam Mirza Johar Baig",
     "alternateName": ["Aqsa Mirza", "Aqsa Johar Baig"],
     "url": SITE_URL,
-    "image": absoluteUrl("/og-image.png"),
+    "image": absoluteUrl("/profile.png"),
     "jobTitle": "Software Developer & AI/ML Specialist",
     "description": "Computer Science student at VIIT Pune and BSc Data Science at IIT Madras, specializing in AI/ML, Full-stack development, and Cloud Architecture.",
     "nationality": {
