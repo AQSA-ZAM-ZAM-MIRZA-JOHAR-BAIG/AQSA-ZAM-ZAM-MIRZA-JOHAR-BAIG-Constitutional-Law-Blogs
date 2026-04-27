@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "How to contact AQSA MIRZA for technical collaborations?",
-    answer: "You can reach out to AQSA MIRZA through the 'Contact' page, via her professional email (aqsamirz6306@gmail.com), or through her official GitHub and LinkedIn profiles."
+    answer: "You can reach out to AQSA MIRZA through the 'Contact' page, via her professional email (aqsamirz@gmail.com), or through her official GitHub and LinkedIn profiles."
   }
 ];
 

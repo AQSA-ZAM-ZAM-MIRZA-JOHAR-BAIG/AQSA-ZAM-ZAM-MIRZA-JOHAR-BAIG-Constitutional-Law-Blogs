@@ -40,7 +40,7 @@ export default function Contact() {
             <div>
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Email</h3>
               <p className="text-lg text-blue-600 dark:text-blue-400 font-medium">
-                <a href="mailto:aqsamirz6306@gmail.com" className="hover:underline">aqsamirz6306@gmail.com</a>
+                <a href="mailto:aqsamirz@gmail.com" className="hover:underline">aqsamirz@gmail.com</a>
               </p>
             </div>
             <div>

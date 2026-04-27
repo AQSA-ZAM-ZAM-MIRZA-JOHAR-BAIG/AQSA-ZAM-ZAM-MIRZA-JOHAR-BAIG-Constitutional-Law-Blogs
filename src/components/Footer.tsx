@@ -62,7 +62,7 @@ export default function Footer() {
                 { name: 'Official Profile', href: '/aqsa-zam-zam-mirza-johar-baig' }, { name: 'Contact', href: '/contact' },
               ].map(link => (
                 <li key={link.name}>
-                   <Link href={link.href} style={{ color: '#64748b', textDecoration: 'none', fontSize: '14px', transition: 'color 0.2s' }}>
+                  <Link href={link.href} style={{ color: '#64748b', textDecoration: 'none', fontSize: '14px', transition: 'color 0.2s' }}>
                     {link.name}
                   </Link>
                 </li>
@@ -89,7 +89,7 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <div style={{ color: '#64748b', fontSize: '14px' }}>📍 Pune, Maharashtra, India</div>
               <div style={{ color: '#64748b', fontSize: '14px' }}>
-                📧 <a href="mailto:aqsamirz6306@gmail.com" style={{ color: '#a78bfa', textDecoration: 'none' }}>aqsamirz6306@gmail.com</a>
+                📧 <a href="mailto:aqsamirz@gmail.com" style={{ color: '#a78bfa', textDecoration: 'none' }}>aqsamirz@gmail.com</a>
               </div>
               <div style={{ color: '#64748b', fontSize: '14px' }}>🎓 VIIT Pune | IIT Madras</div>
             </div>
