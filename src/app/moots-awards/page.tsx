@@ -30,7 +30,7 @@ const awards = [
   },
   {
     title: "1st Place - Local College Coding Sprint",
-    organization: "VIIT Pune",
+    organization: "VIIIT PUNE",
     date: "Sept 2024",
     impact: "Solved 6/6 algorithmic challenges in record time using Python and C++.",
     details: "Focused on Dynamic Programming, Graph Theory, and String Manipulation."

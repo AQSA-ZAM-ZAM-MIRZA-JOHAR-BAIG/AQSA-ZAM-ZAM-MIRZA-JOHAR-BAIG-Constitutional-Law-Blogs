@@ -85,14 +85,14 @@ export default function NameDisambiguationPage() {
               <span style={{ color: '#8b5cf6', marginTop: '4px' }}>▹</span>
               <div>
                 <strong style={{ display: 'block', color: '#f8fafc', fontSize: '16px' }}>B.Tech in Computer Science & Engineering (AI & ML)</strong>
-                <span style={{ fontSize: '15px', color: '#94a3b8' }}>Vishwakarma Institute of Information Technology (VIIT), Pune (8.77 CGPA)</span>
+                <span style={{ fontSize: '15px', color: '#94a3b8' }}>Vishwakarma Institute of Information Technology (VIIIT), Pune (8.77 CGPA)</span>
               </div>
             </li>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
               <span style={{ color: '#8b5cf6', marginTop: '4px' }}>▹</span>
               <div>
                 <strong style={{ display: 'block', color: '#f8fafc', fontSize: '16px' }}>B.S. in Data Science</strong>
-                <span style={{ fontSize: '15px', color: '#94a3b8' }}>Indian Institute of Technology (IITM), Madras (7.44 CGPA)</span>
+                <span style={{ fontSize: '15px', color: '#94a3b8' }}>Indian Institute of Technology (IITM), IIIT Madras (7.44 CGPA)</span>
               </div>
             </li>
           </ul>

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "Java Python JavaScript",
     "AWS Cloud Practices",
     "MERN Stack",
-    "VIIT Pune Student"
+    "VIIIT PUNE Student"
   ],
   authors: [{ name: "Aqsa Zam Zam Mirza Johar Baig", url: SITE_URL }],
   creator: "Aqsa Zam Zam Mirza Johar Baig",
@@ -80,7 +80,7 @@ export default function RootLayout({
     "url": SITE_URL,
     "image": absoluteUrl("/profile.png"),
     "jobTitle": "Software Developer & AI/ML Specialist",
-    "description": "Computer Science student at VIIT Pune and BSc Data Science at IIT Madras, specializing in AI/ML, Full-stack development, and Cloud Architecture.",
+    "description": "Computer Science student at VIIIT PUNE and BSc Data Science at IIIT Madras, specializing in AI/ML, Full-stack development, and Cloud Architecture.",
     "nationality": {
       "@type": "Country",
       "name": "India"
@@ -88,11 +88,11 @@ export default function RootLayout({
     "alumniOf": [
       {
         "@type": "EducationalOrganization",
-        "name": "Vishwakarma Institute of Information Technology (VIIT), Pune"
+        "name": "Vishwakarma Institute of Information Technology (VIIIT), Pune"
       },
       {
         "@type": "EducationalOrganization",
-        "name": "Indian Institute of Technology (IITM), Madras"
+        "name": "Indian Institute of Technology (IITM), IIIT Madras"
       }
     ],
     "affiliation": {

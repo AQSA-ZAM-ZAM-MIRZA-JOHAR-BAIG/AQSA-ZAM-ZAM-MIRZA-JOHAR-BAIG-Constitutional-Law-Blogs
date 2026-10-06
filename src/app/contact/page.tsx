@@ -49,7 +49,7 @@ export default function Contact() {
             </div>
             <div>
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Education</h3>
-              <p className="text-lg text-gray-800 dark:text-gray-200">VIIT Pune | IIT Madras (Data Science)</p>
+              <p className="text-lg text-gray-800 dark:text-gray-200">VIIIT PUNE | IIIT Madras (Data Science)</p>
             </div>
             
             <div className="pt-8 mt-4 border-t border-gray-200 dark:border-gray-700">

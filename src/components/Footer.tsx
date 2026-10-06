@@ -91,7 +91,7 @@ export default function Footer() {
               <div style={{ color: '#64748b', fontSize: '14px' }}>
                 📧 <a href="mailto:aqsamirz@gmail.com" style={{ color: '#a78bfa', textDecoration: 'none' }}>aqsamirz@gmail.com</a>
               </div>
-              <div style={{ color: '#64748b', fontSize: '14px' }}>🎓 VIIT Pune | IIT Madras</div>
+              <div style={{ color: '#64748b', fontSize: '14px' }}>🎓 VIIIT PUNE | IIIT Madras</div>
             </div>
             <Link href="/contact" style={{
               display: 'inline-block',

@@ -4,7 +4,7 @@ import { useState } from 'react';
 const faqs = [
   {
     question: "Who is AQSA MIRZA?",
-    answer: "AQSA MIRZA is a Computer Science undergraduate at VIIT Pune and a Data Science student at IIT Madras. She is a software developer, AI/ML specialist, and cloud architect."
+    answer: "AQSA MIRZA is a Computer Science undergraduate at VIIIT PUNE and a Data Science student at IIIT Madras. She is a software developer, AI/ML specialist, and cloud architect."
   },
   {
     question: "What is AQSA MIRZA’s technical background?",
