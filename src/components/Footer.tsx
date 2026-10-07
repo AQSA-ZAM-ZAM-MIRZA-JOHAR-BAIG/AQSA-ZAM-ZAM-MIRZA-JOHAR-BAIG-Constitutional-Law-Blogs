@@ -107,6 +107,34 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Verified Web Network Directory */}
+        <div style={{
+          borderTop: '1px solid rgba(255,255,255,0.08)',
+          paddingTop: '28px',
+          marginBottom: '28px',
+          textAlign: 'center',
+        }}>
+          <h4 style={{ color: '#a78bfa', fontSize: '13px', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '8px' }}>
+            Official Verified Web Network of Aqsa Zam Zam Mirza Johar Baig (Aqsa Mirza)
+          </h4>
+          <p style={{ color: '#64748b', fontSize: '13px', maxWidth: '780px', margin: '0 auto 16px' }}>
+            Explore verified web applications, academic publications, legal tech initiatives, and projects by Aqsa Zam Zam Mirza Johar Baig (also known as Aqsa Zam Zam Mirza and Aqsa Mirza):
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '8px 12px', fontSize: '12px' }}>
+            <a href="https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app/" target="_blank" rel="noopener" style={{ color: '#94a3b8', textDecoration: 'none', padding: '4px 10px', borderRadius: '6px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>Aqsa Zam Zam Mirza Johar Baig – AI Developer Portfolio</a>
+            <a href="https://aqsa-zam-zam-mirza-johar-baig-blogs.vercel.app/" target="_blank" rel="noopener" style={{ color: '#94a3b8', textDecoration: 'none', padding: '4px 10px', borderRadius: '6px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>Aqsa Mirza – AI &amp; Engineering Blogs</a>
+            <a href="https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/" style={{ color: '#94a3b8', textDecoration: 'none', padding: '4px 10px', borderRadius: '6px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>Aqsa Zam Zam Mirza – Constitutional Law Research</a>
+            <a href="https://aqsa-zam-zam-mirza-johar-baig-law-d.vercel.app/" target="_blank" rel="noopener" style={{ color: '#94a3b8', textDecoration: 'none', padding: '4px 10px', borderRadius: '6px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>Aqsa Mirza – LexiLaw Legal Dictionary</a>
+            <a href="https://aqsa-zam-zam-mirza-johar-baig-law-f.vercel.app/" target="_blank" rel="noopener" style={{ color: '#94a3b8', textDecoration: 'none', padding: '4px 10px', borderRadius: '6px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>Aqsa Zam Zam Mirza Johar Baig – Law For Beginners</a>
+            <a href="https://aqsazamzammirzajoharbaig.com/" target="_blank" rel="noopener" style={{ color: '#94a3b8', textDecoration: 'none', padding: '4px 10px', borderRadius: '6px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>Aqsa Zam Zam Mirza – Alerto Market Bot</a>
+            <a href="https://firgenerator.org/" target="_blank" rel="noopener" style={{ color: '#94a3b8', textDecoration: 'none', padding: '4px 10px', borderRadius: '6px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>Aqsa Mirza – FIR Generator Online</a>
+            <a href="https://aqsa-zam-zam-mirza-johar-baig-urdu.vercel.app/" target="_blank" rel="noopener" style={{ color: '#94a3b8', textDecoration: 'none', padding: '4px 10px', borderRadius: '6px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>AQSA ZAM ZAM MIRZA JOHAR BAIG – Urdu Shayari &amp; Literature</a>
+            <a href="https://www.aqsazamzammirzajoharbaig.com/" target="_blank" rel="noopener" style={{ color: '#94a3b8', textDecoration: 'none', padding: '4px 10px', borderRadius: '6px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>Aqsa Zam Zam Mirza Johar Baig – Drawing Center Studio</a>
+            <a href="https://aqsa-zam-zam-mirza-johar-baig-portfolio-3.vercel.app/" target="_blank" rel="noopener" style={{ color: '#94a3b8', textDecoration: 'none', padding: '4px 10px', borderRadius: '6px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>Aqsa Mirza – VIP Logistics &amp; Executive Services</a>
+            <a href="https://aqsa-zam-zam-mirza-johar-baig.github.io/Yashwantrao-chavan-mahavidyalaya/" target="_blank" rel="noopener" style={{ color: '#94a3b8', textDecoration: 'none', padding: '4px 10px', borderRadius: '6px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>Aqsa Zam Zam Mirza Johar Baig – Academic Merit Records</a>
+          </div>
+        </div>
+
         <div style={{
           borderTop: '1px solid rgba(255,255,255,0.06)',
           paddingTop: '24px',
@@ -116,9 +144,9 @@ export default function Footer() {
           gap: '4px',
         }}>
           <p style={{ color: '#475569', fontSize: '13px', textAlign: 'center' }}>
-            &copy; {currentYear} AQSA MIRZA. All rights reserved.
+            &copy; {currentYear} <strong>Aqsa Zam Zam Mirza Johar Baig</strong> (Aqsa Mirza). All rights reserved.
           </p>
-          <p style={{ color: '#334155', fontSize: '12px', textAlign: 'center' }}>Last Updated: March 2026</p>
+          <p style={{ color: '#334155', fontSize: '12px', textAlign: 'center' }}>Official Academic &amp; Legal Research Platform</p>
         </div>
       </div>
     </footer>

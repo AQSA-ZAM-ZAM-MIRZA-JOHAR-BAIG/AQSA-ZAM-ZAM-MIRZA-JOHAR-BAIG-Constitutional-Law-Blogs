@@ -18,33 +18,42 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Aqsa Zam Zam Mirza Johar Baig Official Profile (2026)",
-    template: "%s | Aqsa Zam Zam Mirza Johar Baig",
+    default: "Aqsa Zam Zam Mirza Johar Baig (Aqsa Mirza) | Constitutional Law & Legal Research Blogs",
+    template: "%s | Aqsa Zam Zam Mirza Johar Baig (Aqsa Mirza)",
   },
   description:
-    "Official profile, verified education, featured projects, FAQ answers, and direct contact for Aqsa Zam Zam Mirza Johar Baig.",
+    "Official profile, constitutional law blogs, academic research, and direct contact for Aqsa Zam Zam Mirza Johar Baig (also known as Aqsa Zam Zam Mirza and Aqsa Mirza).",
   keywords: [
+    "AQSA ZAM ZAM MIRZA JOHAR BAIG",
     "Aqsa Zam Zam Mirza Johar Baig",
+    "aqsa zam zam mirza johar baig",
+    "AQSA ZAM ZAM MIRZA",
+    "Aqsa Zam Zam Mirza",
+    "aqsa zam zam mirza",
+    "AQSA MIRZA",
     "Aqsa Mirza",
+    "aqsa mirza",
     "Software Developer",
     "Computer Science Portfolio",
     "AI & ML Engineer",
     "Full-Stack Developer",
-    "Java Python JavaScript",
-    "AWS Cloud Practices",
-    "MERN Stack",
-    "VIIIT PUNE Student"
+    "Constitutional Law Researcher",
+    "VIIIT PUNE Student",
+    "IIIT Madras Data Science"
   ],
-  authors: [{ name: "Aqsa Zam Zam Mirza Johar Baig", url: SITE_URL }],
+  authors: [{ name: "Aqsa Zam Zam Mirza Johar Baig (Aqsa Mirza)", url: SITE_URL }],
   creator: "Aqsa Zam Zam Mirza Johar Baig",
   publisher: "Aqsa Zam Zam Mirza Johar Baig",
+  verification: {
+    google: "googlee89522a79f5eb2c7",
+  },
   alternates: {
     canonical: `${SITE_URL}/`,
   },
   openGraph: {
-    title: "Aqsa Zam Zam Mirza Johar Baig | Developer & AI/ML",
+    title: "Aqsa Zam Zam Mirza Johar Baig (Aqsa Mirza) | Developer & Constitutional Law",
     description:
-      "Explore Aqsa's technical portfolio, engineering case studies, cloud projects, and AI/ML writing in one place.",
+      "Explore Aqsa Zam Zam Mirza Johar Baig's technical portfolio, constitutional research, engineering case studies, and AI writing in one place.",
     url: `${SITE_URL}/`,
     siteName: SITE_NAME,
     locale: "en_US",
@@ -54,15 +63,15 @@ export const metadata: Metadata = {
         url: absoluteUrl("/profile.png"),
         width: 1200,
         height: 630,
-        alt: "Aqsa Zam Zam Mirza Johar Baig – Developer & AI/ML",
+        alt: "Aqsa Zam Zam Mirza Johar Baig (Aqsa Mirza) – Developer & Legal Researcher",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aqsa Zam Zam Mirza Johar Baig | Developer & AI/ML",
+    title: "Aqsa Zam Zam Mirza Johar Baig (Aqsa Mirza) | Developer & AI/ML",
     description:
-      "Explore Aqsa's technical portfolio, engineering case studies, cloud projects, and AI/ML writing.",
+      "Explore technical portfolio, constitutional law case studies, and AI research by Aqsa Zam Zam Mirza Johar Baig.",
     images: [absoluteUrl("/profile.png")],
   },
 };
@@ -76,11 +85,27 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Aqsa Zam Zam Mirza Johar Baig",
-    "alternateName": ["Aqsa Mirza", "Aqsa Johar Baig"],
+    "alternateName": [
+      "AQSA ZAM ZAM MIRZA JOHAR BAIG",
+      "Aqsa Zam Zam Mirza Johar Baig",
+      "aqsa zam zam mirza johar baig",
+      "AQSA ZAM ZAM MIRZA",
+      "Aqsa Zam Zam Mirza",
+      "aqsa zam zam mirza",
+      "AQSA MIRZA",
+      "Aqsa Mirza",
+      "aqsa mirza",
+      "Aqsa Johar Baig",
+      "Aqsa M. J. Baig"
+    ],
+    "givenName": "Aqsa",
+    "familyName": "Mirza Johar Baig",
+    "additionalName": "Zam Zam",
     "url": SITE_URL,
     "image": absoluteUrl("/profile.png"),
     "jobTitle": "Software Developer & AI/ML Specialist",
-    "description": "Computer Science student at VIIIT PUNE and BSc Data Science at IIIT Madras, specializing in AI/ML, Full-stack development, and Cloud Architecture.",
+    "description": "Aqsa Zam Zam Mirza Johar Baig (also known as Aqsa Zam Zam Mirza and Aqsa Mirza) is a Computer Science student at VIIIT PUNE and BSc Data Science at IIIT Madras, specializing in AI/ML, Full-stack development, and Constitutional Law research.",
+    "disambiguatingDescription": "Official entity record for Aqsa Zam Zam Mirza Johar Baig, also searched as Aqsa Zam Zam Mirza and Aqsa Mirza.",
     "nationality": {
       "@type": "Country",
       "name": "India"
@@ -99,10 +124,25 @@ export default function RootLayout({
       "@type": "Organization",
       "name": "Mahalaxmi Tailors, FalcoVita"
     },
-    "knowsAbout": ["Full-Stack Development", "Artificial Intelligence", "Machine Learning", "Cloud Architecture (AWS)", "Data Structures & Algorithms"],
+    "knowsAbout": ["Full-Stack Development", "Artificial Intelligence", "Machine Learning", "Cloud Architecture (AWS)", "Data Structures & Algorithms", "Constitutional Law"],
     "sameAs": [
+      "https://github.com/AQSA-ZAM-ZAM-MIRZA-JOHAR-BAIG",
       "https://www.linkedin.com/in/aqsamirza08",
-      "https://github.com/AQSA-ZAM-ZAM-MIRZA-JOHAR-BAIG"
+      "https://www.kaggle.com/aqsamirza08",
+      "https://aqsamirza08.medium.com/",
+      "https://stackoverflow.com/users/32468898/aqsa-zam-zam-mirza-johar-baig",
+      "https://www.youtube.com/@aqsamirza08",
+      "https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app/",
+      "https://aqsa-zam-zam-mirza-johar-baig-portfolio-3.vercel.app/",
+      "https://aqsazamzammirzajoharbaig.com/",
+      "https://aqsa-zam-zam-mirza-johar-baig-blogs.vercel.app/",
+      "https://aqsa-zam-zam-mirza-johar-baig-const.vercel.app/",
+      "https://firgenerator.org/",
+      "https://aqsa-zam-zam-mirza-johar-baig-law-d.vercel.app/",
+      "https://aqsa-zam-zam-mirza-johar-baig-law-f.vercel.app/",
+      "https://aqsa-zam-zam-mirza-johar-baig-urdu.vercel.app/",
+      "https://www.aqsazamzammirzajoharbaig.com/",
+      "https://aqsa-zam-zam-mirza-johar-baig.github.io/Yashwantrao-chavan-mahavidyalaya/"
     ]
   };
 
