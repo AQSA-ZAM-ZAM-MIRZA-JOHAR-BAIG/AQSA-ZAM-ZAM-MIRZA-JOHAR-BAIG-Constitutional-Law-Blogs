@@ -245,6 +245,7 @@ export default async function Home() {
                   className="object-cover"
                   sizes="320px"
                   priority
+                  unoptimized
                 />
               </div>
               {/* Floating badge */}

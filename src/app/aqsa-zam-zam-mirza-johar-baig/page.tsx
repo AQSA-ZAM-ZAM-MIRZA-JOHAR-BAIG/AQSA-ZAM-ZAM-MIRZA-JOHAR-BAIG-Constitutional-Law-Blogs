@@ -58,6 +58,7 @@ export default function NameDisambiguationPage() {
               className="object-cover"
               sizes="200px"
               priority
+              unoptimized
             />
           </div>
           

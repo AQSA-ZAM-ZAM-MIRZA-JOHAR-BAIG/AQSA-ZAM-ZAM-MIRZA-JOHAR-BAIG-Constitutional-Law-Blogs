@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    unoptimized: true,
     formats: ["image/avif", "image/webp"],
     // Restrict device sizes to avoid serving unnecessarily large images
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
