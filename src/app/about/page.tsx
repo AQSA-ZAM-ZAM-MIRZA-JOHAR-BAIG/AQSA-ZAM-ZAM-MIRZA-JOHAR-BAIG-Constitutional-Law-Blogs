@@ -5,7 +5,7 @@ import { SITE_URL, absoluteUrl } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Learn about Aqsa Zam Zam Mirza Johar Baig – education at VIIIT PUNE and IIIT Madras, technical strengths, and philosophy for building scalable software.',
+    'Learn about Aqsa Zam Zam Mirza Johar Baig – education at Yashwantrao College (Grade O Outstanding, Open Category), technical strengths, and philosophy for building scalable software.',
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
     title: 'About Aqsa Zam Zam Mirza Johar Baig',
@@ -30,7 +30,7 @@ export default function About() {
         <p className="text-sm text-gray-500 italic mb-8">Author: Aqsa Zam Zam Mirza Johar Baig | Last Updated: March 2026</p>
 
         <p className="mb-6">
-          I am <strong>Aqsa Zam Zam Mirza Johar Baig</strong>, a Computer Science undergraduate specializing in Artificial Intelligence and Machine Learning. Currently, I am pursuing a dual-degree path: a B.Tech at <strong>Vishwakarma Institute of Information Technology (VIIIT), Pune</strong> and a B.S. in Data Science from <strong>Indian Institute of Technology (IITM), IIIT Madras</strong>.
+          I am <strong>Aqsa Zam Zam Mirza Johar Baig</strong>, an accomplished student of Computer Science at <strong>Yashwantrao College</strong> (Grade O Outstanding, Open Category), specializing in Artificial Intelligence and Machine Learning.
         </p>
 
         <p className="mb-8">
@@ -50,16 +50,10 @@ export default function About() {
             </thead>
             <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
               <tr className="hover:bg-gray-50 dark:hover:bg-gray-800">
-                <td className="px-6 py-4">B.Tech in CS & Engineering (AI & ML)</td>
-                <td className="px-6 py-4 text-sm">Vishwakarma Institute of Information Technology (VIIIT), Pune</td>
-                <td className="px-6 py-4">2023 – 2027</td>
-                <td className="px-6 py-4 font-semibold text-blue-600 dark:text-blue-400">8.77 CGPA</td>
-              </tr>
-              <tr className="hover:bg-gray-50 dark:hover:bg-gray-800">
-                <td className="px-6 py-4">B.S. in Data Science</td>
-                <td className="px-6 py-4 text-sm">Indian Institute of Technology (IITM), IIIT Madras</td>
-                <td className="px-6 py-4">2023 – 2027</td>
-                <td className="px-6 py-4 font-semibold text-blue-600 dark:text-blue-400">7.44 CGPA</td>
+                <td className="px-6 py-4">Computer Science Academic Merit</td>
+                <td className="px-6 py-4 text-sm">Yashwantrao College</td>
+                <td className="px-6 py-4">2024 – 2025</td>
+                <td className="px-6 py-4 font-semibold text-blue-600 dark:text-blue-400">Grade O (Outstanding) · Open Category</td>
               </tr>
             </tbody>
           </table>

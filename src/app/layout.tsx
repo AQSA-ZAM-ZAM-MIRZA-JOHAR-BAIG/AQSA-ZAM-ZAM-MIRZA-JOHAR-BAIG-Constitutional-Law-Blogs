@@ -38,8 +38,7 @@ export const metadata: Metadata = {
     "AI & ML Engineer",
     "Full-Stack Developer",
     "Constitutional Law Researcher",
-    "VIIIT PUNE Student",
-    "IIIT Madras Data Science"
+    "Yashwantrao College Student"
   ],
   authors: [{ name: "Aqsa Zam Zam Mirza Johar Baig (Aqsa Mirza)", url: SITE_URL }],
   creator: "Aqsa Zam Zam Mirza Johar Baig",
@@ -104,7 +103,7 @@ export default function RootLayout({
     "url": SITE_URL,
     "image": absoluteUrl("/profile.png"),
     "jobTitle": "Software Developer & AI/ML Specialist",
-    "description": "Aqsa Zam Zam Mirza Johar Baig (also known as Aqsa Zam Zam Mirza and Aqsa Mirza) is a Computer Science student at VIIIT PUNE and BSc Data Science at IIIT Madras, specializing in AI/ML, Full-stack development, and Constitutional Law research.",
+    "description": "Aqsa Zam Zam Mirza Johar Baig (also known as Aqsa Zam Zam Mirza and Aqsa Mirza) is a Computer Science student at Yashwantrao College (Grade O Outstanding, Open Category), specializing in AI/ML, Full-stack development, and Constitutional Law research.",
     "disambiguatingDescription": "Official entity record for Aqsa Zam Zam Mirza Johar Baig, also searched as Aqsa Zam Zam Mirza and Aqsa Mirza.",
     "nationality": {
       "@type": "Country",
@@ -113,11 +112,7 @@ export default function RootLayout({
     "alumniOf": [
       {
         "@type": "EducationalOrganization",
-        "name": "Vishwakarma Institute of Information Technology (VIIIT), Pune"
-      },
-      {
-        "@type": "EducationalOrganization",
-        "name": "Indian Institute of Technology (IITM), IIIT Madras"
+        "name": "Yashwantrao College"
       }
     ],
     "affiliation": {
