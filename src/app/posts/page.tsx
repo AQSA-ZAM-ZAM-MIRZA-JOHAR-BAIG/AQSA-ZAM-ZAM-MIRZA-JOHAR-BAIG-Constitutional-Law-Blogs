@@ -43,6 +43,8 @@ export async function generateMetadata({
   };
 }
 
+import { FALLBACK_POSTS } from "@/data/fallbackPosts";
+
 export default async function PostsPage({
   searchParams,
 }: {
@@ -52,16 +54,41 @@ export default async function PostsPage({
 
   const getPosts = unstable_cache(
     async (cat?: string, q?: string) => {
-      await connectToDatabase();
-      let query: any = { published: true };
-      if (cat) query.category = cat;
-      if (q) {
-        query.$or = [
-          { title: { $regex: q, $options: "i" } },
-          { content: { $regex: q, $options: "i" } }
-        ];
+      try {
+        if (process.env.MONGODB_URI) {
+          await connectToDatabase();
+          let query: any = { published: true };
+          if (cat && cat !== "All Categories") query.category = cat;
+          if (q) {
+            query.$or = [
+              { title: { $regex: q, $options: "i" } },
+              { content: { $regex: q, $options: "i" } }
+            ];
+          }
+          const dbPosts = await Post.find(query).populate("author", "name").sort({ publishedAt: -1, createdAt: -1 }).lean();
+          if (dbPosts && dbPosts.length > 0) {
+            return JSON.parse(JSON.stringify(dbPosts));
+          }
+        }
+      } catch (err) {
+        console.warn("MongoDB unavailable or empty, serving fallback posts:", err);
       }
-      return Post.find(query).populate("author", "name").sort({ publishedAt: -1, createdAt: -1 }).lean();
+
+      // Filter fallback posts
+      return FALLBACK_POSTS.filter((post) => {
+        if (cat && cat !== "All Categories" && cat !== "") {
+          if (post.category !== cat) return false;
+        }
+        if (q && q.trim() !== "") {
+          const lower = q.toLowerCase();
+          return (
+            post.title.toLowerCase().includes(lower) ||
+            post.summary.toLowerCase().includes(lower) ||
+            post.tags.some(t => t.toLowerCase().includes(lower))
+          );
+        }
+        return true;
+      });
     },
     ['posts-list', category || 'all', search || 'none'],
     { revalidate: 3600 }

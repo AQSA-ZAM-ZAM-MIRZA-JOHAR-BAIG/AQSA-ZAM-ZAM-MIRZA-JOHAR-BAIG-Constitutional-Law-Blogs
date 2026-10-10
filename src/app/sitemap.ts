@@ -92,8 +92,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.7,
       }));
   } catch (error) {
-    console.error('Sitemap: Failed to fetch posts from DB:', error);
-    postPages = [];
+    const { FALLBACK_POSTS } = await import('@/data/fallbackPosts');
+    postPages = FALLBACK_POSTS.map((post) => ({
+      url: `${baseUrl}/posts/${post.slug}`,
+      lastModified: new Date(post.publishedAt),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    }));
   }
 
   // Deduplicate by URL (guard against duplicate slugs)

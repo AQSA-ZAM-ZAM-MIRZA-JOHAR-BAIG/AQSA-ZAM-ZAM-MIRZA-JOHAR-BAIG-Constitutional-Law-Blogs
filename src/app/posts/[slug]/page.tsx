@@ -8,6 +8,8 @@ import { Metadata } from "next";
 import { SITE_URL, absoluteUrl, trimToLength } from "@/lib/seo";
 import AuthorBio from "@/components/AuthorBio";
 
+import { FALLBACK_POSTS } from "@/data/fallbackPosts";
+
 export const revalidate = 3600; // Cache for 1 hour to fix slow TTFB
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -15,8 +17,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   
   const getPostMeta = unstable_cache(
     async (postSlug: string) => {
-      await connectToDatabase();
-      return Post.findOne({ slug: postSlug, published: true }).lean();
+      try {
+        if (process.env.MONGODB_URI) {
+          await connectToDatabase();
+          const dbPost = await Post.findOne({ slug: postSlug, published: true }).lean();
+          if (dbPost) return JSON.parse(JSON.stringify(dbPost));
+        }
+      } catch (err) {
+        // Fall back to static post data
+      }
+      return FALLBACK_POSTS.find(p => p.slug === postSlug) || null;
     },
     [`post-meta-${slug}`],
     { revalidate: 3600 }
@@ -37,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   // Ensure description is always 110–155 chars for SEO
   let rawDesc = post.summary ||
-    `Read "${post.title}" \u2013 constitutional law analysis by Aqsa Zam Zam Mirza Johar Baig covering ${post.category} on the official law blog.`;
+    `Read "${post.title}" – constitutional law analysis by Aqsa Zam Zam Mirza Johar Baig covering ${post.category} on the official law blog.`;
     
   if (rawDesc.length < 110) {
     rawDesc = `${rawDesc} Discover comprehensive constitutional law analysis, landmark case studies, and insights by Aqsa Zam Zam Mirza Johar Baig.`;
@@ -78,16 +88,33 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   
   const getPostData = unstable_cache(
     async (postSlug: string) => {
-      await connectToDatabase();
-      const post = await Post.findOne({ slug: postSlug, published: true }).populate("author", "name").lean();
-      if (!post) return null;
-      
-      const recentPosts = await Post.find({ slug: { $ne: postSlug }, published: true })
-        .sort({ publishedAt: -1, createdAt: -1 })
-        .limit(3)
-        .lean();
-        
-      return { post, recentPosts };
+      try {
+        if (process.env.MONGODB_URI) {
+          await connectToDatabase();
+          const dbPost = await Post.findOne({ slug: postSlug, published: true }).populate("author", "name").lean();
+          if (dbPost) {
+            const recent = await Post.find({ slug: { $ne: postSlug }, published: true })
+              .sort({ publishedAt: -1, createdAt: -1 })
+              .limit(3)
+              .lean();
+            return {
+              post: JSON.parse(JSON.stringify(dbPost)),
+              recentPosts: JSON.parse(JSON.stringify(recent))
+            };
+          }
+        }
+      } catch (err) {
+        // Fallback below
+      }
+
+      const fallback = FALLBACK_POSTS.find(p => p.slug === postSlug);
+      if (!fallback) return null;
+
+      const recentFallback = FALLBACK_POSTS.filter(p => p.slug !== postSlug).slice(0, 3);
+      return {
+        post: fallback,
+        recentPosts: recentFallback
+      };
     },
     [`post-${slug}`],
     { revalidate: 3600 }

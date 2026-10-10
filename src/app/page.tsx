@@ -17,7 +17,12 @@ export default async function Home() {
       .limit(3)
       .lean();
   } catch (error) {
-    console.error("Failed to fetch posts:", error);
+    console.warn("Failed to fetch posts from DB, using fallback articles.");
+  }
+
+  if (!recentPosts || recentPosts.length === 0) {
+    const { FALLBACK_POSTS } = await import('@/data/fallbackPosts');
+    recentPosts = FALLBACK_POSTS.slice(0, 3);
   }
 
   const technicalSkills = [

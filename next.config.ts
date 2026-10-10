@@ -27,6 +27,11 @@ const nextConfig: NextConfig = {
         destination: '/aqsa-zam-zam-mirza-johar-baig',
         permanent: true,
       },
+      {
+        source: '/blog',
+        destination: '/posts',
+        permanent: true,
+      },
     ];
   },
   async headers() {
