@@ -13,7 +13,7 @@ export default function AuthorBio() {
       aria-label="Author biography"
     >
       <p style={{ color: "#cbd5e1", fontSize: "14px", lineHeight: 1.7, marginBottom: "10px" }}>
-        <strong>Aqsa Zam Zam Mirza Johar Baig</strong> studied Computer Science at Yashwantrao College (Grade O Outstanding, Open Category).
+        <strong>Aqsa Zam Zam Mirza Johar Baig</strong> studied Computer Science at Y.C. College (Yashwantrao Chavan College, Grade O Outstanding, Open Category).
       </p>
       <p style={{ color: "#cbd5e1", fontSize: "14px", lineHeight: 1.7, marginBottom: "10px" }}>
         She has personally verified and documented multiple production software, cloud, and legal-content workflows

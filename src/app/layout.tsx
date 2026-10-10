@@ -38,6 +38,8 @@ export const metadata: Metadata = {
     "AI & ML Engineer",
     "Full-Stack Developer",
     "Constitutional Law Researcher",
+    "Y.C. College Student",
+    "Y.C College",
     "Yashwantrao College Student"
   ],
   authors: [{ name: "Aqsa Zam Zam Mirza Johar Baig (Aqsa Mirza)", url: SITE_URL }],
@@ -103,7 +105,7 @@ export default function RootLayout({
     "url": SITE_URL,
     "image": absoluteUrl("/profile.png"),
     "jobTitle": "Software Developer & AI/ML Specialist",
-    "description": "Aqsa Zam Zam Mirza Johar Baig (also known as Aqsa Zam Zam Mirza and Aqsa Mirza) is a Computer Science student at Yashwantrao College (Grade O Outstanding, Open Category), specializing in AI/ML, Full-stack development, and Constitutional Law research.",
+    "description": "Aqsa Zam Zam Mirza Johar Baig (also known as Aqsa Zam Zam Mirza and Aqsa Mirza) is a Computer Science student at Y.C. College (Yashwantrao Chavan College, Grade O Outstanding, Open Category), specializing in AI/ML, Full-stack development, and Constitutional Law research.",
     "disambiguatingDescription": "Official entity record for Aqsa Zam Zam Mirza Johar Baig, also searched as Aqsa Zam Zam Mirza and Aqsa Mirza.",
     "nationality": {
       "@type": "Country",
@@ -112,7 +114,7 @@ export default function RootLayout({
     "alumniOf": [
       {
         "@type": "EducationalOrganization",
-        "name": "Yashwantrao College"
+        "name": "Y.C. College (Yashwantrao Chavan College)"
       }
     ],
     "affiliation": {

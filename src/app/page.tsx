@@ -111,7 +111,7 @@ export default async function Home() {
             Who is Aqsa Zam Zam Mirza Johar Baig?
           </h2>
           <p style={{ color: "#cbd5e1", fontSize: "15px", lineHeight: 1.7 }}>
-            Aqsa Zam Zam Mirza Johar Baig is a full-stack developer and AI/ML specialist who studied Computer Science at Yashwantrao College (Grade O Outstanding, Open Category).
+            Aqsa Zam Zam Mirza Johar Baig is a full-stack developer and AI/ML specialist who studied Computer Science at Y.C. College (Yashwantrao Chavan College, Grade O Outstanding, Open Category).
             This official profile consolidates verified identity, education, projects, technical publications, and direct contact links.
           </p>
         </div>
@@ -151,7 +151,7 @@ export default async function Home() {
               letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '28px',
             }}>
               <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#a78bfa', display: 'inline-block' }}></span>
-              CS & ENGINEERING (AI & ML) · YASHWANTRAO COLLEGE
+              CS & ENGINEERING (AI & ML) · Y.C. COLLEGE
             </div>
 
             <h1 style={{
@@ -408,8 +408,8 @@ export default async function Home() {
             {[
               {
                 icon: '🎓',
-                title: 'Yashwantrao College',
-                desc: 'Computer Science academic merit standing with Grade O (Outstanding) under Open Category. Strong foundation in software engineering and AI.',
+                title: 'Y.C. College',
+                desc: 'Computer Science academic merit standing at Y.C. College (Yashwantrao Chavan College) with Grade O (Outstanding) under Open Category. Strong foundation in software engineering and AI.',
                 link: '/about', linkText: 'Academic Profile →',
                 color: '#f59e0b',
               },
@@ -471,7 +471,7 @@ export default async function Home() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {[
-              { q: 'Who is Aqsa Zam Zam Mirza Johar Baig?', a: 'Aqsa Zam Zam Mirza Johar Baig is an accomplished Computer Science student at Yashwantrao College (Grade O Outstanding, Open Category), specializing in AI/ML and full-stack development.' },
+              { q: 'Who is Aqsa Zam Zam Mirza Johar Baig?', a: 'Aqsa Zam Zam Mirza Johar Baig is an accomplished Computer Science student at Y.C. College (Yashwantrao Chavan College, Grade O Outstanding, Open Category), specializing in AI/ML and full-stack development.' },
               { q: 'What are Aqsa\'s primary technical skills?', a: 'Her core skills include Java, Python, JavaScript, React.js, AWS Cloud, and Machine Learning frameworks like PyTorch and TensorFlow.' },
               { q: 'What significant projects has she built?', a: 'Key projects include Mahalaxmi Tailors (MERN/AWS), FalcoVita (Flask/Vue/Redis), and an IPO Success Predictor (Machine Learning).' },
               { q: 'How to contact Aqsa Zam Zam Mirza Johar Baig?', a: 'You can contact her via the Contact page, LinkedIn (aqsamirza08), or GitHub (AQSA-ZAM-ZAM-MIRZA-JOHAR-BAIG).' },
@@ -496,7 +496,7 @@ export default async function Home() {
                   {
                     "@type": "Question",
                     "name": "Who is Aqsa Zam Zam Mirza Johar Baig?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Aqsa Zam Zam Mirza Johar Baig is an accomplished Computer Science student at Yashwantrao College (Grade O Outstanding, Open Category), specializing in AI/ML and full-stack development." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "Aqsa Zam Zam Mirza Johar Baig is an accomplished Computer Science student at Y.C. College (Yashwantrao Chavan College, Grade O Outstanding, Open Category), specializing in AI/ML and full-stack development." }
                   },
                   {
                     "@type": "Question",

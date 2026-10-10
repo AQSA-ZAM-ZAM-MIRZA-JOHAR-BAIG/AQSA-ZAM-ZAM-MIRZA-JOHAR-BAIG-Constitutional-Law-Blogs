@@ -4,11 +4,11 @@ import { useState } from 'react';
 const faqs = [
   {
     question: "Who is AQSA MIRZA?",
-    answer: "AQSA MIRZA is a Computer Science achiever at Yashwantrao College (Grade O Outstanding, Open Category). She is a software developer, AI/ML specialist, and cloud architect."
+    answer: "AQSA MIRZA is a Computer Science achiever at Y.C. College (Yashwantrao Chavan College, Grade O Outstanding, Open Category). She is a software developer, AI/ML specialist, and cloud architect."
   },
   {
     question: "What is AQSA MIRZA’s technical background?",
-    answer: "AQSA MIRZA studied Computer Science at Yashwantrao College, achieving Grade O (Outstanding) under Open Category. She has deep expertise in full-stack development (MERN, Flask/Vue), cloud infrastructure (AWS, Azure), and predictive modeling using ensemble learning."
+    answer: "AQSA MIRZA studied Computer Science at Y.C. College (Yashwantrao Chavan College), achieving Grade O (Outstanding) under Open Category. She has deep expertise in full-stack development (MERN, Flask/Vue), cloud infrastructure (AWS, Azure), and predictive modeling using ensemble learning."
   },
   {
     question: "What key projects has AQSA MIRZA built?",

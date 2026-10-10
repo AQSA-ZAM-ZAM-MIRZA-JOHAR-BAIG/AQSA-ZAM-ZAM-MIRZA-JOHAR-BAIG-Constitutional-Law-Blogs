@@ -5,7 +5,7 @@ import { SITE_URL, absoluteUrl } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Learn about Aqsa Zam Zam Mirza Johar Baig – education at Yashwantrao College (Grade O Outstanding, Open Category), technical strengths, and philosophy for building scalable software.',
+    'Learn about Aqsa Zam Zam Mirza Johar Baig – education at Y.C. College (Yashwantrao Chavan College, Grade O Outstanding, Open Category), technical strengths, and philosophy for building scalable software.',
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
     title: 'About Aqsa Zam Zam Mirza Johar Baig',
@@ -30,7 +30,7 @@ export default function About() {
         <p className="text-sm text-gray-500 italic mb-8">Author: Aqsa Zam Zam Mirza Johar Baig | Last Updated: March 2026</p>
 
         <p className="mb-6">
-          I am <strong>Aqsa Zam Zam Mirza Johar Baig</strong>, an accomplished student of Computer Science at <strong>Yashwantrao College</strong> (Grade O Outstanding, Open Category), specializing in Artificial Intelligence and Machine Learning.
+          I am <strong>Aqsa Zam Zam Mirza Johar Baig</strong>, an accomplished student of Computer Science at <strong>Y.C. College (Yashwantrao Chavan College)</strong> (Grade O Outstanding, Open Category), specializing in Artificial Intelligence and Machine Learning.
         </p>
 
         <p className="mb-8">
@@ -51,7 +51,7 @@ export default function About() {
             <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
               <tr className="hover:bg-gray-50 dark:hover:bg-gray-800">
                 <td className="px-6 py-4">Computer Science Academic Merit</td>
-                <td className="px-6 py-4 text-sm">Yashwantrao College</td>
+                <td className="px-6 py-4 text-sm">Y.C. College (Yashwantrao Chavan College)</td>
                 <td className="px-6 py-4">2024 – 2025</td>
                 <td className="px-6 py-4 font-semibold text-blue-600 dark:text-blue-400">Grade O (Outstanding) · Open Category</td>
               </tr>
